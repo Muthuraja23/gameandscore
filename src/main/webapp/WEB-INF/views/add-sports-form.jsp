@@ -24,19 +24,13 @@
 					</div>
 				</div>
 				<div>
-					<label for="noofteamspergame">No.of Teams per Game</label>
+					<label for="noofteamsparticipating">No.of Teams Participating</label>
 					<div>
-						<form:input path="noofteamspergame" />
+						<form:input path="noofteamsparticipating" />
 					</div>
 				</div>
 				<div>
-					<label for="max_players_perteam">Max.Players Per Team</label>
-					<div>
-						<form:input path="maxplayersperteam" />
-					</div>
-				</div>
-				<div>
-				 <form:button>Add New</form:button>
+				 <form:button>Add</form:button>
                 </div>
             </form:form>
             </div>

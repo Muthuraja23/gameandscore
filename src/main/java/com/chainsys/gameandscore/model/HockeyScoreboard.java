@@ -9,31 +9,47 @@ import javax.persistence.Table;
 @Table(name = "hockey_scoreboard")
 public class HockeyScoreboard {
 	@Id
+	@Column(name = "h_scoreboard_id")
+	private int hscoreboardid;
 	@Column(name = "game_id")
 	private int gameid;
-	@Column(name = "team_id")
-	private int teamid;
-	@Column(name = "goals_scored")
-	private int goalsscored;
+	@Column(name = "match_between")
+	private String matchbetween;
+	@Column(name = "team1_score")
+	private int team1score;
+	@Column(name = "team2_score")
+	private int team2score;
 	@Column(name = "result")
 	private String result;
+	public int getHscoreboardid() {
+		return hscoreboardid;
+	}
+	public void setHscoreboardid(int hscoreboardid) {
+		this.hscoreboardid = hscoreboardid;
+	}
 	public int getGameid() {
 		return gameid;
 	}
 	public void setGameid(int gameid) {
 		this.gameid = gameid;
 	}
-	public int getTeamid() {
-		return teamid;
+	public String getMatchbetween() {
+		return matchbetween;
 	}
-	public void setTeamid(int teamid) {
-		this.teamid = teamid;
+	public void setMatchbetween(String matchbetween) {
+		this.matchbetween = matchbetween;
 	}
-	public int getGoalsscored() {
-		return goalsscored;
+	public int getTeam1score() {
+		return team1score;
 	}
-	public void setGoalsscored(int goalsscored) {
-		this.goalsscored = goalsscored;
+	public void setTeam1score(int team1score) {
+		this.team1score = team1score;
+	}
+	public int getTeam2score() {
+		return team2score;
+	}
+	public void setTeam2score(int team2score) {
+		this.team2score = team2score;
 	}
 	public String getResult() {
 		return result;
@@ -41,5 +57,7 @@ public class HockeyScoreboard {
 	public void setResult(String result) {
 		this.result = result;
 	}
+	
+
 	
 }

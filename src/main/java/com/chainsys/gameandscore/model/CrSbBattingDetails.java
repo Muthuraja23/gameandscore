@@ -9,12 +9,14 @@ import javax.persistence.Table;
 @Table(name = "cr_sb_batting_details")
 public class CrSbBattingDetails {
 	@Id
+	@Column(name = "cr_batting_id")
+	private int crbattingid;
 	@Column(name = "game_id")
 	private int gameid;
-	@Column(name = "team_id")
-	private int teamid;
-	@Column(name = "player_id")
-	private int playerid;
+	@Column(name = "team")
+	private int team;
+	@Column(name = "player_name	")
+	private int playername;
 	@Column(name = "runs_scored")
 	private int runsscored;
 	@Column(name = "balls_faced")
@@ -23,27 +25,35 @@ public class CrSbBattingDetails {
 	private int fours;
 	@Column(name = "sixes")
 	private int sixes;
-	@Column(name = "dot_balls")
-	private int dotballs;
+	@Column(name = "strike_rate")
+	private float strikerate;
 	@Column(name = "status")
 	private String status;
+	
+	
+	public int getCrbattingid() {
+		return crbattingid;
+	}
+	public void setCrbattingid(int crbattingid) {
+		this.crbattingid = crbattingid;
+	}
 	public int getGameid() {
 		return gameid;
 	}
 	public void setGameid(int gameid) {
 		this.gameid = gameid;
 	}
-	public int getTeamid() {
-		return teamid;
+	public int getTeam() {
+		return team;
 	}
-	public void setTeamid(int teamid) {
-		this.teamid = teamid;
+	public void setTeam(int team) {
+		this.team = team;
 	}
-	public int getPlayerid() {
-		return playerid;
+	public int getPlayername() {
+		return playername;
 	}
-	public void setPlayerid(int playerid) {
-		this.playerid = playerid;
+	public void setPlayername(int playername) {
+		this.playername = playername;
 	}
 	public int getRunsscored() {
 		return runsscored;
@@ -69,11 +79,11 @@ public class CrSbBattingDetails {
 	public void setSixes(int sixes) {
 		this.sixes = sixes;
 	}
-	public int getDotballs() {
-		return dotballs;
+	public float getStrikerate() {
+		return strikerate;
 	}
-	public void setDotballs(int dotballs) {
-		this.dotballs = dotballs;
+	public void setStrikerate(float strikerate) {
+		this.strikerate = strikerate;
 	}
 	public String getStatus() {
 		return status;
@@ -81,6 +91,8 @@ public class CrSbBattingDetails {
 	public void setStatus(String status) {
 		this.status = status;
 	}
+	
+
 	
 
 }

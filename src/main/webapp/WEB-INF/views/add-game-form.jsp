@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Add Sports</title>
+<title>Add Game</title>
 </head>
 <body>
 	<div id="root">
@@ -18,9 +18,9 @@
 					</div>
 				</div>
 				<div>
-					<label for="gamename">Game Name</label>
+					<label for="gamebetween">Game Between</label>
 					<div>
-						<form:input path="gamename" />
+						<form:input path="gamebetween" />
 					</div>
 				</div>
 				<div>
@@ -30,27 +30,15 @@
 					</div>
 				</div>
 				<div>
-					<label for="startdate">Start Date</label>
+					<label for="date">Date</label>
 					<div>
-						<form:input path="startdate" />
+						<form:input path="date" />
 					</div>
 				</div>
 					<div>
-					<label for="starttime">Start Time</label>
+					<label for="time">Time</label>
 					<div>
-						<form:input path="starttime" />
-					</div>
-				</div>
-				<div>
-					<label for="enddate">End Date</label>
-					<div>
-						<form:input path="enddate" />
-					</div>
-				</div>
-				<div>
-					<label for="enddate">End Time</label>
-					<div>
-						<form:input path="enddate" />
+						<form:input path="time" />
 					</div>
 				</div>
 				<div>
@@ -60,7 +48,7 @@
 					</div>
 				</div>
 				<div>
-				 <form:button>Add New</form:button>
+				 <form:button>Add</form:button>
                 </div>
             </form:form>
             </div>

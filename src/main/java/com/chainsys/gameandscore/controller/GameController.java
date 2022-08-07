@@ -12,16 +12,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.chainsys.gameandscore.model.Game;
-import com.chainsys.gameandscore.model.Sports;
 import com.chainsys.gameandscore.service.GameService;
-import com.chainsys.gameandscore.service.SportsService;
 
 @Controller
 @RequestMapping("/game")
 public class GameController {
 	@Autowired
 	public GameService gmservice;
-	@GetMapping("/getallgame")
+	@GetMapping("/getallgames")
 	public String getallgames(Model model) {
 		List<Game> gamelist = gmservice.getGame();
 		model.addAttribute("allgames", gamelist);
@@ -34,25 +32,25 @@ public class GameController {
         return "add-game-form";
     }
 	@PostMapping("/add")
-   public String addnewsports(@ModelAttribute("addsports") Game gm) {
+   public String addnewsports(@ModelAttribute("addgame") Game gm) {
    	gmservice.save(gm);
-       return "redirect:/game/getallgame";
+       return "redirect:/game/getallgames";
    }
 	@GetMapping("/updateform")
-    public String showUpdateForm(@RequestParam("sportsid") int id, Model model) {
+    public String showUpdateForm(@RequestParam("gameid") int id, Model model) {
         Game g = gmservice.findById(id);
-        model.addAttribute("updatesports", g);
+        model.addAttribute("updategame", g);
         return "update-game-form";
     }
 
     @PostMapping("/updategame")
     public String updateGame(@ModelAttribute("updategame") Game g) {
     	gmservice.save(g);
-        return "redirect:/game/getallgame";
+        return "redirect:/game/getallgames";
     }
     @GetMapping("/deletegame")
     public String deletesgame(@RequestParam("gameid") int id) {
     	gmservice.deleteById(id);
-        return "redirect:/game/getallgame";
+        return "redirect:/game/getallgames";
     }
 }

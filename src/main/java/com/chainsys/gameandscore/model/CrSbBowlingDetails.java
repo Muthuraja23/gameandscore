@@ -9,86 +9,79 @@ import javax.persistence.Table;
 @Table(name = "cr_sb_bowling_details")
 public class CrSbBowlingDetails {
 	@Id
+	@Column(name = "cr_bowling_id")
+	private int crbowlingid;
 	@Column(name = "game_id")
 	private int gameid;
-	@Column(name = "team_id")
-	private int teamid;
-	@Column(name = "player_id")
-	private int playerid;
-	@Column(name = "overs_bowled")
-	private int oversbowled;
-	@Column(name = "wickets_taken")
-	private int wicketstaken;
-	@Column(name = "dot_balls")
-	private int dotballs;
-	@Column(name = "wides")
-	private int wides;
-	@Column(name = "noball")
-	private int noball;
-	@Column(name = "runs_given")
-	private int runsgiven;
-	@Column(name = "maiden_overs")
-	private int maidenovers;
+	@Column(name = "team")
+	private int team;
+	@Column(name = "player_name")
+	private int playername;
+	@Column(name = "overs")
+	private float overs;
+	@Column(name = "wickets")
+	private int wickets;
+	@Column(name = "runs")
+	private int runs;
+	@Column(name = "maiden")
+	private int maiden;
+	@Column(name = "economy")
+	private float economy;
 	
+	public int getCrbowlingid() {
+		return crbowlingid;
+	}
+	public void setCrbowlingid(int crbowlingid) {
+		this.crbowlingid = crbowlingid;
+	}
 	public int getGameid() {
 		return gameid;
 	}
 	public void setGameid(int gameid) {
 		this.gameid = gameid;
 	}
-	public int getTeamid() {
-		return teamid;
+	public int getTeam() {
+		return team;
 	}
-	public void setTeamid(int teamid) {
-		this.teamid = teamid;
+	public void setTeam(int team) {
+		this.team = team;
 	}
-	public int getPlayerid() {
-		return playerid;
+	public int getPlayername() {
+		return playername;
 	}
-	public void setPlayerid(int playerid) {
-		this.playerid = playerid;
+	public void setPlayername(int playername) {
+		this.playername = playername;
 	}
-	public int getOversbowled() {
-		return oversbowled;
+	public float getOvers() {
+		return overs;
 	}
-	public void setOversbowled(int oversbowled) {
-		this.oversbowled = oversbowled;
+	public void setOvers(float overs) {
+		this.overs = overs;
 	}
-	public int getWicketstaken() {
-		return wicketstaken;
+	public int getWickets() {
+		return wickets;
 	}
-	public void setWicketstaken(int wicketstaken) {
-		this.wicketstaken = wicketstaken;
+	public void setWickets(int wickets) {
+		this.wickets = wickets;
 	}
-	public int getDotballs() {
-		return dotballs;
+	public int getRuns() {
+		return runs;
 	}
-	public void setDotballs(int dotballs) {
-		this.dotballs = dotballs;
+	public void setRuns(int runs) {
+		this.runs = runs;
 	}
-	public int getWides() {
-		return wides;
+	public int getMaiden() {
+		return maiden;
 	}
-	public void setWides(int wides) {
-		this.wides = wides;
+	public void setMaiden(int maiden) {
+		this.maiden = maiden;
 	}
-	public int getNoball() {
-		return noball;
+	public float getEconomy() {
+		return economy;
 	}
-	public void setNoball(int noball) {
-		this.noball = noball;
+	public void setEconomy(float economy) {
+		this.economy = economy;
 	}
-	public int getRunsgiven() {
-		return runsgiven;
-	}
-	public void setRunsgiven(int runsgiven) {
-		this.runsgiven = runsgiven;
-	}
-	public int getMaidenovers() {
-		return maidenovers;
-	}
-	public void setMaidenovers(int maidenovers) {
-		this.maidenovers = maidenovers;
-	}
+
 	
 }

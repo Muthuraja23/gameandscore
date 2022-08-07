@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.chainsys.gameandscore.dto.SportsGameDto;
 import com.chainsys.gameandscore.model.Sports;
 import com.chainsys.gameandscore.service.SportsService;
 
@@ -20,7 +21,7 @@ import com.chainsys.gameandscore.service.SportsService;
 @RequestMapping("/sports")
 public class SportsController {
 	@Autowired
-	public SportsService spservice;
+	SportsService spservice;
 	@GetMapping("/getallsports")
 	public String getallsports(Model model) {
 		List<Sports> sportslist = spservice.getSports();
@@ -55,5 +56,11 @@ public class SportsController {
     	spservice.deleteById(id);
         return "redirect:/sports/getallsports";
     }
-	
+	@GetMapping("/getsportsgame")
+    public String getSportsGame(@RequestParam("id")int id,Model model ) {
+    	SportsGameDto dto=spservice.getSportsGameDto(id);
+    	model.addAttribute("getsportsid",dto.getSports());
+    	model.addAttribute("getgamelist",dto.getGameList());
+    	return "sports-game";
+    }
 }

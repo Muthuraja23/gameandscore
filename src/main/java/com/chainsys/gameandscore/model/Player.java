@@ -12,34 +12,29 @@ public class Player {
 	@Id
 	@Column(name = "player_id")
 	private int playerid;
-	@Column(name = "player_name")
-	private String playername;
+	@Column(name = "name")
+	private String name;
 	@Column(name = "DOB")
 	private Date dob;
 	@Column(name = "gender")
 	private String gender;
+	@Column(name ="game")
+	private String game;
 	@Column(name = "team_id")
 	private int teamid;
+	@Column(name = "team")
+	private String team;
 	@Column(name = "skill")
 	private String skill;
-	@Column(name = "player_address")
-	private String playeraddress;
-	@Column(name = "player_email")
-	private String playeremail;
-	@Column(name = "player_phone")
-	private long playerphone;
-	@Column(name = "player_aadhar")
-	private long playeraadhar;
-	@Column(name = "player_bloodgroup")
-	private String playerbloodgroup;
-	@Column(name = "player_height")
-	private int playerheight;
-	@Column(name = "player_weight")
-	private int playerweight;
-	@Column(name = "player_fees")
-	private float playerfees;
-	@Column(name = "player_grade")
-	private String playergrade;
+	@Column(name = "bloodgroup")
+	private String bloodgroup;
+	@Column(name = "height")
+	private String height;
+	@Column(name = "weight")
+	private String weight;
+	@Column(name = "grade")
+	private String grade;
+	
 	
 	
 	public int getPlayerid() {
@@ -48,11 +43,11 @@ public class Player {
 	public void setPlayerid(int playerid) {
 		this.playerid = playerid;
 	}
-	public String getPlayername() {
-		return playername;
+	public String getName() {
+		return name;
 	}
-	public void setPlayername(String playername) {
-		this.playername = playername;
+	public void setName(String name) {
+		this.name = name;
 	}
 	public Date getDob() {
 		return dob;
@@ -66,11 +61,23 @@ public class Player {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
+	public String getGame() {
+		return game;
+	}
+	public void setGame(String game) {
+		this.game = game;
+	}
 	public int getTeamid() {
 		return teamid;
 	}
 	public void setTeamid(int teamid) {
 		this.teamid = teamid;
+	}
+	public String getTeam() {
+		return team;
+	}
+	public void setTeam(String team) {
+		this.team = team;
 	}
 	public String getSkill() {
 		return skill;
@@ -78,60 +85,28 @@ public class Player {
 	public void setSkill(String skill) {
 		this.skill = skill;
 	}
-	public String getPlayeraddress() {
-		return playeraddress;
+	public String getBloodgroup() {
+		return bloodgroup;
 	}
-	public void setPlayeraddress(String playeraddress) {
-		this.playeraddress = playeraddress;
+	public void setBloodgroup(String bloodgroup) {
+		this.bloodgroup = bloodgroup;
 	}
-	public String getPlayeremail() {
-		return playeremail;
+	public String getHeight() {
+		return height;
 	}
-	public void setPlayeremail(String playeremail) {
-		this.playeremail = playeremail;
+	public void setHeight(String height) {
+		this.height = height;
 	}
-	public long getPlayerphone() {
-		return playerphone;
+	public String getWeight() {
+		return weight;
 	}
-	public void setPlayerphone(long playerphone) {
-		this.playerphone = playerphone;
+	public void setWeight(String weight) {
+		this.weight = weight;
 	}
-	public long getPlayeraadhar() {
-		return playeraadhar;
+	public String getGrade() {
+		return grade;
 	}
-	public void setPlayeraadhar(long playeraadhar) {
-		this.playeraadhar = playeraadhar;
-	}
-	public String getPlayerbloodgroup() {
-		return playerbloodgroup;
-	}
-	public void setPlayerbloodgroup(String playerbloodgroup) {
-		this.playerbloodgroup = playerbloodgroup;
-	}
-	public int getPlayerheight() {
-		return playerheight;
-	}
-	public void setPlayerheight(int playerheight) {
-		this.playerheight = playerheight;
-	}
-	public int getPlayerweight() {
-		return playerweight;
-	}
-	public void setPlayerweight(int playerweight) {
-		this.playerweight = playerweight;
-	}
-	public float getPlayerfees() {
-		return playerfees;
-	}
-	public void setPlayerfees(float playerfees) {
-		this.playerfees = playerfees;
-	}
-	public String getPlayergrade() {
-		return playergrade;
-	}
-	public void setPlayergrade(String playergrade) {
-		this.playergrade = playergrade;
-	}
-	
-	
+	public void setGrade(String grade) {
+		this.grade = grade;
+	}	
 }

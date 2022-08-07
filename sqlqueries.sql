@@ -55,28 +55,32 @@ foreign key (team_id)references team(team_id)
 );
 
 create table teamplayerdetails(
+team_player_id number(5),
 team_id number(5),
 player_id number(5),
 date_of_joining date,
 status varchar(10),
 date_of_leaving date,
-primary key(team_id),
+primary key(team_player_id),
+foreign key(team_id) references team(team_id),
 foreign key (player_id) references player(player_id)
 );
 
 create table cr_scoreboard(
-s_no number(3),
+cr_scoreboard_id number(5),
 game_id number(5),
 team_id number(5),
 total_runs number(3),
 overs number(4),
 total_wickets number(2),
 result varchar(30),
+primary key (cr_scoreboard_id),
 foreign key (game_id) references game(game_id),
 foreign key (team_id) references team(team_id)
 );
 
 create table cr_Sb_batting_details (
+cr_batting_id number(5),
 game_id number(5),
 team_id number(5),
 player_id number(5),
@@ -86,12 +90,14 @@ fours number(2),
 sixes number(2),
 dot_balls number(3),
 status varchar(10),
+primary key (cr_batting_id),
 foreign key (game_id) references game(game_id),
 foreign key (team_id) references team(team_id),
 foreign key (player_id) references player(player_id)
 );
 
 create table cr_sb_bowling_details (
+cr_bowling_id number(5),
 game_id number(5),
 team_id number(5),
 player_id number(5),
@@ -102,22 +108,25 @@ wides number(2),
 noball number(2),
 runs_given number(3),
 maiden_overs number(5),
+primary key (cr_bowling_id),
 foreign key (game_id) references game(game_id),
 foreign key (team_id) references team(team_id),
 foreign key (player_id) references player(player_id)
 );
 
 create table football_scoreboard(
+fb_scoreboard_id number(5),
 game_id number(5),
 team_id number(5),
 goals_scored number(5),
 result varchar(30),
+primary key (fb_scoreboard_id),
 foreign key (game_id) references game(game_id),
 foreign key (team_id) references team(team_id)
 );
 
-
 create table fb_sb_goals(
+fb_goals_id number(5),
 game_id number(5),
 team_id number(5),
 player_id number(5),
@@ -129,21 +138,26 @@ assist number(5),
 goal_attempt number(5),
 penalty number(5),
 corners number(5),
+primary key (fb_goals_id),
 foreign key (game_id) references game(game_id),
 foreign key (team_id) references team(team_id),
 foreign key (player_id) references player(player_id)
 );
 
+select * from hockey_scoreboard;
 create table hockey_scoreboard(
+h_scoreboard_id number(5),
 game_id number(5),
 team_id number(5),
 goals_scored number(5),
 result varchar(30),
+primary key (h_scoreboard_id),
 foreign key (game_id) references game(game_id),
 foreign key (team_id) references team(team_id)
 );
 
 create table h_sb_goals(
+h_scoreboard_id number(5),
 game_id number(5),
 team_id number(5),
 player_id number(5),
@@ -155,8 +169,8 @@ assist number(5),
 goal_attempt number(5),
 penalty number(5),
 corners number(5),
+primary key (h_scoreboard_id),
 foreign key (game_id) references game(game_id),
 foreign key (team_id) references team(team_id),
 foreign key (player_id) references player(player_id)
 );
-

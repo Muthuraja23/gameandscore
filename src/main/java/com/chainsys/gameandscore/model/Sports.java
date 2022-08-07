@@ -1,25 +1,27 @@
 package com.chainsys.gameandscore.model;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import org.springframework.web.bind.annotation.RequestMapping;
 
 @Entity
 @Table(name = "sports")
-@RequestMapping("/sports")
 public class Sports {
 	@Id
 	@Column(name = "sports_id")
 	private int sportsid;
 	@Column(name = "sports_name")
 	private String sportsname;
-	@Column(name = "no_of_teams_per_game")
-	private int noofteamspergame;
-	@Column(name = "max_players_perteam")
-	private int maxplayersperteam;
+	@Column(name = "no_of_teams_participating")
+	private int noofteamsparticipating;
+	
+	
 	public int getSportsid() {
 		return sportsid;
 	}
@@ -32,20 +34,29 @@ public class Sports {
 	public void setSportsname(String sportsname) {
 		this.sportsname = sportsname;
 	}
-	public int getNoofteamspergame() {
-		return noofteamspergame;
+	public int getNoofteamsparticipating() {
+		return noofteamsparticipating;
 	}
-	public void setNoofteamspergame(int noofteamspergame) {
-		this.noofteamspergame = noofteamspergame;
+	public void setNoofteamsparticipating(int noofteamsparticipating) {
+		this.noofteamsparticipating = noofteamsparticipating;
 	}
-	public int getMaxplayersperteam() {
-		return maxplayersperteam;
-	}
-	public void setMaxplayersperteam(int maxplayersperteam) {
-		this.maxplayersperteam = maxplayersperteam;
-	}
-	
-	
 
+
+
+
+
+
+	@OneToMany(mappedBy = "sports",fetch = FetchType.LAZY)
+
+	List<Game> game;
+	
+	public List<Game> getGame() {
+		return game;
+	}
+	public void setGame(List<Game> game) {
+		this.game = game;
+	}
+	
+	
 
 }

@@ -2,14 +2,19 @@ package com.chainsys.gameandscore.repository;
 
 import java.util.List;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 import com.chainsys.gameandscore.model.Game;
-import com.chainsys.gameandscore.model.Sports;
 
-public interface GameRepository extends JpaRepository<Game,Integer>{
+@Repository
+public interface GameRepository extends CrudRepository<Game, Integer> {
 	Game save(Game gm);
+
 	List<Game> findAll();
+
 	Game findById(int id);
+
 	void deleteById(int gm_id);
+
 }

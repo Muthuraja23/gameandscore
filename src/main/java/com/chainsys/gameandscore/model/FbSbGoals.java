@@ -1,5 +1,6 @@
 package com.chainsys.gameandscore.model;
 
+import java.security.Timestamp;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -11,16 +12,18 @@ import javax.persistence.Table;
 @Table(name = "fb_sb_goals")
 public class FbSbGoals {
 	@Id
+	@Column(name = "fb_goals_id")
+	private int fbgoalsid;
 	@Column(name = "game_id")
 	private int gameid;
-	@Column(name = "team_id")
-	private int teamid;
-	@Column(name = "player_id")
-	private int playerid;
+	@Column(name = "team")
+	private String team;
+	@Column(name = "player_name")
+	private String playername;
 	@Column(name = "goal_scored")
 	private int goalscored;
 	@Column(name = "time")
-	private Date time;
+	private Timestamp time;
 	@Column(name = "fouls")
 	private int fouls;
 	@Column(name = "tackles")
@@ -33,24 +36,29 @@ public class FbSbGoals {
 	private int penalty;
 	@Column(name = "corners")
 	private int corners;
-	
+	public int getFbgoalsid() {
+		return fbgoalsid;
+	}
+	public void setFbgoalsid(int fbgoalsid) {
+		this.fbgoalsid = fbgoalsid;
+	}
 	public int getGameid() {
 		return gameid;
 	}
 	public void setGameid(int gameid) {
 		this.gameid = gameid;
 	}
-	public int getTeamid() {
-		return teamid;
+	public String getTeam() {
+		return team;
 	}
-	public void setTeamid(int teamid) {
-		this.teamid = teamid;
+	public void setTeam(String team) {
+		this.team = team;
 	}
-	public int getPlayerid() {
-		return playerid;
+	public String getPlayername() {
+		return playername;
 	}
-	public void setPlayerid(int playerid) {
-		this.playerid = playerid;
+	public void setPlayername(String playername) {
+		this.playername = playername;
 	}
 	public int getGoalscored() {
 		return goalscored;
@@ -58,10 +66,10 @@ public class FbSbGoals {
 	public void setGoalscored(int goalscored) {
 		this.goalscored = goalscored;
 	}
-	public Date getTime() {
+	public Timestamp getTime() {
 		return time;
 	}
-	public void setTime(Date time) {
+	public void setTime(Timestamp time) {
 		this.time = time;
 	}
 	public int getFouls() {
@@ -100,6 +108,7 @@ public class FbSbGoals {
 	public void setCorners(int corners) {
 		this.corners = corners;
 	}
+	
 	
 
 }

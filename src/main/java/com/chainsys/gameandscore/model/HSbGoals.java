@@ -10,12 +10,14 @@ import javax.persistence.Table;
 @Table(name = "h_sb_goals")
 public class HSbGoals {
 	@Id
+	@Column(name = "h_goals_id")
+	private int hgoalsid;
 	@Column(name = "game_id")
 	private int gameid;
-	@Column(name = "team_id")
-	private int teamid;
-	@Column(name = "player_id")
-	private int playerid;
+	@Column(name = "team")
+	private String team;
+	@Column(name = "player_name")
+	private String playername;
 	@Column(name = "goal_scored")
 	private int goalscored;
 	@Column(name = "time")
@@ -26,31 +28,35 @@ public class HSbGoals {
 	private int tackles;
 	@Column(name = "assist")
 	private int assist;
-	@Column(name = "goals_attempt")
-	private int goalattempt;
+	@Column(name = "goal_attempt")
+	private int goalsattempt;
 	@Column(name = "penalty")
 	private int penalty;
 	@Column(name = "corners")
 	private int corners;
-	
-	
+	public int getHgoalsid() {
+		return hgoalsid;
+	}
+	public void setHgoalsid(int hgoalsid) {
+		this.hgoalsid = hgoalsid;
+	}
 	public int getGameid() {
 		return gameid;
 	}
 	public void setGameid(int gameid) {
 		this.gameid = gameid;
 	}
-	public int getTeamid() {
-		return teamid;
+	public String getTeam() {
+		return team;
 	}
-	public void setTeamid(int teamid) {
-		this.teamid = teamid;
+	public void setTeam(String team) {
+		this.team = team;
 	}
-	public int getPlayerid() {
-		return playerid;
+	public String getPlayername() {
+		return playername;
 	}
-	public void setPlayerid(int playerid) {
-		this.playerid = playerid;
+	public void setPlayername(String playername) {
+		this.playername = playername;
 	}
 	public int getGoalscored() {
 		return goalscored;
@@ -82,11 +88,11 @@ public class HSbGoals {
 	public void setAssist(int assist) {
 		this.assist = assist;
 	}
-	public int getGoalattempt() {
-		return goalattempt;
+	public int getGoalsattempt() {
+		return goalsattempt;
 	}
-	public void setGoalattempt(int goalattempt) {
-		this.goalattempt = goalattempt;
+	public void setGoalsattempt(int goalsattempt) {
+		this.goalsattempt = goalsattempt;
 	}
 	public int getPenalty() {
 		return penalty;
@@ -100,5 +106,8 @@ public class HSbGoals {
 	public void setCorners(int corners) {
 		this.corners = corners;
 	}
+	
+	
+	
 	
 }

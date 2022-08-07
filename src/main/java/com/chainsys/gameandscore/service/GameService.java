@@ -7,9 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.chainsys.gameandscore.model.Game;
-import com.chainsys.gameandscore.model.Sports;
 import com.chainsys.gameandscore.repository.GameRepository;
-import com.chainsys.gameandscore.repository.SportsRepository;
 
 @Service
 public class GameService {
