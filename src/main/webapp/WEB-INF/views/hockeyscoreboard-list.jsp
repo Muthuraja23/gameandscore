@@ -2,7 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html>
+<html lang=en>
 <head>
 <meta charset="ISO-8859-1">
 <title>Hockey Scoreboard List</title>
@@ -22,9 +22,7 @@ table, th, td {
 		<table>
 			<thead>
 				<tr>
-					<th>H Scoreboard Id</th>
-					<th>Game Id</th>
-					<th>Match Between</th>
+					<th>Match</th>
 					<th>Team 1 Score</th>
 					<th>Team 2 Score</th>
 					<th>Result</th>
@@ -33,8 +31,6 @@ table, th, td {
 			<tbody>
 				<c:forEach var="HockeyScoreboard" items="${score}">
 					<tr>
-						<td>${HockeyScoreboard.hscoreboardid}</td>
-						<td>${HockeyScoreboard.gameid}</td>
 						<td>${HockeyScoreboard.matchbetween}</td>
 						<td>${HockeyScoreboard.team1score}</td>
 						<td>${HockeyScoreboard.team2score}</td>

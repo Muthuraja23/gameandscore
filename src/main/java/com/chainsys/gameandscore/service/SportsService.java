@@ -33,11 +33,10 @@ public class SportsService {
 	public void deleteById(int id) {
 		sportsRepo.deleteById(id);
 	}
-	public SportsGameDto getSportsGameDto(int id) {
-		SportsGameDto dto=new SportsGameDto();
-        dto.setSports(sportsRepo.g);
-        dto.setGame(gameRepo.);
-        return dto;
-	}
+	/*
+	 * public SportsGameDto getSportsGameDto(int id) { SportsGameDto dto=new
+	 * SportsGameDto(); dto.setSports(sportsRepo.g); dto.setGame(gameRepo.); return
+	 * dto; }
+	 */
 	
 }

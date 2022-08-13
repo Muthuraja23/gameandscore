@@ -2,17 +2,23 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
-<html>
+<html lang=en>
 <head>
 <meta charset="ISO-8859-1">
 <title>Add Cricket Scoreboard Form</title>
+<style>
+.text-danger {
+    color: #e80c4d;
+    font-size: 0.9em;
+}
+</style>
 </head>
 <body>
 	<div id="root">
 		<div id="form">
 			<form:form action="add" method="post" modelAttribute="addscore">
 				<div>
-					<label for="crscoreboardid">Cricket Scoreboard Id</label>
+					<label for="crscoreboardid">Scoreboard Id</label>
 					<div>
 						<form:input path="crscoreboardid" />
 					</div>

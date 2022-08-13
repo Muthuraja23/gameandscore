@@ -1,7 +1,6 @@
 package com.chainsys.gameandscore.model;
 
 import java.security.Timestamp;
-import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -12,7 +11,6 @@ import javax.persistence.Table;
 @Table(name = "fb_sb_goals")
 public class FbSbGoals {
 	@Id
-	@Column(name = "fb_goals_id")
 	private int fbgoalsid;
 	@Column(name = "game_id")
 	private int gameid;
@@ -36,6 +34,7 @@ public class FbSbGoals {
 	private int penalty;
 	@Column(name = "corners")
 	private int corners;
+	
 	public int getFbgoalsid() {
 		return fbgoalsid;
 	}

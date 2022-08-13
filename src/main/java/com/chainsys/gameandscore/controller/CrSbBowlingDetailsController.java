@@ -2,6 +2,7 @@ package com.chainsys.gameandscore.controller;
 
 import java.util.List;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,7 +24,7 @@ public class CrSbBowlingDetailsController {
 	@GetMapping("/getalldetails")
 	public String getBowlingDetails(Model model) {
 		List<CrSbBowlingDetails> bowl = blservice.getBowlingDetails();
-		model.addAttribute("alldetails", bowl);
+		model.addAttribute("bowlingdetails", bowl);
 		return "bowlingdetails-list";
 	}
 @GetMapping("/addform")

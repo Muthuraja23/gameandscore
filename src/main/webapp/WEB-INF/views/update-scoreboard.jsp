@@ -13,9 +13,9 @@
 			<form:form action="updatescore" method="post"
 				modelAttribute="updatescore">
 				<div>
-					<label for="sno">S.NO</label>
+					<label for="crscoreboardid">ScoreBoard Id</label>
 					<div>
-						<form:input path="sno" />
+						<form:input path="crscoreboardid" />
 					</div>
 				</div>
 				<div>
@@ -25,21 +25,33 @@
 					</div>
 				</div>
 				<div>
-					<label for="totalruns">Total Runs</label>
+					<label for="matchbetween">Match Between</label>
 					<div>
-						<form:input path="totalruns" />
+						<form:input path="matchbetween" />
 					</div>
 				</div>
 				<div>
-					<label for="overs">Overs</label>
+					<label for="team1">Team 1 Score</label>
 					<div>
-						<form:input path="overs" />
+						<form:input path="team1" />
 					</div>
 				</div>
 				<div>
-					<label for="totalwickets">Total Wickets</label>
+					<label for="oversbyt1">Overs</label>
 					<div>
-						<form:input path="totalwickets" />
+						<form:input path="oversbyt1" />
+					</div>
+				</div>
+				<div>
+					<label for="team2">Team 2 Score</label>
+					<div>
+						<form:input path="team2" />
+					</div>
+				</div>
+				<div>
+					<label for="oversbyt2">Overs</label>
+					<div>
+						<form:input path="oversbyt2" />
 					</div>
 				</div>
 				<div>

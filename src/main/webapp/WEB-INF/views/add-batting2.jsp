@@ -5,7 +5,7 @@
 <html lang=en>
 <head>
 <meta charset="ISO-8859-1">
-<title>Add BattingDetails Form</title>
+<title>Add BattingDetails 2 Form</title>
 <style>
 .text-danger {
     color: #e80c4d;
@@ -16,7 +16,7 @@
 <body>
 	<div id="root">
 		<div id="form">
-			<form:form action="add" method="post" modelAttribute="addbattingdetails">
+			<form:form action="add2" method="post" modelAttribute="addbatting2details">
 				<div>
 					<label for="crbattingid">Batting Id</label>
 					<div>

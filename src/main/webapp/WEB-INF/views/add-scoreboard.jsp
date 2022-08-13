@@ -2,7 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
-<html>
+<html lang=en>
 <head>
 <meta charset="ISO-8859-1">
 <title>Add Scoreboard Form</title>
@@ -12,9 +12,9 @@
 		<div id="form">
 			<form:form action="add" method="post" modelAttribute="addscore">
 				<div>
-					<label for="sno">S.No</label>
+					<label for="crscoreboardid">ScoreBoard Id</label>
 					<div>
-						<form:input path="sno" />
+						<form:input path="crscoreboardid" />
 					</div>
 				</div>
 				<div>
@@ -24,27 +24,33 @@
 					</div>
 				</div>
 				<div>
-					<label for="teamid">Team Id</label>
+					<label for="matchbetween">Match Between</label>
 					<div>
-						<form:input path="teamid" />
+						<form:input path="matchbetween" />
 					</div>
 				</div>
 				<div>
-					<label for="totalruns">Total Runs</label>
+					<label for="team1">Team 1 Score</label>
 					<div>
-						<form:input path="totalruns" />
+						<form:input path="team1" />
 					</div>
 				</div>
 				<div>
-					<label for="overs">Overs</label>
+					<label for="oversbyt1">Overs</label>
 					<div>
-						<form:input path="overs" />
+						<form:input path="oversbyt1" />
 					</div>
 				</div>
 				<div>
-					<label for="totalwickets">Total Wickets</label>
+					<label for="team2">Team 2 Score</label>
 					<div>
-						<form:input path="totalwickets" />
+						<form:input path="team2" />
+					</div>
+				</div>
+				<div>
+					<label for="oversbyt2">Overs</label>
+					<div>
+						<form:input path="oversbyt2" />
 					</div>
 				</div>
 				<div>

@@ -1,24 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<html lang=en>
+<html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Add BattingDetails Form</title>
-<style>
-.text-danger {
-    color: #e80c4d;
-    font-size: 0.9em;
-}
-</style>
+<title>Update Game 2</title>
 </head>
 <body>
-	<div id="root">
+<div id="root">
 		<div id="form">
-			<form:form action="add" method="post" modelAttribute="addbattingdetails">
+			<form:form action="update2" method="post"
+				modelAttribute="update2details">
 				<div>
-					<label for="crbattingid">Batting Id</label>
+					<label for="crbattingid">cricket Scoreboard Id</label>
 					<div>
 						<form:input path="crbattingid" />
 					</div>
@@ -35,6 +29,7 @@
 						<form:input path="team" />
 					</div>
 				</div>
+				<form:errors path="team" cssClass="text-danger" />
 				<div>
 					<label for="playername">Player Name</label>
 					<div>
@@ -78,7 +73,7 @@
 					</div>
 				</div>
 				<div>
-					<form:button>Add</form:button>
+					<form:button>Update</form:button>
 				</div>
 			</form:form>
 		</div>

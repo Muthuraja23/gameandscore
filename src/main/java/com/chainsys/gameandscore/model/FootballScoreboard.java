@@ -9,11 +9,9 @@ import javax.persistence.Table;
 @Table(name = "football_scoreboard")
 public class FootballScoreboard {
 	@Id
-	@Column(name = "fb_scoreboard_id")
 	private int fbscoreboardid;
 	@Column(name = "game_id")
 	private int gameid;
-	@Column(name = "match_between")
 	private String matchbetween;
 	@Column(name = "team1_score")
 	private int team1score;
@@ -21,6 +19,8 @@ public class FootballScoreboard {
 	private int team2score;
 	@Column(name = "result")
 	private String result;
+	
+	
 	public int getFbscoreboardid() {
 		return fbscoreboardid;
 	}

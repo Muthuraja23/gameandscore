@@ -6,6 +6,12 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Update Batting Details</title>
+<style>
+.text-danger {
+    color: #e80c4d;
+    font-size: 0.9em;
+}
+</style>
 </head>
 <body>
 	<div id="root">
@@ -30,6 +36,7 @@
 						<form:input path="team" />
 					</div>
 				</div>
+				<form:errors path="team" cssClass="text-danger" />
 				<div>
 					<label for="playername">Player Name</label>
 					<div>
@@ -52,6 +59,12 @@
 					<label for="fours">Fours</label>
 					<div>
 						<form:input path="fours" />
+					</div>
+				</div>
+				<div>
+					<label for="sixes">Sixes</label>
+					<div>
+						<form:input path="sixes" />
 					</div>
 				</div>
 				<div>

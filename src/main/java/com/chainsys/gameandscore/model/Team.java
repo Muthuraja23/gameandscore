@@ -6,6 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
 @Entity
 @Table(name = "team")
 public class Team {
@@ -26,6 +27,8 @@ public class Team {
 	private String owner;
 	@Column(name = "email")
 	private String email;
+	
+	
 	public int getTeamid() {
 		return teamid;
 	}
@@ -71,9 +74,11 @@ public class Team {
 	public String getEmail() {
 		return email;
 	}
-	public void setOwneremail(String email) {
+	public void setEmail(String email) {
 		this.email = email;
 	}
+	
+	
 	
 	
 	

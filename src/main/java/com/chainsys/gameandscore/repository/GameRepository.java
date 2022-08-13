@@ -16,5 +16,6 @@ public interface GameRepository extends CrudRepository<Game, Integer> {
 	Game findById(int id);
 
 	void deleteById(int gm_id);
+	
 
 }

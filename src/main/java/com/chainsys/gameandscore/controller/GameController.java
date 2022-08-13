@@ -2,6 +2,7 @@ package com.chainsys.gameandscore.controller;
 
 import java.util.List;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.chainsys.gameandscore.dto.GameCrScoreboardDto;
 import com.chainsys.gameandscore.model.Game;
 import com.chainsys.gameandscore.service.GameService;
 
@@ -19,9 +21,13 @@ import com.chainsys.gameandscore.service.GameService;
 public class GameController {
 	@Autowired
 	public GameService gmservice;
+	@RequestMapping("/index")
+	public String index() {
+		return "index";
+	}
 	@GetMapping("/getallgames")
 	public String getallgames(Model model) {
-		List<Game> gamelist = gmservice.getGame();
+		List<Game> gamelist = gmservice.getGame();	
 		model.addAttribute("allgames", gamelist);
 		return "game-list";
 	}
@@ -53,4 +59,12 @@ public class GameController {
     	gmservice.deleteById(id);
         return "redirect:/game/getallgames";
     }
+    @GetMapping("/getscoreboard")
+    public String getGameScoreboard(@RequestParam("gamescoreid")int id,Model model) {
+    	GameCrScoreboardDto dto=new GameCrScoreboardDto();
+    	model.addAttribute(dto.getGame());
+    	model.addAttribute(dto.getCrScoreboard());
+    	return "listgame-board";
+    }
+    
 }

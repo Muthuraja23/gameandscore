@@ -6,6 +6,12 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Update Team</title>
+<style>
+.text-danger {
+    color: #e80c4d;
+    font-size: 0.9em;
+}
+</style>
 </head>
 <body>
 	<div id="root">

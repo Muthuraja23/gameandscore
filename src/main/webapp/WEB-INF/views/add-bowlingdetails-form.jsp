@@ -2,17 +2,23 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
-<html>
+<html lang=en>
 <head>
 <meta charset="ISO-8859-1">
 <title>Add BowlingDetails Form</title>
+<style>
+.text-danger {
+    color: #e80c4d;
+    font-size: 0.9em;
+}
+</style>
 </head>
 <body>
 	<div id="root">
 		<div id="form">
 			<form:form action="add" method="post" modelAttribute="adddetails">
 				<div>
-					<label for="crbowlingid">Cricket Bowling id</label>
+					<label for="crbowlingid">Bowling id</label>
 					<div>
 						<form:input path="crbowlingid" />
 					</div>
@@ -24,13 +30,13 @@
 					</div>
 				</div>
 				<div>
-					<label for="teamid">Team Id</label>
+					<label for="team">Team</label>
 					<div>
-						<form:input path="teamid" />
+						<form:input path="team" />
 					</div>
 				</div>
 				<div>
-					<label for="playername">Player Name</label>
+					<label for="playername">Name</label>
 					<div>
 						<form:input path="playername" />
 					</div>
@@ -45,12 +51,6 @@
 					<label for="wickets">Wickets</label>
 					<div>
 						<form:input path="wickets" />
-					</div>
-				</div>
-				<div>
-					<label for="dotballs">Dot Balls</label>
-					<div>
-						<form:input path="dotballs" />
 					</div>
 				</div>
 				<div>

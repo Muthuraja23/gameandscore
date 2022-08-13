@@ -5,7 +5,7 @@
 <html lang=en>
 <head>
 <meta charset="ISO-8859-1">
-<title>Batting Score</title>
+<title>Batting 3 Score</title>
 <style>
 h1, h2, h3 {
     text-align: center;
@@ -19,7 +19,7 @@ table, th, td {
 </head>
 <body>
 	<div id="table root">
-		<table>
+		<table class="center">
 			<thead>
 				<tr>
 					<th>Team</th>
@@ -33,16 +33,16 @@ table, th, td {
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach var="CrSbBattingDetails" items="${battingdetails}">
+				<c:forEach var="Batting3" items="${batting3details}">
 					<tr>
-						<td>${CrSbBattingDetails.team}</td>
-						<td>${CrSbBattingDetails.playername}</td>
-						<td>${CrSbBattingDetails.runsscored}</td>
-						<td>${CrSbBattingDetails.ballsfaced}</td>
-						<td>${CrSbBattingDetails.fours}</td>
-						<td>${CrSbBattingDetails.sixes}</td>
-						<td>${CrSbBattingDetails.strikerate}</td>
-						<td>${CrSbBattingDetails.status}</td>
+						<td>${Batting3.team}</td>
+						<td>${Batting3.playername}</td>
+						<td>${Batting3.runsscored}</td>
+						<td>${Batting3.ballsfaced}</td>
+						<td>${Batting3.fours}</td>
+						<td>${Batting3.sixes}</td>
+						<td>${Batting3.strikerate}</td>
+						<td>${Batting3.status}</td>
 					</tr>
 				</c:forEach>
 			</tbody>

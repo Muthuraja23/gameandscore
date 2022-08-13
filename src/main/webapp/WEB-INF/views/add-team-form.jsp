@@ -2,17 +2,23 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
-<html>
+<html lang=en>
 <head>
 <meta charset="ISO-8859-1">
 <title>Add Team Form</title>
+<style>
+.text-danger {
+	color: #e80c4d;
+	font-size: 0.9em;
+}
+</style>
 </head>
 <body>
 	<div id="root">
 		<div id="form">
 			<form:form action="add" method="post" modelAttribute="addteam">
 				<div>
-					<label for="teamid">Team Id</label>
+					<label for="teamid">Team id</label>
 					<div>
 						<form:input path="teamid" />
 					</div>
@@ -41,6 +47,7 @@
 						<form:input path="country" />
 					</div>
 				</div>
+				<div>
 					<label for="status">Status</label>
 					<div>
 						<form:input path="status" />
@@ -52,6 +59,7 @@
 						<form:input path="owner" />
 					</div>
 				</div>
+				<form:errors path="owner" cssClass="text-danger" />
 				<div>
 					<label for="email">Email</label>
 					<div>

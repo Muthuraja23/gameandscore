@@ -2,10 +2,16 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
-<html>
+<html lang=en>
 <head>
 <meta charset="ISO-8859-1">
 <title>Add Player Form</title>
+<style>
+.text-danger {
+    color: #e80c4d;
+    font-size: 0.9em;
+}
+</style>
 </head>
 <body>
 	<div id="root">
@@ -35,12 +41,14 @@
 						<form:input path="gender" />
 					</div>
 				</div>
+				<form:errors path="gender" cssClass="text-danger" />
 				<div>
 					<label for="game">Game</label>
 					<div>
 						<form:input path="game" />
 					</div>
 				</div>
+				<form:errors path="game" cssClass="text-danger" />
 				<div>
 					<label for="teamid">Team Id</label>
 					<div>

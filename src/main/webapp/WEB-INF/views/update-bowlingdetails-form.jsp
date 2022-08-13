@@ -6,6 +6,12 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Update Bowling Details</title>
+<style>
+.text-danger {
+    color: #e80c4d;
+    font-size: 0.9em;
+}
+</style>
 </head>
 <body>
 	<div id="root">
@@ -25,13 +31,13 @@
 					</div>
 				</div>
 				<div>
-					<label for="teamid">Team Id</label>
+					<label for="team">Team</label>
 					<div>
-						<form:input path="teamid" />
+						<form:input path="team" />
 					</div>
 				</div>
 				<div>
-					<label for="playername">Player Name</label>
+					<label for="playername">Name</label>
 					<div>
 						<form:input path="playername" />
 					</div>
@@ -46,12 +52,6 @@
 					<label for="wickets">Wickets</label>
 					<div>
 						<form:input path="wickets" />
-					</div>
-				</div>
-				<div>
-					<label for="dotballs">Dot Balls</label>
-					<div>
-						<form:input path="dotballs" />
 					</div>
 				</div>
 				<div>

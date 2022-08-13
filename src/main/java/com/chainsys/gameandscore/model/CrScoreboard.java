@@ -25,56 +25,69 @@ public class CrScoreboard {
 	private float oversbyt2;
 	@Column(name = "result")
 	private String result;
+
 	public int getCrscoreboardid() {
 		return crscoreboardid;
 	}
+
 	public void setCrscoreboardid(int crscoreboardid) {
 		this.crscoreboardid = crscoreboardid;
 	}
+
 	public int getGameid() {
 		return gameid;
 	}
+
 	public void setGameid(int gameid) {
 		this.gameid = gameid;
 	}
+
 	public String getMatchbetween() {
 		return matchbetween;
 	}
+
 	public void setMatchbetween(String matchbetween) {
 		this.matchbetween = matchbetween;
 	}
+
 	public String getTeam1() {
 		return team1;
 	}
+
 	public void setTeam1(String team1) {
 		this.team1 = team1;
 	}
+
 	public float getOversbyt1() {
 		return oversbyt1;
 	}
+
 	public void setOversbyt1(float oversbyt1) {
 		this.oversbyt1 = oversbyt1;
 	}
+
 	public String getTeam2() {
 		return team2;
 	}
+
 	public void setTeam2(String team2) {
 		this.team2 = team2;
 	}
+
 	public float getOversbyt2() {
 		return oversbyt2;
 	}
+
 	public void setOversbyt2(float oversbyt2) {
 		this.oversbyt2 = oversbyt2;
 	}
+
 	public String getResult() {
 		return result;
 	}
+
 	public void setResult(String result) {
 		this.result = result;
 	}
-	
-	
-
 
 }

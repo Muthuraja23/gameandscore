@@ -2,7 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html>
+<html lang=en>
 <head>
 <meta charset="ISO-8859-1">
 <title>BowlingDetails List</title>
@@ -22,10 +22,10 @@ table, th, td {
 		<table>
 			<thead>
 				<tr>
-					<th>Bowling Id</th>
-					<th>Game id</th>
+					<!-- <th>Bowling Id</th> -->
+					<!-- <th>Game id</th> -->
 					<th>Team</th>
-					<th>PlayerName</th>
+					<th>Name</th>
 					<th>Overs</th>
 					<th>Wickets</th>
 					<th>Runs</th>
@@ -34,10 +34,10 @@ table, th, td {
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach var="CrSbBowlingDetails" items="${alldetails}">
+				<c:forEach var="CrSbBowlingDetails" items="${bowlingdetails}">
 					<tr>
-						<td>${CrSbBowlingDetails.crbowlingid}</td>
-						<td>${CrSbBowlingDetails.gameid}</td>
+						<%-- <td>${CrSbBowlingDetails.crbowlingid}</td> --%>
+						<%-- <td>${CrSbBowlingDetails.gameid}</td> --%>
 						<td>${CrSbBowlingDetails.team}</td>
 						<td>${CrSbBowlingDetails.playername}</td>
 						<td>${CrSbBowlingDetails.overs}</td>

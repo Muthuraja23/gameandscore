@@ -1,11 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-	<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
-<html>
+<html lang=en>
 <head>
 <meta charset="ISO-8859-1">
 <title>Add Game</title>
+<style>
+.text-danger {
+    color: #e80c4d;
+    font-size: 0.9em;
+}
+</style>
 </head>
 <body>
 	<div id="root">
@@ -14,7 +20,7 @@
 				<div>
 					<label for="gameid">Game Id</label>
 					<div>
-						<form:input path="gameid" />
+						<form:input path="gameid"/>
 					</div>
 				</div>
 				<div>
@@ -30,15 +36,9 @@
 					</div>
 				</div>
 				<div>
-					<label for="date">Date</label>
+					<label for="dateandtime">Date And Time</label>
 					<div>
-						<form:input path="date" />
-					</div>
-				</div>
-					<div>
-					<label for="time">Time</label>
-					<div>
-						<form:input path="time" />
+						<form:input path="dateandtime" />
 					</div>
 				</div>
 				<div>
@@ -48,10 +48,10 @@
 					</div>
 				</div>
 				<div>
-				 <form:button>Add</form:button>
-                </div>
-            </form:form>
-            </div>
-            </div>
+					<form:button>Add</form:button>
+				</div>
+			</form:form>
+		</div>
+	</div>
 </body>
 </html>

@@ -9,7 +9,6 @@ import javax.persistence.Table;
 @Table(name = "hockey_scoreboard")
 public class HockeyScoreboard {
 	@Id
-	@Column(name = "h_scoreboard_id")
 	private int hscoreboardid;
 	@Column(name = "game_id")
 	private int gameid;
@@ -21,6 +20,8 @@ public class HockeyScoreboard {
 	private int team2score;
 	@Column(name = "result")
 	private String result;
+	
+	
 	public int getHscoreboardid() {
 		return hscoreboardid;
 	}

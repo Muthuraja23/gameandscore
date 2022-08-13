@@ -6,6 +6,12 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Add Football Goals Form</title>
+<style>
+.text-danger {
+    color: #e80c4d;
+    font-size: 0.9em;
+}
+</style>
 </head>
 <body>
 	<div id="root">
@@ -35,6 +41,7 @@
 						<form:input path="playername" />
 					</div>
 				</div>
+				<form:errors path="playername" cssClass="text-danger" />
 				<div>
 					<label for="goalscored">Goals Scored</label>
 					<div>

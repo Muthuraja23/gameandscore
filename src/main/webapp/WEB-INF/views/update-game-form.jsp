@@ -6,6 +6,12 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Update Game</title>
+<style>
+.text-danger {
+    color: #e80c4d;
+    font-size: 0.9em;
+}
+</style>
 </head>
 <body>
 	<div id="root">
@@ -31,15 +37,9 @@
 					</div>
 				</div>
 				<div>
-					<label for="date">Date</label>
+					<label for="dateandtime">Date And Time</label>
 					<div>
-						<form:input path="date" />
-					</div>
-				</div>
-				<div>
-					<label for="time">Time</label>
-					<div>
-						<form:input path="time" />
+						<form:input path="dateandtime" />
 					</div>
 				</div>
 				<div>

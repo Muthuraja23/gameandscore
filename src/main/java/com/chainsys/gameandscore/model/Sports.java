@@ -1,12 +1,9 @@
 package com.chainsys.gameandscore.model;
 
-import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 
@@ -45,18 +42,5 @@ public class Sports {
 
 
 
-
-	@OneToMany(mappedBy = "sports",fetch = FetchType.LAZY)
-
-	List<Game> game;
-	
-	public List<Game> getGame() {
-		return game;
-	}
-	public void setGame(List<Game> game) {
-		this.game = game;
-	}
-	
-	
 
 }
