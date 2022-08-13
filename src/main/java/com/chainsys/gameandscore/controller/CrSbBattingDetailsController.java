@@ -2,12 +2,10 @@ package com.chainsys.gameandscore.controller;
 
 import java.util.List;
 
-import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.chainsys.gameandscore.model.CrSbBattingDetails;
-import com.chainsys.gameandscore.model.CrScoreboard;
 import com.chainsys.gameandscore.service.Batting2Service;
 import com.chainsys.gameandscore.service.CrSbBattingDetailsService;
 
@@ -41,8 +38,8 @@ public class CrSbBattingDetailsController {
 		return "add-battingdetails-form";
 	}
 	@PostMapping("/add")
-	public String addNewDetails(@ModelAttribute("addbattingdetails")CrSbBattingDetails bd) {
-		bdservice.save(bd);
+	public String addNewDetails(@ModelAttribute("addbattingdetails")CrSbBattingDetails batdetails) {
+		bdservice.save(batdetails);
 		return "redirect:/batting/getalldetails";
 	}
 	@GetMapping("/updatebatting")

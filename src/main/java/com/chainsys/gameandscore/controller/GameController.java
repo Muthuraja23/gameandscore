@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.chainsys.gameandscore.dto.GameCrScoreboardDto;
 import com.chainsys.gameandscore.model.Game;
 import com.chainsys.gameandscore.service.GameService;
 
