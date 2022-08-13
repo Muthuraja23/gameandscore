@@ -2,7 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html>
+<html lang=en>
 <head>
 <meta charset="ISO-8859-1">
 <title>TeamPlayerDetails List</title>
@@ -22,10 +22,7 @@ table, th, td {
 		<table>
 			<thead>
 				<tr>
-					<!-- <th>Team Player Id</th> -->
-					<!-- <th>Team Id</th> -->
 					<th>Team</th>
-					<!-- <th>Player Id</th> -->
 					<th>Name</th>
 					<th>Date Of Joining</th>
 					<th>Status</th>
@@ -35,10 +32,7 @@ table, th, td {
 			<tbody>
 				<c:forEach var="TeamPlayerDetails" items="${allteamplayerdetails}">
 					<tr>
-					<%-- 	<td>${TeamPlayerDetails.teamplayerid}</td> --%>
-						<%-- <td>${TeamPlayerDetails.teamid}</td> --%>
 						<td>${TeamPlayerDetails.team}</td>
-					<%-- 	<td>${TeamPlayerDetails.playerid}</td> --%>
 						<td>${TeamPlayerDetails.name}</td>
 						<td>${TeamPlayerDetails.dateofjoining}</td>
 						<td>${TeamPlayerDetails.status}</td>
