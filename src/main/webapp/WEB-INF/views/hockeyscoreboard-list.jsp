@@ -5,7 +5,7 @@
 <html lang=en>
 <head>
 <meta charset="ISO-8859-1">
-<title>Hockey Scoreboard List</title>
+<title>Hockey ScoreBoard List</title>
 <style>
 h1, h2, h3 {
     text-align: center;

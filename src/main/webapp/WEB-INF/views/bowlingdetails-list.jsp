@@ -22,8 +22,6 @@ table, th, td {
 		<table>
 			<thead>
 				<tr>
-					<!-- <th>Bowling Id</th> -->
-					<!-- <th>Game id</th> -->
 					<th>Team</th>
 					<th>Name</th>
 					<th>Overs</th>
@@ -36,8 +34,6 @@ table, th, td {
 			<tbody>
 				<c:forEach var="CrSbBowlingDetails" items="${bowlingdetails}">
 					<tr>
-						<%-- <td>${CrSbBowlingDetails.crbowlingid}</td> --%>
-						<%-- <td>${CrSbBowlingDetails.gameid}</td> --%>
 						<td>${CrSbBowlingDetails.team}</td>
 						<td>${CrSbBowlingDetails.playername}</td>
 						<td>${CrSbBowlingDetails.overs}</td>
