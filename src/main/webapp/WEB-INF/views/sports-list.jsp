@@ -10,7 +10,7 @@
 <body>
 	<h1 align="center">Sports List</h1>
 	<div id="table root">
-		<table border="8" cellpadding="30%" align="center" bordercolor="blue">
+		<table>
 			<thead>
 				<tr>
 					<th>Sports Name</th>
