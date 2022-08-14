@@ -30,7 +30,6 @@ public class CrSbBattingDetails {
 	@Column(name = "status")
 	private String status;
 	
-	
 	public int getCrbattingid() {
 		return crbattingid;
 	}
@@ -91,8 +90,6 @@ public class CrSbBattingDetails {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-	
-
 	
 
 }
