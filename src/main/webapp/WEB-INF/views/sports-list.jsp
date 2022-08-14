@@ -8,7 +8,7 @@
 <title>Sports List</title>
 </head>
 <body>
-	<h1 align="center">Sports List</h1>
+	<h1>Sports List</h1>
 	<div id="table root">
 		<table>
 			<thead>
