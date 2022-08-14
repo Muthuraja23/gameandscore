@@ -19,11 +19,11 @@ import com.chainsys.gameandscore.service.CrSbBattingDetailsService;
 @RequestMapping("/batting")
 public class CrSbBattingDetailsController {
 	@Autowired
-	private CrSbBattingDetailsService bdservice;
+	private CrSbBattingDetailsService batservice;
 
 	@GetMapping("/getalldetails")
 	public String getalldetails(Model model) {
-		List <CrSbBattingDetails> detailslist=bdservice.getCrSbBattingDetails();
+		List <CrSbBattingDetails> detailslist = batservice.getCrSbBattingDetails();
 		model.addAttribute("battingdetails", detailslist);
 		return "battingdetails-list";
 	}
@@ -36,24 +36,24 @@ public class CrSbBattingDetailsController {
 	}
 	@PostMapping("/add")
 	public String addNewDetails(@ModelAttribute("addbattingdetails")CrSbBattingDetails batdetails) {
-		bdservice.save(batdetails);
-		return "redirect:/batting/getalldetails";
+		batservice.save(batdetails);
+		return "batdetails";
 	}
 	@GetMapping("/updatebatting")
 	public String showUpdateForm(@RequestParam("crbattingid") int id, Model model) {
-	    CrSbBattingDetails b = bdservice.findById(id);
+	    CrSbBattingDetails b = batservice.findById(id);
 	    model.addAttribute("updatedetails", b);
 	    return "update-battingdetails-form";
 	}
 
 	@PostMapping("/update")
 	public String updateBattingDetails(@ModelAttribute("updatedetails") CrSbBattingDetails b) {
-		bdservice.save(b);
+		batservice.save(b);
 	    return "redirect:/batting/getalldetails";
 	}
 	@GetMapping("/deletebatting")
 	public String deleteBattingDetails(@RequestParam("crbattingid") int id) {
-		bdservice.deleteById(id);
+		batservice.deleteById(id);
 		return "redirect:/batting/getalldetails";
 	}
 
