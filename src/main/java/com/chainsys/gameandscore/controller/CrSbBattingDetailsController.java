@@ -30,8 +30,8 @@ public class CrSbBattingDetailsController {
 	
 	@GetMapping("/addbatting")
 	public String battingAddForm(Model model) {
-		CrSbBattingDetails b=new CrSbBattingDetails();
-		model.addAttribute("addbattingdetails", b);
+		CrSbBattingDetails batting = new CrSbBattingDetails();
+		model.addAttribute("addbattingdetails", batting);
 		return "add-battingdetails-form";
 	}
 	@PostMapping("/add")
