@@ -57,20 +57,11 @@ table.center {
 	margin-right: auto;
 }
 
-/* table, th, td {
-	border: 2px solid black;
-	border-collapse: collapse;
-} */
-
 div {
 	text-align: center;
 }
-/* * {
-	background-image: url("https://t4.ftcdn.net/jpg/02/19/80/13/360_F_219801337_3kbasqLvgbUxAGVDH8QS35Sm4SEiPJFJ.jpg");
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: 1366px 768px;
-} */
+
+
 .content-table {
 	border-collapse: collapse;
 	margin: 25px 0;
