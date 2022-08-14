@@ -20,7 +20,7 @@ public class GameController {
 	@Autowired
 	public GameService gmservice;
 
-	@RequestMapping("/index")
+	@GetMapping("/index")
 	public String index() {
 		return "index";
 	}
