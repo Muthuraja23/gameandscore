@@ -115,7 +115,7 @@ public class CrSbBattingDetailsController {
 	@PostMapping("/add3")
 	public String addNew3Details(@ModelAttribute("addbatting3details")CrSbBattingDetails bd) {
 		bdservice.save(bd);
-		return "redirect:/batting/get3Details";
+		return "added";
 	}
 	@GetMapping("/update3batting")
 	public String showUpdate3Form(@RequestParam("crbattingid") int id, Model model) {
@@ -127,7 +127,7 @@ public class CrSbBattingDetailsController {
 	@PostMapping("/update3")
 	public String updateBatting3Details(@ModelAttribute("update3details") CrSbBattingDetails b) {
 		bdservice.save(b);
-	    return "redirect:/batting/get3Details";
+	    return "updated";
 	}
 	@GetMapping("/delete3batting")
 	public String deleteBatting3Details(@RequestParam("crbattingid") int id) {

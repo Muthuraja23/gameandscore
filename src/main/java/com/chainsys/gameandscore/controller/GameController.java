@@ -20,10 +20,10 @@ import com.chainsys.gameandscore.service.GameService;
 public class GameController {
 	@Autowired
 	public GameService gmservice;
-	@RequestMapping("/index")
-	public String index() {
-		return "index";
-	}
+
+	/*
+	 * @RequestMapping("/index") public String index() { return "index"; }
+	 */
 	@GetMapping("/getallgames")
 	public String getallgames(Model model) {
 		List<Game> gamelist = gmservice.getGame();	
