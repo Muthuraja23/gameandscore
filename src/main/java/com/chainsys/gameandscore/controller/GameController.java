@@ -36,7 +36,7 @@ public class GameController {
 	@PostMapping("/add")
    public String addnewsports(@ModelAttribute("addgame") Game gm) {
    	gmservice.save(gm);
-       return "redirect:/game/getallgames";
+       return "Added Successfully";
    }
 	@GetMapping("/updateform")
     public String showUpdateForm(@RequestParam("gameid") int id, Model model) {
@@ -54,13 +54,6 @@ public class GameController {
     public String deletesgame(@RequestParam("gameid") int id) {
     	gmservice.deleteById(id);
         return "redirect:/game/getallgames";
-    }
-    @GetMapping("/getscoreboard")
-    public String getGameScoreboard(@RequestParam("gamescoreid")int id,Model model) {
-    	GameCrScoreboardDto dto=new GameCrScoreboardDto();
-    	model.addAttribute(dto.getGame());
-    	model.addAttribute(dto.getCrScoreboard());
-    	return "listgame-board";
     }
     
 }
