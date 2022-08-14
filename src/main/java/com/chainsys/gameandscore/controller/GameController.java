@@ -2,7 +2,6 @@ package com.chainsys.gameandscore.controller;
 
 import java.util.List;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,39 +20,48 @@ public class GameController {
 	@Autowired
 	public GameService gmservice;
 
+	@RequestMapping("/index")
+	public String index() {
+		return "index";
+	}
+
 	@GetMapping("/getallgames")
 	public String getallgames(Model model) {
-		List<Game> gamelist = gmservice.getGame();	
+		List<Game> gamelist = gmservice.getGame();
 		model.addAttribute("allgames", gamelist);
 		return "game-list";
 	}
-	@GetMapping("addform")
-    public String gameAddForm(Model model) {
-         Game g = new Game();
-        model.addAttribute("addgame", g);
-        return "add-game-form";
-    }
-	@PostMapping("/add")
-   public String addnewsports(@ModelAttribute("addgame") Game gm) {
-   	gmservice.save(gm);
-       return "Added Successfully";
-   }
-	@GetMapping("/updateform")
-    public String showUpdateForm(@RequestParam("gameid") int id, Model model) {
-        Game g = gmservice.findById(id);
-        model.addAttribute("updategame", g);
-        return "update-game-form";
-    }
 
-    @PostMapping("/updategame")
-    public String updateGame(@ModelAttribute("updategame") Game g) {
-    	gmservice.save(g);
-        return "redirect:/game/getallgames";
-    }
-    @GetMapping("/deletegame")
-    public String deletesgame(@RequestParam("gameid") int id) {
-    	gmservice.deleteById(id);
-        return "redirect:/game/getallgames";
-    }
-    
+	@GetMapping("addform")
+	public String gameAddForm(Model model) {
+		Game g = new Game();
+		model.addAttribute("addgame", g);
+		return "add-game-form";
+	}
+
+	@PostMapping("/add")
+	public String addnewsports(@ModelAttribute("addgame") Game gm) {
+		gmservice.save(gm);
+		return "Added Successfully";
+	}
+
+	@GetMapping("/updateform")
+	public String showUpdateForm(@RequestParam("gameid") int id, Model model) {
+		Game g = gmservice.findById(id);
+		model.addAttribute("updategame", g);
+		return "update-game-form";
+	}
+
+	@PostMapping("/updategame")
+	public String updateGame(@ModelAttribute("updategame") Game g) {
+		gmservice.save(g);
+		return "redirect:/game/getallgames";
+	}
+
+	@GetMapping("/deletegame")
+	public String deletesgame(@RequestParam("gameid") int id) {
+		gmservice.deleteById(id);
+		return "Deleted";
+	}
+
 }
