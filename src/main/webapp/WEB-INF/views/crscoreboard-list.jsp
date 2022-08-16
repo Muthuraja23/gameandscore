@@ -5,86 +5,10 @@
 <html lang=en>
 <head>
 <meta charset="ISO-8859-1">
-<title>Cricket Scoreboard List</title>
+<title>Cricket ScoreBoard List</title>
 <style>
-* {
-	text-align: center;
-}
-
-body {
-	margin: 0;
-}
-
-ul.topnav {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	background-color: #333;
-}
-
-ul.topnav li {
-	float: left;
-}
-
-ul.topnav li a {
-	display: block;
-	color: white;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-}
-
-ul.topnav li a:hover:not(.active) {
-	background-color: #111;
-}
-
-ul.topnav li a.active {
-	background-color: #04AA6D;
-}
-
-ul.topnav li.right {
-	float: right;
-}
-
-@media screen and (max-width: 600px) {
-	ul.topnav li.right, ul.topnav li {
-		float: none;
-	}
-}
-
-h1, h2, h3 {
-	text-align: center;
-}
-
-.content-table {
-	border-collapse: collapse;
-	margin: 25px 0;
-	font-size: 0.9em;
-	min-width: 400px;
-}
-
-.content-table thead tr {
-	background-color: #04AA6D;
-	color: white;
-	text-align: left;
-	font-weight: bold;
-}
-
-.content-table th, .content-table td {
-	padding: 12px 15px;
-}
-
-.content-table tbody tr {
-	border-bottom: 1px solid #dddddd;
-}
-
-.content-table tbody tr:nth-of-type(even){
-	background-color: #f3f3f3;
-}
-.content-table tbody tr:last-of-type{
-	border-bottom: 2px solid #04AA6D;
-}
+<%@ include file="css/navigationbar.css"%>
+<%@ include file="css/table.css"%>
 </style>
 </head>
 <body>
@@ -119,6 +43,64 @@ h1, h2, h3 {
 							<td>${CrScoreboard.team2}</td>
 							<td>${CrScoreboard.oversbyt2}</td>
 							<td>${CrScoreboard.result}</td>
+						</tr>
+					</c:forEach>
+				</tbody>
+			</table>
+		</div>
+		<div id="table root">
+			<table class = bat-table>
+				<thead>
+					<tr>
+						<th>Team</th>
+						<th>Name</th>
+						<th>Runs Scored</th>
+						<th>Balls Faced</th>
+						<th>Fours</th>
+						<th>Sixes</th>
+						<th>Strike Rate</th>
+						<th>Status</th>
+					</tr>
+				</thead>
+				<tbody>
+					<c:forEach var="CrSbBattingDetails" items="${bat}">
+						<tr>
+							<td>${CrSbBattingDetails.team}</td>
+							<td>${CrSbBattingDetails.playername}</td>
+							<td>${CrSbBattingDetails.runsscored}</td>
+							<td>${CrSbBattingDetails.ballsfaced}</td>
+							<td>${CrSbBattingDetails.fours}</td>
+							<td>${CrSbBattingDetails.sixes}</td>
+							<td>${CrSbBattingDetails.strikerate}</td>
+							<td>${CrSbBattingDetails.status}</td>
+						</tr>
+					</c:forEach>
+				</tbody>
+			</table>
+		</div>
+		<div id="table root">
+			<table class = bowl-table>
+				<thead>
+					<tr>
+						<th>Team</th>
+						<th>Name</th>
+						<th>Overs</th>
+						<th>Wickets</th>
+						<th>Runs</th>
+						<th>Maiden</th>
+						<th>Economy</th>
+					</tr>
+				</thead>
+				<tbody>
+					<c:forEach var="CrSbBowlingDetails" items="${ball}">
+						<tr>
+							<td>${CrSbBowlingDetails.team}</td>
+							<td>${CrSbBowlingDetails.playername}</td>
+							<td>${CrSbBowlingDetails.overs}</td>
+							<td>${CrSbBowlingDetails.wickets}</td>
+							<td>${CrSbBowlingDetails.runs}</td>
+							<td>${CrSbBowlingDetails.maiden}</td>
+							<td>${CrSbBowlingDetails.economy}</td>
 						</tr>
 					</c:forEach>
 				</tbody>

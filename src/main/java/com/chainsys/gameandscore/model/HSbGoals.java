@@ -1,6 +1,5 @@
 package com.chainsys.gameandscore.model;
 
-import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,121 +14,97 @@ public class HSbGoals {
 	private int hgoalsid;
 	@Column(name = "game_id")
 	private int gameid;
-	@Column(name = "team")
-	private String team;
-	@Column(name = "player_name")
-	private String playername;
-	@Column(name = "goal_scored")
-	private int goalscored;
-	@Column(name = "time")
-	private Date time;
-	@Column(name = "fouls")
-	private int fouls;
-	@Column(name = "tackles")
-	private int tackles;
-	@Column(name = "assist")
-	private int assist;
-	@Column(name = "goal_attempt")
-	private int goalsattempt;
-	@Column(name = "penalty")
-	private int penalty;
-	@Column(name = "corners")
-	private int corners;
-
+	@Column(name = "team1")
+	private String team1;
+	@Column(name = "t1_shots")
+	private int t1shots;
+	@Column(name = "t1_hits")
+	private int t1hits;
+	@Column(name = "t1_totalpenalties")
+	private int t1totalpenalties;
+	@Column(name = "t1_blockedshots")
+	private int t1blockedshots;
+	@Column(name = "team2")
+	private String team2;
+	@Column(name = "t2_shots")
+	private int t2shots;
+	@Column(name = "t2_hits")
+	private int t2hits;
+	@Column(name = "t2_totalpenalties")
+	private int t2totalpenalties;
+	@Column(name = "t2_blockedshots")
+	private int t2blockedshots;
+	
 	public int getHgoalsid() {
 		return hgoalsid;
 	}
-
 	public void setHgoalsid(int hgoalsid) {
 		this.hgoalsid = hgoalsid;
 	}
-
 	public int getGameid() {
 		return gameid;
 	}
-
 	public void setGameid(int gameid) {
 		this.gameid = gameid;
 	}
-
-	public String getTeam() {
-		return team;
+	public String getTeam1() {
+		return team1;
 	}
-
-	public void setTeam(String team) {
-		this.team = team;
+	public void setTeam1(String team1) {
+		this.team1 = team1;
 	}
-
-	public String getPlayername() {
-		return playername;
+	public int getT1shots() {
+		return t1shots;
 	}
-
-	public void setPlayername(String playername) {
-		this.playername = playername;
+	public void setT1shots(int t1shots) {
+		this.t1shots = t1shots;
 	}
-
-	public int getGoalscored() {
-		return goalscored;
+	public int getT1hits() {
+		return t1hits;
 	}
-
-	public void setGoalscored(int goalscored) {
-		this.goalscored = goalscored;
+	public void setT1hits(int t1hits) {
+		this.t1hits = t1hits;
 	}
-
-	public Date getTime() {
-		return time;
+	public int getT1totalpenalties() {
+		return t1totalpenalties;
 	}
-
-	public void setTime(Date time) {
-		this.time = time;
+	public void setT1totalpenalties(int t1totalpenalties) {
+		this.t1totalpenalties = t1totalpenalties;
 	}
-
-	public int getFouls() {
-		return fouls;
+	public int getT1blockedshots() {
+		return t1blockedshots;
 	}
-
-	public void setFouls(int fouls) {
-		this.fouls = fouls;
+	public void setT1blockedshots(int t1blockedshots) {
+		this.t1blockedshots = t1blockedshots;
 	}
-
-	public int getTackles() {
-		return tackles;
+	public String getTeam2() {
+		return team2;
 	}
-
-	public void setTackles(int tackles) {
-		this.tackles = tackles;
+	public void setTeam2(String team2) {
+		this.team2 = team2;
 	}
-
-	public int getAssist() {
-		return assist;
+	public int getT2shots() {
+		return t2shots;
 	}
-
-	public void setAssist(int assist) {
-		this.assist = assist;
+	public void setT2shots(int t2shots) {
+		this.t2shots = t2shots;
 	}
-
-	public int getGoalsattempt() {
-		return goalsattempt;
+	public int getT2hits() {
+		return t2hits;
 	}
-
-	public void setGoalsattempt(int goalsattempt) {
-		this.goalsattempt = goalsattempt;
+	public void setT2hits(int t2hits) {
+		this.t2hits = t2hits;
 	}
-
-	public int getPenalty() {
-		return penalty;
+	public int getT2totalpenalties() {
+		return t2totalpenalties;
 	}
-
-	public void setPenalty(int penalty) {
-		this.penalty = penalty;
+	public void setT2totalpenalties(int t2totalpenalties) {
+		this.t2totalpenalties = t2totalpenalties;
 	}
-
-	public int getCorners() {
-		return corners;
+	public int getT2blockedshots() {
+		return t2blockedshots;
 	}
-
-	public void setCorners(int corners) {
-		this.corners = corners;
+	public void setT2blockedshots(int t2blockedshots) {
+		this.t2blockedshots = t2blockedshots;
 	}
-
 }

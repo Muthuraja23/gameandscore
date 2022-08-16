@@ -22,31 +22,31 @@ table, th, td {
 		<table>
 			<thead>
 				<tr>
-					<th>Team</th>
-					<th>Name</th>
-					<th>Goals Scored</th>
-					<th>Time</th>
+					<th>Team1</th>
 					<th>Fouls</th>
-					<th>Tackles</th>
-					<th>Assist</th>
-					<th>Goal Attempts</th>
-					<th>Penalty</th>
+					<th>Yellow/Red Cards</th>
 					<th>Corners</th>
+					<th>Saves</th>
+					<th>Team2</th>
+					<th>Fouls</th>
+					<th>Yellow/Red Cards</th>
+					<th>Corners</th>
+					<th>Saves</th>
 				</tr>
 			</thead>
 			<tbody>
 				<c:forEach var="FbSbGoals" items="${allgoals}">
 					<tr>
-						<td>${FbSbGoals.team}</td>
-						<td>${FbSbGoals.playername}</td>
-						<td>${FbSbGoals.goalscored}</td>
-						<td>${FbSbGoals.time}</td>
-						<td>${FbSbGoals.fouls}</td>
-						<td>${FbSbGoals.tackles}</td>
-						<td>${FbSbGoals.assist}</td>
-						<td>${FbSbGoals.goalattempt}</td>
-						<td>${FbSbGoals.penalty}</td>
-						<td>${FbSbGoals.corners}</td>
+						<td>${FbSbGoals.team1}</td>
+						<td>${FbSbGoals.t1fouls}</td>
+						<td>${FbSbGoals.t1yrcards}</td>
+						<td>${FbSbGoals.t1corners}</td>
+						<td>${FbSbGoals.t1saves}</td>
+						<td>${FbSbGoals.team2}</td>
+						<td>${FbSbGoals.t2fouls}</td>
+						<td>${FbSbGoals.t2yrcards}</td>
+						<td>${FbSbGoals.t2corners}</td>
+						<td>${FbSbGoals.t2saves}</td>
 					</tr>
 				</c:forEach>
 			</tbody>

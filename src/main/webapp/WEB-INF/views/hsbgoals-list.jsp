@@ -22,31 +22,31 @@ table, th, td {
 		<table>
 			<thead>
 				<tr>
-					<th>Team</th>
-					<th>Name</th>
-					<th>Goals Scored</th>
-					<th>Time</th>
-					<th>Fouls</th>
-					<th>Tackles</th>
-					<th>Assist</th>
-					<th>Goals Attempt</th>
-					<th>Penalty</th>
-					<th>Corners</th>
+					<th>Team 1</th>
+					<th>Shots</th>
+					<th>Hits</th>
+					<th>Penalties</th>
+					<th>Blocked Shots</th>
+					<th>Team 2</th>
+					<th>Shots</th>
+					<th>Hits</th>
+					<th>Penalties</th>
+					<th>Blocked Shots</th>
 				</tr>
 			</thead>
 			<tbody>
 				<c:forEach var="HSbGoals" items="${allgoals}">
 					<tr>
-						<td>${HSbGoals.team}</td>
-						<td>${HSbGoals.playername}</td>
-						<td>${HSbGoals.goalscored}</td>
-						<td>${HSbGoals.time}</td>
-						<td>${HSbGoals.fouls}</td>
-						<td>${HSbGoals.tackles}</td>
-						<td>${HSbGoals.assist}</td>
-						<td>${HSbGoals.goalsattempt}</td>
-						<td>${HSbGoals.penalty}</td>
-						<td>${HSbGoals.corners}</td>
+						<td>${HSbGoals.team1}</td>
+						<td>${HSbGoals.t1shots}</td>
+						<td>${HSbGoals.t1hits}</td>
+						<td>${HSbGoals.t1totalpenalties}</td>
+						<td>${HSbGoals.t1blockedshots}</td>
+						<td>${HSbGoals.team2}</td>
+						<td>${HSbGoals.t2shots}</td>
+						<td>${HSbGoals.t2hits}</td>
+						<td>${HSbGoals.t2totalpenalties}</td>
+						<td>${HSbGoals.t2blockedshots}</td>
 					</tr>
 				</c:forEach>
 			</tbody>

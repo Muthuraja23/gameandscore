@@ -14,8 +14,8 @@ public class CrScoreboardService {
 
 	@Autowired
 	private CrScoreboardRepository rp;
-	public List<CrScoreboard> getScore(){
-	List <CrScoreboard> scoreboard = rp.findAll();
+	public List<CrScoreboard> getScore(int id){
+	List <CrScoreboard> scoreboard = rp.findByGameid(id);
 	return scoreboard;
 	}
 	public CrScoreboard save(CrScoreboard cs) {

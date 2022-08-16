@@ -22,12 +22,13 @@ public class GameController {
 
 	@GetMapping("/index")
 	public String index() {
+		
 		return "index";
 	}
 
 	@GetMapping("/getallgames")
-	public String getallgames(Model model) {
-		List<Game> gamelist = gmservice.getGame();
+	public String getallgames(@RequestParam("id")int sportsId,Model model) {
+		List<Game> gamelist = gmservice.getGame(sportsId);
 		model.addAttribute("allgames", gamelist);
 		return "game-list";
 	}
@@ -42,7 +43,7 @@ public class GameController {
 	@PostMapping("/add")
 	public String addnewsports(@ModelAttribute("addgame") Game gm) {
 		gmservice.save(gm);
-		return "Added Successfully";
+		return "redirect:/game/getallgames";
 	}
 
 	@GetMapping("/updateform")
@@ -59,7 +60,7 @@ public class GameController {
 	}
 
 	@GetMapping("/deletegame")
-	public String deletesgame(@RequestParam("gameid") int id) {
+	public String deleteGame(@RequestParam("gameid") int id) {
 		gmservice.deleteById(id);
 		return "Deleted";
 	}

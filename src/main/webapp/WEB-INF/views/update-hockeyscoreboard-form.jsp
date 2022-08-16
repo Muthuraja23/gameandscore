@@ -19,7 +19,7 @@
 			<form:form action="update" method="post"
 				modelAttribute="updatescore">
 				<div>
-					<label for="hscoreboardid">Hockey Scoreboard Id</label>
+					<label for="hscoreboardid">Hockey ScoreBoard Id</label>
 					<div>
 						<form:input path="hscoreboardid" />
 					</div>
@@ -31,27 +31,75 @@
 					</div>
 				</div>
 				<div>
-					<label for="matchbetween">Match Between</label>
+					<label for="team1">Team 1</label>
 					<div>
-						<form:input path="matchbetween" />
+						<form:input path="team1" />
 					</div>
 				</div>
 				<div>
-					<label for="team1score">Team 1 Score</label>
+					<label for="t1period1">1</label>
 					<div>
-						<form:input path="team1score" />
+						<form:input path="t1period1" />
 					</div>
 				</div>
 				<div>
-					<label for="team2score">Team 2 Score</label>
+					<label for="t1period2">2</label>
 					<div>
-						<form:input path="team2score" />
+						<form:input path="t1period2" />
 					</div>
 				</div>
 				<div>
-					<label for="result">Result</label>
+					<label for="t1period3">3</label>
 					<div>
-						<form:input path="result" />
+						<form:input path="t1period3" />
+					</div>
+				</div>
+				<div>
+					<label for="t1ot">OT</label>
+					<div>
+						<form:input path="t1ot" />
+					</div>
+				</div>
+				<div>
+					<label for="t1total">Total</label>
+					<div>
+						<form:input path="t1total" />
+					</div>
+				</div>
+				<div>
+					<label for="team2">Team 2</label>
+					<div>
+						<form:input path="team2" />
+					</div>
+				</div>
+				<div>
+					<label for="t2period1">1</label>
+					<div>
+						<form:input path="t2period1" />
+					</div>
+				</div>
+				<div>
+					<label for="t2period2">2</label>
+					<div>
+						<form:input path="t2period2" />
+					</div>
+				</div>
+				<div>
+					<label for="t2period3">3</label>
+					<div>
+						<form:input path="t2period3" />
+					</div>
+				</div>
+				<div>
+					<label for="t2ot">OT</label>
+					<div>
+						<form:input path="t2ot" />
+					</div>
+				</div>
+				<div>
+					<label for="t2total">Total</label>
+					<div>
+						<form:input path="t2total" />
 					</div>
 				</div>
 				<div>

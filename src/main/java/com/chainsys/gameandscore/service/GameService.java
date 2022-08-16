@@ -13,9 +13,8 @@ import com.chainsys.gameandscore.repository.GameRepository;
 public class GameService {
 	@Autowired
 	private GameRepository repo;
-	public List<Game> getGame() {
-		List<Game> gamelist = repo.findAll();
-		return gamelist;
+	public List<Game> getGame(int id) {
+		return repo.findBySportsid(id);
 	}
 	public Game save(Game gm) {
 		return repo.save(gm);

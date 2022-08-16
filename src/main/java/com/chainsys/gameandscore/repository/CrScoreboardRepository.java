@@ -14,5 +14,6 @@ public interface CrScoreboardRepository extends JpaRepository<CrScoreboard,Integ
 	CrScoreboard save(CrScoreboard cs);
 	void deleteById(int id);
 	List <CrScoreboard> findAll();
+	List<CrScoreboard> findByGameid(int id);
 	
 }

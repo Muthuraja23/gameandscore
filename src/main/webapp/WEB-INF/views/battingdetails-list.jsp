@@ -7,14 +7,7 @@
 <meta charset="ISO-8859-1">
 <title>Batting Score</title>
 <style>
-h1, h2, h3 {
-    text-align: center;
-}
-
-table, th, td {
-    border: 2px solid black;
-    border-collapse: collapse;
-}
+<%@ include file="css/navigationbar.css"%>
 </style>
 </head>
 <body>

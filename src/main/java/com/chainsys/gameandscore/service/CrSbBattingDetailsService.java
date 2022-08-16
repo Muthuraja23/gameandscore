@@ -26,7 +26,9 @@ public class CrSbBattingDetailsService {
 	public CrSbBattingDetails findById(int id) {
 		return rp.findById(id);
 	}
-
+	public List<CrSbBattingDetails> getCrSbBattingDetails(int id){
+		return rp.findByGameid(id);
+	}
 	@Transactional
 	public void deleteById(int id) {
 		rp.deleteById(id);

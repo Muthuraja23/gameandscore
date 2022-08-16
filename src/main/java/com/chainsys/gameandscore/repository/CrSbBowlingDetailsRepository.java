@@ -13,5 +13,5 @@ public interface CrSbBowlingDetailsRepository extends JpaRepository<CrSbBowlingD
 	CrSbBowlingDetails save(CrSbBowlingDetails bl);
 	void deleteById(int id);
 	List <CrSbBowlingDetails> findAll();
-
+	List<CrSbBowlingDetails> findByGameid(int id);
 }

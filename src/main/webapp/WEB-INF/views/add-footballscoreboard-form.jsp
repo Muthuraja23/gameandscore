@@ -18,7 +18,7 @@
 		<div id="form">
 			<form:form action="add" method="post" modelAttribute="addscore">
 				<div>
-					<label for="fbscoreboardid">Football Scoreboard Id</label>
+					<label for="fbscoreboardid">Football ScoreBoard Id</label>
 					<div>
 						<form:input path="fbscoreboardid" />
 					</div>

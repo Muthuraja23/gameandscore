@@ -22,19 +22,35 @@ table, th, td {
 		<table>
 			<thead>
 				<tr>
-					<th>Match</th>
-					<th>Team 1 Score</th>
-					<th>Team 2 Score</th>
-					<th>Result</th>
+					<th>Team 1</th>
+					<th>Period 1</th>
+					<th>Period 2</th>
+					<th>Period 3</th>
+					<th>OT</th>
+					<th>Total</th>
+					<th>Team 2</th>
+					<th>Period 1</th>
+					<th>Period 2</th>
+					<th>Period 3</th>
+					<th>OT</th>
+					<th>Total</th>
 				</tr>
 			</thead>
 			<tbody>
 				<c:forEach var="HockeyScoreboard" items="${score}">
 					<tr>
-						<td>${HockeyScoreboard.matchbetween}</td>
-						<td>${HockeyScoreboard.team1score}</td>
-						<td>${HockeyScoreboard.team2score}</td>
-						<td>${HockeyScoreboard.result}</td>
+						<td>${HockeyScoreboard.team1}</td>
+						<td>${HockeyScoreboard.t1period1}</td>
+						<td>${HockeyScoreboard.t1period2}</td>
+						<td>${HockeyScoreboard.t1period3}</td>
+						<td>${HockeyScoreboard.t1ot}</td>
+						<td>${HockeyScoreboard.t1total}</td>
+						<td>${HockeyScoreboard.team2}</td>
+						<td>${HockeyScoreboard.t2period1}</td>
+						<td>${HockeyScoreboard.t2period2}</td>
+						<td>${HockeyScoreboard.t2period3}</td>
+						<td>${HockeyScoreboard.t2ot}</td>
+						<td>${HockeyScoreboard.t2total}</td>
 					</tr>
 				</c:forEach>
 			</tbody>

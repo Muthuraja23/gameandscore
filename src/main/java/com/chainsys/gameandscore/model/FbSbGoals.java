@@ -1,6 +1,5 @@
 package com.chainsys.gameandscore.model;
 
-import java.security.Timestamp;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,30 +10,30 @@ import javax.persistence.Table;
 @Table(name = "fb_sb_goals")
 public class FbSbGoals {
 	@Id
+	@Column(name = "fb_goals_id")
 	private int fbgoalsid;
 	@Column(name = "game_id")
 	private int gameid;
-	@Column(name = "team")
-	private String team;
-	@Column(name = "player_name")
-	private String playername;
-	@Column(name = "goal_scored")
-	private int goalscored;
-	@Column(name = "time")
-	private Timestamp time;
-	@Column(name = "fouls")
-	private int fouls;
-	@Column(name = "tackles")
-	private int tackles;
-	@Column(name = "assist")
-	private int assist;
-	@Column(name = "goal_attempt")
-	private int goalattempt;
-	@Column(name = "penalty")
-	private int penalty;
-	@Column(name = "corners")
-	private int corners;
-	
+	@Column(name = "team1")
+	private String team1;
+	@Column(name = "t1_fouls")
+	private int t1fouls;
+	@Column(name = "t1_yr_cards")
+	private int t1yrcards;
+	@Column(name = "t1_corners")
+	private int t1corners;
+	@Column(name = "t1_saves")
+	private int t1saves;
+	@Column(name = "team2")
+	private String team2;
+	@Column(name = "t2_fouls")
+	private int t2fouls;
+	@Column(name = "t2_yr_cards")
+	private int t2yrcards;
+	@Column(name = "t2_corners")
+	private int t2corners;
+	@Column(name = "t2_saves")
+	private int t2saves;
 	public int getFbgoalsid() {
 		return fbgoalsid;
 	}
@@ -47,67 +46,67 @@ public class FbSbGoals {
 	public void setGameid(int gameid) {
 		this.gameid = gameid;
 	}
-	public String getTeam() {
-		return team;
+	public String getTeam1() {
+		return team1;
 	}
-	public void setTeam(String team) {
-		this.team = team;
+	public void setTeam1(String team1) {
+		this.team1 = team1;
 	}
-	public String getPlayername() {
-		return playername;
+	public int getT1fouls() {
+		return t1fouls;
 	}
-	public void setPlayername(String playername) {
-		this.playername = playername;
+	public void setT1fouls(int t1fouls) {
+		this.t1fouls = t1fouls;
 	}
-	public int getGoalscored() {
-		return goalscored;
+	public int getT1yrcards() {
+		return t1yrcards;
 	}
-	public void setGoalscored(int goalscored) {
-		this.goalscored = goalscored;
+	public void setT1yrcards(int t1yrcards) {
+		this.t1yrcards = t1yrcards;
 	}
-	public Timestamp getTime() {
-		return time;
+	public int getT1corners() {
+		return t1corners;
 	}
-	public void setTime(Timestamp time) {
-		this.time = time;
+	public void setT1corners(int t1corners) {
+		this.t1corners = t1corners;
 	}
-	public int getFouls() {
-		return fouls;
+	public int getT1saves() {
+		return t1saves;
 	}
-	public void setFouls(int fouls) {
-		this.fouls = fouls;
+	public void setT1saves(int t1saves) {
+		this.t1saves = t1saves;
 	}
-	public int getTackles() {
-		return tackles;
+	public String getTeam2() {
+		return team2;
 	}
-	public void setTackles(int tackles) {
-		this.tackles = tackles;
+	public void setTeam2(String team2) {
+		this.team2 = team2;
 	}
-	public int getAssist() {
-		return assist;
+	public int getT2fouls() {
+		return t2fouls;
 	}
-	public void setAssist(int assist) {
-		this.assist = assist;
+	public void setT2fouls(int t2fouls) {
+		this.t2fouls = t2fouls;
 	}
-	public int getGoalattempt() {
-		return goalattempt;
+	public int getT2yrcards() {
+		return t2yrcards;
 	}
-	public void setGoalattempt(int goalattempt) {
-		this.goalattempt = goalattempt;
+	public void setT2yrcards(int t2yrcards) {
+		this.t2yrcards = t2yrcards;
 	}
-	public int getPenalty() {
-		return penalty;
+	public int getT2corners() {
+		return t2corners;
 	}
-	public void setPenalty(int penalty) {
-		this.penalty = penalty;
+	public void setT2corners(int t2corners) {
+		this.t2corners = t2corners;
 	}
-	public int getCorners() {
-		return corners;
+	public int getT2saves() {
+		return t2saves;
 	}
-	public void setCorners(int corners) {
-		this.corners = corners;
+	public void setT2saves(int t2saves) {
+		this.t2saves = t2saves;
 	}
 	
 	
-
+	
 }

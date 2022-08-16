@@ -13,5 +13,5 @@ public interface CrSbBattingDetailsRepository extends JpaRepository<CrSbBattingD
 	CrSbBattingDetails save(CrSbBattingDetails bd);
 	void deleteById(int id);
 	List <CrSbBattingDetails> findAll();
-
+	List<CrSbBattingDetails> findByGameid(int id);
 }

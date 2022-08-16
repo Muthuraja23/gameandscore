@@ -23,6 +23,9 @@ public class CrSbBowlingDetailsService {
 		public CrSbBowlingDetails findById(int id) {
 			return rp.findById(id);
 			}
+		public List<CrSbBowlingDetails> getBowlingByGameId(int id){
+			return rp.findByGameid(id);
+		}
 	@Transactional
 	public void deleteById(int id) {
 		rp.deleteById(id);

@@ -30,63 +30,63 @@
 					</div>
 				</div>
 				<div>
-					<label for="teamname">Team</label>
+					<label for="team1">Team 1</label>
 					<div>
-						<form:input path="teamname" />
+						<form:input path="team1" />
 					</div>
 				</div>
 				<div>
-					<label for="playername">Player Name</label>
+					<label for="t1shots">Shots</label>
 					<div>
-						<form:input path="playername" />
+						<form:input path="t1shots" />
 					</div>
 				</div>
 				<div>
-					<label for="goalscored">Goals Scored</label>
+					<label for="t1hits">Hits</label>
 					<div>
-						<form:input path="goalscored" />
+						<form:input path="t1hits" />
 					</div>
 				</div>
 				<div>
-					<label for="time">Time</label>
+					<label for="t1totalpenalties">Penalties</label>
 					<div>
-						<form:input path="time" />
+						<form:input path="t1totalpenalties" />
 					</div>
 				</div>
 				<div>
-					<label for="fouls">Fouls</label>
+					<label for="t1blockedshots">Blocked Shots</label>
 					<div>
-						<form:input path="fouls" />
+						<form:input path="t1blockedshots" />
 					</div>
 				</div>
 				<div>
-					<label for="tackles">Tackles</label>
+					<label for="team2">Team 2</label>
 					<div>
-						<form:input path="tackles" />
+						<form:input path="team2" />
 					</div>
 				</div>
 				<div>
-					<label for="assist">Assist</label>
+					<label for="t2shots">Shots</label>
 					<div>
-						<form:input path="assist" />
+						<form:input path="t2shots" />
 					</div>
 				</div>
 				<div>
-					<label for="goalsattempt">Goal Attempts</label>
+					<label for="t2hits">Hits</label>
 					<div>
-						<form:input path="goalsattempt" />
+						<form:input path="t2hits" />
 					</div>
 				</div>
 				<div>
-					<label for="penalty">Penalty</label>
+					<label for="t2totalpenalties">Penalties</label>
 					<div>
-						<form:input path="penalty" />
+						<form:input path="t2totalpenalties" />
 					</div>
 				</div>
 				<div>
-					<label for="corners">Corners</label>
+					<label for="t2blockedshots">Blocked Shots</label>
 					<div>
-						<form:input path="corners" />
+						<form:input path="t2blockedshots" />
 					</div>
 				</div>
 				<div>

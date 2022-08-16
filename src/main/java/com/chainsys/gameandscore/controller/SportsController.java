@@ -43,7 +43,6 @@ public class SportsController {
         model.addAttribute("updatesports", s);
         return "update-sports-form";
     }
-
     @PostMapping("/updatesports")
     public String updatesports(@ModelAttribute("updatesports") Sports s) {
     	spservice.save(s);
@@ -54,11 +53,4 @@ public class SportsController {
     	spservice.deleteById(id);
         return "redirect:/sports/getallsports";
     }
-	/*
-	 * @GetMapping("/getsportsgame") public String
-	 * getSportsGame(@RequestParam("id")int id,Model model ) { SportsGameDto
-	 * dto=spservice.getSportsGameDto(id);
-	 * model.addAttribute("getsportsid",dto.getSports());
-	 * model.addAttribute("getgamelist",dto.getGameList()); return "sports-game"; }
-	 */
 }

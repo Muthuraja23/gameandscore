@@ -1,23 +1,22 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-	<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html lang=en>
 <head>
 <meta charset="ISO-8859-1">
-<title>Update FbSbGoals</title>
+<title>Add FbSbGoals</title>
 <style>
 .text-danger {
-    color: #e80c4d;
-    font-size: 0.9em;
+	color: #e80c4d;
+	font-size: 0.9em;
 }
 </style>
 </head>
 <body>
 	<div id="root">
 		<div id="form">
-			<form:form action="add" method="post"
-				modelAttribute="addgoal">
+			<form:form action="add" method="post" modelAttribute="addgoal">
 				<div>
 					<label for="fbgoalsid">Football Goal Id</label>
 					<div>
@@ -31,70 +30,68 @@
 					</div>
 				</div>
 				<div>
-					<label for="team">Team</label>
+					<label for="team1">Team1</label>
 					<div>
-						<form:input path="team" />
+						<form:input path="team1" />
 					</div>
 				</div>
 				<div>
-					<label for="playername">Player Name</label>
+					<label for="t1fouls">Fouls</label>
 					<div>
-						<form:input path="playername" />
+						<form:input path="t1fouls" />
 					</div>
 				</div>
 				<div>
-					<label for="goalscored">Goals Scored</label>
+					<label for="t1yrcards">Yellow/Red Cards</label>
 					<div>
-						<form:input path="goalscored" />
+						<form:input path="t1yrcards" />
 					</div>
 				</div>
 				<div>
-					<label for="time">Time</label>
+					<label for="t1corners">Corners</label>
 					<div>
-						<form:input path="time" />
+						<form:input path="t1corners" />
 					</div>
 				</div>
 				<div>
-					<label for="fouls">Fouls</label>
+					<label for="t1saves">Saves</label>
 					<div>
-						<form:input path="fouls" />
+						<form:input path="t1saves" />
 					</div>
 				</div>
+				<label for="team2">Team2</label>
 				<div>
-					<label for="tackles">Tackles</label>
-					<div>
-						<form:input path="tackles" />
-					</div>
+					<form:input path="team2" />
 				</div>
-				<div>
-					<label for="assist">Assist</label>
-					<div>
-						<form:input path="assist" />
-					</div>
-				</div>
-				<div>
-					<label for="goalattempt">Goal Attempts</label>
-					<div>
-						<form:input path="goalattempt" />
-					</div>
-				</div>
-				<div>
-					<label for="penalty">Penalty</label>
-					<div>
-						<form:input path="penalty" />
-					</div>
-				</div>
-				<div>
-					<label for="corners">Corners</label>
-					<div>
-						<form:input path="corners" />
-					</div>
-				</div>
-				<div>
-					<form:button>Add</form:button>
-				</div>
-			</form:form>
 		</div>
+		<div>
+			<label for="t2fouls">Fouls</label>
+			<div>
+				<form:input path="t2fouls" />
+			</div>
+		</div>
+		<div>
+			<label for="t2yrcards">Yellow/Red Cards</label>
+			<div>
+				<form:input path="t2yrcards" />
+			</div>
+		</div>
+		<div>
+			<label for="t2corners">Corners</label>
+			<div>
+				<form:input path="t2corners" />
+			</div>
+		</div>
+		<div>
+			<label for="t2saves">Saves</label>
+			<div>
+				<form:input path="t2saves" />
+			</div>
+		</div>
+		<div>
+			<form:button>Add</form:button>
+		</div>
+		</form:form>
 	</div>
 </body>
 </html>
