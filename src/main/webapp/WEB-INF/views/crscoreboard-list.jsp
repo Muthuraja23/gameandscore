@@ -13,16 +13,6 @@
 </head>
 <body>
 	<div id="table root">
-		<h1></h1>
-		<div>
-			<ul class="topnav">
-				<li><a class="active" href="/game/index">Home</a></li>
-				<li><a href="/game/getallgames">Cricket</a></li>
-				<li><a href="/football/getscore">Football</a></li>
-				<li><a href="/hockey/getscore">Hockey</a></li>
-				<li class="right"><a href="home">Menu</a></li>
-			</ul>
-			<div style="padding: 0 16px;"></div>
 			<table class=content-table>
 				<thead>
 					<tr>
