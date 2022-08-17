@@ -41,6 +41,7 @@
 		</div>
 		<div id="table root">
 			<table class = bat-table>
+			<caption></caption>
 				<thead>
 					<tr>
 						<th>Team</th>
@@ -71,6 +72,7 @@
 		</div>
 		<div id="table root">
 			<table class = bowl-table>
+			<caption></caption>
 				<thead>
 					<tr>
 						<th>Team</th>

@@ -30,9 +30,9 @@ opacity: 0.75;
 	
 	<form:form action="" method="get" modelAttribute="space">
 		<div class="w3-content-width w3-sections">
-			<img class="mySlides" src="https://media.istockphoto.com/photos/cricket-leather-ball-resting-on-bat-on-the-stadium-pitch-picture-id1255328634?b=1&k=20&m=1255328634&s=170667a&w=0&h=kPODQbM_ZecfQOPipjG-iTfyvDwrlx6CQwECg2iGvQg="style="width: 100%">
-			<img class="mySlides" src="https://images.pexels.com/photos/46798/the-ball-stadion-football-the-pitch-46798.jpeg" style="width: 100%"> 
-			<img class="mySlides" src="https://wallpaperaccess.com/full/2051794.jpg" style="width: 100%">
+			<img class="mySlides" src="https://media.istockphoto.com/photos/cricket-leather-ball-resting-on-bat-on-the-stadium-pitch-picture-id1255328634?b=1&k=20&m=1255328634&s=170667a&w=0&h=kPODQbM_ZecfQOPipjG-iTfyvDwrlx6CQwECg2iGvQg=" alt="" style="width: 100%">
+			<img class="mySlides" src="https://images.pexels.com/photos/46798/the-ball-stadion-football-the-pitch-46798.jpeg" alt="" style="width: 100%"> 
+			<img class="mySlides" src="https://wallpaperaccess.com/full/2051794.jpg" alt="" style="width: 100%">
 		</div>
 	</form:form>
 	<script>
