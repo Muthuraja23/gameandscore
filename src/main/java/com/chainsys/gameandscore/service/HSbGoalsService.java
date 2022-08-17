@@ -13,18 +13,24 @@ import com.chainsys.gameandscore.repository.HSbGoalsRepository;
 public class HSbGoalsService {
 	@Autowired
 	private HSbGoalsRepository rp;
-	public List<HSbGoals> getHgoals(){
-	List <HSbGoals> goallist = rp.findAll();
-	return goallist;
+
+	public List<HSbGoals> getHgoals() {
+		List<HSbGoals> goallist = rp.findAll();
+		return goallist;
 	}
+
 	public HSbGoals save(HSbGoals hky) {
 		return rp.save(hky);
 	}
+
 	public HSbGoals findById(int id) {
 		return rp.findById(id);
-		}
-@Transactional
-public void deleteById(int id) {
-	rp.deleteById(id);
-}
+	}
+	public List<HSbGoals> getGoalsByGameId(int id){
+		return rp.findByGameid(id);
+	}
+
+	public void deleteById(int id) {
+		rp.deleteById(id);
+	}
 }

@@ -5,7 +5,7 @@
 <html lang=en>
 <head>
 <meta charset="ISO-8859-1">
-<title>Football Scoreboard List</title>
+<title>Football ScoreBoard List</title>
 <style>
 <%@ include file = "css/table.css" %>
 </style>
@@ -13,6 +13,7 @@
 <body>
 	<div id="table root">
 		<table class=football>
+		<caption></caption>
 			<thead>
 				<tr>
 					<th>Match</th>
@@ -28,6 +29,41 @@
 						<td>${FootballScoreboard.team1score}</td>
 						<td>${FootballScoreboard.team2score}</td>
 						<td>${FootballScoreboard.result}</td>
+					</tr>
+				</c:forEach>
+			</tbody>
+		</table>
+	</div>
+	<div id="table root">
+		<table class=fgoals>
+		<caption></caption>
+			<thead>
+				<tr>
+					<th>Team1</th>
+					<th>Fouls</th>
+					<th>Yellow/Red Cards</th>
+					<th>Corners</th>
+					<th>Saves</th>
+					<th>Team2</th>
+					<th>Fouls</th>
+					<th>Yellow/Red Cards</th>
+					<th>Corners</th>
+					<th>Saves</th>
+				</tr>
+			</thead>
+			<tbody>
+				<c:forEach var="FbSbGoals" items="${goals}">
+					<tr>
+						<td>${FbSbGoals.team1}</td>
+						<td>${FbSbGoals.t1fouls}</td>
+						<td>${FbSbGoals.t1yrcards}</td>
+						<td>${FbSbGoals.t1corners}</td>
+						<td>${FbSbGoals.t1saves}</td>
+						<td>${FbSbGoals.team2}</td>
+						<td>${FbSbGoals.t2fouls}</td>
+						<td>${FbSbGoals.t2yrcards}</td>
+						<td>${FbSbGoals.t2corners}</td>
+						<td>${FbSbGoals.t2saves}</td>
 					</tr>
 				</c:forEach>
 			</tbody>

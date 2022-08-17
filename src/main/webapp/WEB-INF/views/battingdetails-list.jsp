@@ -13,6 +13,7 @@
 <body>
 	<div id="table root">
 		<table>
+		<caption></caption>
 			<thead>
 				<tr>
 					<th>Team</th>

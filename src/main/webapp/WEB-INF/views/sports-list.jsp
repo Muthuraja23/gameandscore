@@ -11,6 +11,7 @@
 	<h1>Sports List</h1>
 	<div id="table root">
 		<table>
+		<caption></caption>
 			<thead>
 				<tr>
 					<th>Sports Name</th>

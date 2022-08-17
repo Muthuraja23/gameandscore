@@ -1,8 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
-<html>
+<html lang=en>
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
@@ -51,6 +52,7 @@
 				<form:input path="t1saves" />
 			</div>
 		</div>
+		<div>
 		<label for="team2">Team2</label>
 		<div>
 			<form:input path="team2" />
@@ -83,6 +85,7 @@
 	</form:form>
 	<div id="table root">
 		<table>
+			<caption></caption>
 			<thead>
 				<tr>
 					<th>Id</th>

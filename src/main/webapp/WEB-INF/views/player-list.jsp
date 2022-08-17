@@ -20,6 +20,7 @@ table, th, td {
 <body>
 	<div id="table root">
 		<table>
+		<caption></caption>
 			<thead>
 				<tr>
 					<th>Name</th>

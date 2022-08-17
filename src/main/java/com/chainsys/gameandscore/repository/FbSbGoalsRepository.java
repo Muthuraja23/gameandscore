@@ -12,5 +12,6 @@ public interface FbSbGoalsRepository extends JpaRepository<FbSbGoals,Integer>{
 	FbSbGoals save(FbSbGoals fb);
 	void deleteById(int id);
 	List <FbSbGoals> findAll();
+	List <FbSbGoals> findByGameid(int id);
 
 }

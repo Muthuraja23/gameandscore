@@ -7,19 +7,12 @@
 <meta charset="ISO-8859-1">
 <title>Hockey Goals List</title>
 <style>
-h1, h2, h3 {
-    text-align: center;
-}
-
-table, th, td {
-    border: 2px solid black;
-    border-collapse: collapse;
-}
 </style>
 </head>
 <body>
 	<div id="table root">
 		<table>
+		<caption></caption>
 			<thead>
 				<tr>
 					<th>Team 1</th>

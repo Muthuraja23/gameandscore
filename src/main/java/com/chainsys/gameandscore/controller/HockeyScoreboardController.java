@@ -12,7 +12,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.chainsys.gameandscore.model.HSbGoals;
 import com.chainsys.gameandscore.model.HockeyScoreboard;
+import com.chainsys.gameandscore.service.HSbGoalsService;
 import com.chainsys.gameandscore.service.HockeyScoreboardService;
 
 
@@ -21,11 +23,15 @@ import com.chainsys.gameandscore.service.HockeyScoreboardService;
 public class HockeyScoreboardController {
 	@Autowired
 	private HockeyScoreboardService hsservice;
-
+	@Autowired
+	private HSbGoalsService hsgservice;
+	
 	@GetMapping("/getscore")
 	public String getHscore(@RequestParam("id") int gameId,Model model) {
 		List<HockeyScoreboard> hscore = hsservice.gethscoreboard(gameId);
 		model.addAttribute("score", hscore);
+		List<HSbGoals> goallist = hsgservice.getGoalsByGameId(gameId);
+		model.addAttribute("goals", goallist);
 		return "hockeyscoreboard-list";
 	}
 @GetMapping("/addform")

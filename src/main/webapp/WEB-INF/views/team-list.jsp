@@ -108,6 +108,7 @@ div {
 
 	<div id="table root">
 		<table class=content-table>
+		<caption></caption>
 			<thead>
 				<tr>
 					<th>Team Name</th>

@@ -14,6 +14,7 @@
 <body>
 	<div id="table root">
 			<table class=content-table>
+			<caption></caption>
 				<thead>
 					<tr>
 						<th>Match</th>

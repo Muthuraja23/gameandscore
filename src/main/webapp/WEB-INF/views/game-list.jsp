@@ -9,6 +9,7 @@
 <style>
 <%@ include file="css/navigationbar.css"%>
 <%@ include file="css/table.css"%>
+<%@ include file="css/footer.css"%>
 </style>
 </head>
 <body>
@@ -17,11 +18,12 @@
 		<li><a href="/game/getallgames?id=1">Cricket</a></li>
 		<li><a href="/game/getallgames?id=2">Football</a></li>
 		<li><a href="/game/getallgames?id=3">Hockey</a></li>
-		<li class="right"><a href="/team/getallteams">Menu</a></li>
+		<li class="right"><a href="/team/getallteams">Teams</a></li>
 	</ul>
 	<div style="padding: 0 16px;"></div>
 	<div id="table root">
 		<table class=content-table>
+		<caption></caption>
 			<thead>
 				<tr>
 					<th>Game</th>

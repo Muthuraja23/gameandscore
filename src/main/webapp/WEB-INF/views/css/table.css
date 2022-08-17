@@ -2,7 +2,10 @@
 table.center, 
 .bat-table, 
 .bowl-table, 
-.football {
+.football,
+.fgoals,
+.hockey,
+.hgoals{
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -14,7 +17,10 @@ div {
 .content-table,
  .bat-table, 
  .bowl-table,
- .football {
+ .football, 
+ .fgoals,
+ .hockey,
+ .hgoals{
 	border-collapse: collapse;
 	margin: 25px 0;
 	font-size: 0.9em;
@@ -24,7 +30,10 @@ div {
 .content-table thead tr, 
 .bat-table thead tr, 
 .bowl-table thead tr, 
-.football thead tr {
+.football thead tr,
+.fgoals thead tr,
+.hockey thead tr,
+.hgoals thead tr{
 	background-color: #04AA6D;
 	color: white;
 	text-align: left;
@@ -34,27 +43,39 @@ div {
 .content-table th, .content-table td, 
 .bat-table th, .bat-table td, 
 .bowl-table th, .bowl-table td, 
-.football th, .football td {
+.football th, .football td, 
+.fgoals th, .fgoals td,
+.hockey th, .hockey td,
+.hgoals th, .hgoals td{
 	padding: 12px 15px;
 }
 
 .content-table tbody tr, 
 .bat-table tbody tr, 
 .bowl-table tbody tr, 
-.football tbody tr {
+.football tbody tr, 
+.fgoals tbody tr,
+.hockey tbody tr,
+.hgoals tbody tr{
 	border-bottom: 1px solid #dddddd;
 }
 
 .content-table tbody tr:nth-of-type(even), 
 .bat-table tbody tr:nth-of-type(even), 
 .bowl-table tbody tr:nth-of-type(even), 
-.football tbody tr:nth-of-type(even){
+.football tbody tr:nth-of-type(even),
+.fgoals tbody tr:nth-of-type(even),
+.hockey tbody tr:nth-of-type(even),
+.hgoals tbody tr:nth-of-type(even){
 	background-color: #f3f3f3;
 }
 
 .content-table tbody tr:last-of-type 
 .bat-table tbody tr:last-of-type, 
 .bowl-table tbody tr:last-of-type, 
-.football tbody tr:last-of-type {
+.football tbody tr:last-of-type, 
+.fgoals tbody tr:last-of-type,
+.hockey tbody tr:last-of-type,
+.hgoals tbody tr:last-of-type{
 	border-bottom: 2px solid #04AA6D;
 }

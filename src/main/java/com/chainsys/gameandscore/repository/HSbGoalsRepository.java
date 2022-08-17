@@ -14,4 +14,5 @@ public interface HSbGoalsRepository extends JpaRepository<HSbGoals,Integer>{
 	HSbGoals save(HSbGoals hky);
 	void deleteById(int id);
 	List <HSbGoals> findAll();
+	List <HSbGoals> findByGameid(int id);
 }

@@ -7,19 +7,13 @@
 <meta charset="ISO-8859-1">
 <title>Hockey ScoreBoard List</title>
 <style>
-h1, h2, h3 {
-    text-align: center;
-}
-
-table, th, td {
-    border: 2px solid black;
-    border-collapse: collapse;
-}
+<%@ include file = "css/table.css"%>
 </style>
 </head>
 <body>
 	<div id="table root">
-		<table>
+		<table class = hockey>
+		<caption></caption>
 			<thead>
 				<tr>
 					<th>Team 1</th>
@@ -51,6 +45,41 @@ table, th, td {
 						<td>${HockeyScoreboard.t2period3}</td>
 						<td>${HockeyScoreboard.t2ot}</td>
 						<td>${HockeyScoreboard.t2total}</td>
+					</tr>
+				</c:forEach>
+			</tbody>
+		</table>
+	</div>
+	<div id="table root">
+		<table class=hgoals>
+		<caption></caption>
+			<thead>
+				<tr>
+					<th>Team 1</th>
+					<th>Shots</th>
+					<th>Hits</th>
+					<th>Penalties</th>
+					<th>Blocked Shots</th>
+					<th>Team 2</th>
+					<th>Shots</th>
+					<th>Hits</th>
+					<th>Penalties</th>
+					<th>Blocked Shots</th>
+				</tr>
+			</thead>
+			<tbody>
+				<c:forEach var="HSbGoals" items="${goals}">
+					<tr>
+						<td>${HSbGoals.team1}</td>
+						<td>${HSbGoals.t1shots}</td>
+						<td>${HSbGoals.t1hits}</td>
+						<td>${HSbGoals.t1totalpenalties}</td>
+						<td>${HSbGoals.t1blockedshots}</td>
+						<td>${HSbGoals.team2}</td>
+						<td>${HSbGoals.t2shots}</td>
+						<td>${HSbGoals.t2hits}</td>
+						<td>${HSbGoals.t2totalpenalties}</td>
+						<td>${HSbGoals.t2blockedshots}</td>
 					</tr>
 				</c:forEach>
 			</tbody>

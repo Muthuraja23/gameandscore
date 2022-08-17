@@ -12,7 +12,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.chainsys.gameandscore.model.FbSbGoals;
 import com.chainsys.gameandscore.model.FootballScoreboard;
+import com.chainsys.gameandscore.service.FbSbGoalsService;
 import com.chainsys.gameandscore.service.FootballScoreboardService;
 
 @Controller
@@ -20,11 +22,15 @@ import com.chainsys.gameandscore.service.FootballScoreboardService;
 public class FootballScoreboardController {
 	@Autowired
 	private FootballScoreboardService fsservice;
+	@Autowired
+	private FbSbGoalsService fsgservice;
 
 	@GetMapping("/getscore")
 	public String getFbscore(@RequestParam("id")int gameId,Model model) {
 		List<FootballScoreboard> fbscore = fsservice.findByGameId(gameId);
 		model.addAttribute("score", fbscore);
+		List<FbSbGoals> goallist = fsgservice.getGoalsByGameId(gameId);
+		model.addAttribute("goals", goallist);
 		return "footballscoreboard-list";
 	}
 @GetMapping("/addform")
