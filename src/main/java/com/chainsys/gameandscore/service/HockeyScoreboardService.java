@@ -17,8 +17,8 @@ public class HockeyScoreboardService {
 
 	@Autowired
 	private HockeyScoreboardRepository rp;
-	public List<HockeyScoreboard> gethscoreboard(){
-	List <HockeyScoreboard> hsb = rp.findAll();
+	public List<HockeyScoreboard> gethscoreboard(int id){
+	List <HockeyScoreboard> hsb = rp.findByGameid(id);
 	return hsb;
 	}
 	public HockeyScoreboard save(HockeyScoreboard hs) {

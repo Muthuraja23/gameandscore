@@ -22,8 +22,8 @@ public class FootballScoreboardController {
 	private FootballScoreboardService fsservice;
 
 	@GetMapping("/getscore")
-	public String getFbscore(Model model) {
-		List<FootballScoreboard> fbscore = fsservice.getfbscoreboard();
+	public String getFbscore(@RequestParam("id")int gameId,Model model) {
+		List<FootballScoreboard> fbscore = fsservice.findByGameId(gameId);
 		model.addAttribute("score", fbscore);
 		return "footballscoreboard-list";
 	}

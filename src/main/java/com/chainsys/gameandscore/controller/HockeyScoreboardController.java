@@ -23,8 +23,8 @@ public class HockeyScoreboardController {
 	private HockeyScoreboardService hsservice;
 
 	@GetMapping("/getscore")
-	public String getHscore(Model model) {
-		List<HockeyScoreboard> hscore = hsservice.gethscoreboard();
+	public String getHscore(@RequestParam("id") int gameId,Model model) {
+		List<HockeyScoreboard> hscore = hsservice.gethscoreboard(gameId);
 		model.addAttribute("score", hscore);
 		return "hockeyscoreboard-list";
 	}

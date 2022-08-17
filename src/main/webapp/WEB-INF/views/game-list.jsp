@@ -34,7 +34,7 @@
 					<tr>
 						<td>${Game.gamebetween}</td>
 						<td>${Game.dateandtime}</td>
-						<td><a href="/cricket/getscore?id=${Game.gameid}">${Game.result}</a></td>
+						<td><a href="/game/directioncontroll?id=${Game.gameid}">${Game.result}</a></td>
 					</tr>
 				</c:forEach>
 			</tbody>

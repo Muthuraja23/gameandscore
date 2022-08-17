@@ -23,7 +23,11 @@ public class FootballScoreboardService {
 	public FootballScoreboard findById(int id) {
 		return rp.findById(id);
 		}
-@Transactional
+	public List<FootballScoreboard> findByGameId(int id){
+		return rp.findByGameid(id);
+	}
+
+	
 public void deleteById(int id) {
 	rp.deleteById(id);
 }

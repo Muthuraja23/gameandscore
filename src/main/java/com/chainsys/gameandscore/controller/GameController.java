@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.chainsys.gameandscore.dto.GameFootBallDTO;
 import com.chainsys.gameandscore.model.Game;
 import com.chainsys.gameandscore.service.GameService;
 
@@ -18,8 +19,7 @@ import com.chainsys.gameandscore.service.GameService;
 @RequestMapping("/game")
 public class GameController {
 	@Autowired
-	public GameService gmservice;
-
+	private GameService gmservice;
 	@GetMapping("/index")
 	public String index() {
 		
@@ -32,7 +32,22 @@ public class GameController {
 		model.addAttribute("allgames", gamelist);
 		return "game-list";
 	}
-
+	@GetMapping("/directioncontroll")
+	public String directionScoreBoard(@RequestParam("id")int gameId,Model model) {
+		Game game=gmservice.findById(gameId);
+		if(game.getSportsid()==1) {
+			return "redirect:/cricket/getscore?id="+gameId;
+		}
+		else if(game.getSportsid()==2) {
+			return "redirect:/football/getscore?id="+gameId;
+		}
+		else if(game.getSportsid()==3) {
+			return "redirect:/hockey/getscore?id="+gameId;
+		}
+		else {
+			return "redirect:/game/getallgames?id="+gameId;
+		}
+	}
 	@GetMapping("addform")
 	public String gameAddForm(Model model) {
 		Game g = new Game();
@@ -65,4 +80,11 @@ public class GameController {
 		return "Deleted";
 	}
 
+	@GetMapping("/getfootballscoreboard")
+	public String getGamScoreBoard(@RequestParam("id") int id, Model model) {
+		GameFootBallDTO  dto = gmservice.getGameFootBall(id);
+		model.addAttribute("getGame",dto.getGame());
+		model.addAttribute("getScoreboardlist", dto.getFootballScoreboards());
+		return "game-scoreboard-list";
+	}
 }

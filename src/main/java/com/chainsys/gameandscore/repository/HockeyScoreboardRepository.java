@@ -14,5 +14,6 @@ public interface HockeyScoreboardRepository extends JpaRepository<HockeyScoreboa
 	HockeyScoreboard save(HockeyScoreboard hs);
 	void deleteById(int id);
 	List <HockeyScoreboard> findAll();
+	List<HockeyScoreboard> findByGameid(int id);
 
 }

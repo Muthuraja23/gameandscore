@@ -13,5 +13,6 @@ public interface FootballScoreboardRepository extends JpaRepository<FootballScor
 	FootballScoreboard save(FootballScoreboard fs);
 	void deleteById(int id);
 	List <FootballScoreboard> findAll();
+	List<FootballScoreboard> findByGameid(int id);
 
 }
