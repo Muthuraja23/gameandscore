@@ -23,6 +23,7 @@ opacity: 0.75;
 			<li><a href="/game/getallgames?id=1">Cricket</a></li>
 			<li><a href="/game/getallgames?id=2">Football</a></li>
 			<li><a href="/game/getallgames?id=3">Hockey</a></li>
+			<li class="right"><a href="/login">Admin</a></li>
 			<li class="right"><a href="/team/getallteams">Teams</a></li>
 		</ul>
 		<div style="padding: 0 16px;"></div>
@@ -49,7 +50,7 @@ opacity: 0.75;
 				myIndex = 1
 			}
 			x[myIndex - 1].style.display = "block";
-			setTimeout(carousel, 2000); // Change image every 2 seconds
+			setTimeout(carousel, 5000); // Change image every 5 seconds
 		}
 	</script>
 	<footer class=footer>

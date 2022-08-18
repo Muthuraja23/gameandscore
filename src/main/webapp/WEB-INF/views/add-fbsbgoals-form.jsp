@@ -59,39 +59,41 @@
 						<form:input path="t1saves" />
 					</div>
 				</div>
-				<label for="team2">Team2</label>
 				<div>
-					<form:input path="team2" />
+					<label for="team2">Team2</label>
+					<div>
+						<form:input path="team2" />
+					</div>
 				</div>
+				<div>
+					<label for="t2fouls">Fouls</label>
+					<div>
+						<form:input path="t2fouls" />
+					</div>
+				</div>
+				<div>
+					<label for="t2yrcards">Yellow/Red Cards</label>
+					<div>
+						<form:input path="t2yrcards" />
+					</div>
+				</div>
+				<div>
+					<label for="t2corners">Corners</label>
+					<div>
+						<form:input path="t2corners" />
+					</div>
+				</div>
+				<div>
+					<label for="t2saves">Saves</label>
+					<div>
+						<form:input path="t2saves" />
+					</div>
+				</div>
+				<div>
+					<form:button>Add</form:button>
+				</div>
+			</form:form>
 		</div>
-		<div>
-			<label for="t2fouls">Fouls</label>
-			<div>
-				<form:input path="t2fouls" />
-			</div>
 		</div>
-		<div>
-			<label for="t2yrcards">Yellow/Red Cards</label>
-			<div>
-				<form:input path="t2yrcards" />
-			</div>
-		</div>
-		<div>
-			<label for="t2corners">Corners</label>
-			<div>
-				<form:input path="t2corners" />
-			</div>
-		</div>
-		<div>
-			<label for="t2saves">Saves</label>
-			<div>
-				<form:input path="t2saves" />
-			</div>
-		</div>
-		<div>
-			<form:button>Add</form:button>
-		</div>
-		</form:form>
-	</div>
 </body>
 </html>

@@ -44,11 +44,6 @@
 					<th>Yellow/Red Cards</th>
 					<th>Corners</th>
 					<th>Saves</th>
-					<th>Team2</th>
-					<th>Fouls</th>
-					<th>Yellow/Red Cards</th>
-					<th>Corners</th>
-					<th>Saves</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -59,6 +54,26 @@
 						<td>${FbSbGoals.t1yrcards}</td>
 						<td>${FbSbGoals.t1corners}</td>
 						<td>${FbSbGoals.t1saves}</td>
+					</tr>
+				</c:forEach>
+			</tbody>
+		</table>
+	</div>
+	<div id="table root">
+		<table class=fgoals>
+		<caption></caption>
+			<thead>
+				<tr>
+					<th>Team2</th>
+					<th>Fouls</th>
+					<th>Yellow/Red Cards</th>
+					<th>Corners</th>
+					<th>Saves</th>
+				</tr>
+			</thead>
+			<tbody>
+				<c:forEach var="FbSbGoals" items="${goals}">
+					<tr>
 						<td>${FbSbGoals.team2}</td>
 						<td>${FbSbGoals.t2fouls}</td>
 						<td>${FbSbGoals.t2yrcards}</td>

@@ -37,7 +37,7 @@ public class CrSbBattingDetailsController {
 	@PostMapping("/add")
 	public String addNewDetails(@ModelAttribute("addbattingdetails")CrSbBattingDetails crSbBattingDetails) {
 		batservice.save(crSbBattingDetails);
-		return "batdetails";
+		return "redirect:/batting/getalldetails";
 	}
 	@GetMapping("/updatebatting")
 	public String showUpdateForm(@RequestParam("crbattingid") int id, Model model) {
