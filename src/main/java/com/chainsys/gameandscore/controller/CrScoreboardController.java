@@ -31,8 +31,8 @@ private CrSbBowlingDetailsService crSbBowlingDetailsService;
 public String getscore(@RequestParam("id")int gameId,Model model) {
 	List<CrScoreboard> sboard = csservice.getScore(gameId);
 	model.addAttribute("score", sboard);
-	List<CrSbBattingDetails> CrSbBattingDetailsList = crSbBattingDetailsService.getCrSbBattingDetails(gameId);
-	model.addAttribute("bat", CrSbBattingDetailsList);
+	List<CrSbBattingDetails> crSbBattingDetailsList = crSbBattingDetailsService.getCrSbBattingDetails(gameId);
+	model.addAttribute("bat", crSbBattingDetailsList);
 	List<CrSbBowlingDetails> CrSbBowlingDetailsList = crSbBowlingDetailsService.getBowlingByGameId(gameId);
 	model.addAttribute("ball", CrSbBowlingDetailsList);
 	return "crscoreboard-list";

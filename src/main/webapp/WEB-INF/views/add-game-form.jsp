@@ -9,6 +9,7 @@
 <meta charset="ISO-8859-1">
 <title>Add Game</title>
 <style>
+	<%@include file="css/background.css"%>
 	<%@include file="css/form.css"%>
 .text-danger {
     color: #e80c4d;
