@@ -18,6 +18,7 @@ import com.chainsys.gameandscore.service.CrSbBattingDetailsService;
 @Controller
 @RequestMapping("/batting")
 public class CrSbBattingDetailsController {
+	public static final String LISTOFBATTING = "redirect:/batting/getalldetails";
 	@Autowired
 	private CrSbBattingDetailsService batservice;
 
@@ -37,7 +38,7 @@ public class CrSbBattingDetailsController {
 	@PostMapping("/add")
 	public String addBattingDetails(@ModelAttribute("addbattingdetails")CrSbBattingDetails crSbBattingDetails) {
 		batservice.save(crSbBattingDetails);
-		return "redirect:/batting/getalldetails";
+		return LISTOFBATTING;
 	}
 	@GetMapping("/updatebatting")
 	public String showUpdateForm(@RequestParam("crbattingid") int id, Model model) {
@@ -49,12 +50,12 @@ public class CrSbBattingDetailsController {
 	@PostMapping("/update")
 	public String updateBattingDetails(@ModelAttribute("updatedetails") CrSbBattingDetails crSbBattingDetails) {
 		batservice.save(crSbBattingDetails);
-	    return "redirect:/batting/getalldetails";
+	    return LISTOFBATTING;
 	}
 	@GetMapping("/deletebatting")
 	public String deleteBattingDetails(@RequestParam("crbattingid") int id) {
 		batservice.deleteById(id);
-		return "redirect:/batting/getalldetails";
+		return LISTOFBATTING;
 	}
 
 }
