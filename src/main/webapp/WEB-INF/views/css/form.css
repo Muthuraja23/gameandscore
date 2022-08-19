@@ -4,7 +4,7 @@ form {box-sizing: border-box; margin: auto; width: 50%; text-align: center;}
 
 input[type=text], input[type=password],input[type=number],input[type=email],
 input[type=date],input[type=textarea],input[type=select] {
-  width: 100%;
+  width: 60%;
   padding: 10px;
   margin: 4px 0 20px 0;
   display: inline-block;
@@ -140,7 +140,7 @@ td,h2 {
   box-sizing:border-box;
   border-radius:0 0 3px 3px;
 }
-textarea {
+/* textarea {
   width: 110%;
   height: 50px;
   padding: 12px 20px;
@@ -150,4 +150,4 @@ textarea {
   background-color: #f8f8f8;
   font-size: 16px;
   resize: none;
-}
+} */

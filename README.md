@@ -1,2 +1,3 @@
 # gameandscore
-Scorecard for various games
+ScoreBoard for various games
+

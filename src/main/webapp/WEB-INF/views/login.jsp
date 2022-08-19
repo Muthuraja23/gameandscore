@@ -13,7 +13,7 @@
 </head>
 <body>
 	<div id="root">
-		<div id="form">
+		<div id="bg">
 			<form:form action="loginValidation" method="post" modelAttribute="login">
 				<div>
 					<label for="adminId">Username</label>

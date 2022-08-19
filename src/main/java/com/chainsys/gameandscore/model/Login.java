@@ -12,15 +12,16 @@ public class Login {
     @Id
     @Column(name = "id")    
     private String adminId;
+    @Column(name = "password")
+    private String password;
+  
+    
     public String getAdminId() {
 		return adminId;
 	}
 	public void setAdminId(String adminId) {
 		this.adminId = adminId;
 	}
-	@Column(name = "password")
-    private String password;
-  
     
     public String getPassword() {
         return password;
