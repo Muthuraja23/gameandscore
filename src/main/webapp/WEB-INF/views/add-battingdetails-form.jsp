@@ -11,6 +11,7 @@
     color: #e80c4d;
     font-size: 0.9em;
 }
+<%@include file="css/form.css"%>
 </style>
 </head>
 <body>

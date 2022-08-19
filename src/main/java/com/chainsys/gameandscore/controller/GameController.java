@@ -58,7 +58,8 @@ public class GameController {
 	@PostMapping("/add")
 	public String addnewsports(@ModelAttribute("addgame") Game gm) {
 		gmservice.save(gm);
-		return "redirect:/game/getallgames";
+		int id=gm.getSportsid();
+		return "redirect:/game/getallgames?id="+id;
 	}
 
 	@GetMapping("/updateform")

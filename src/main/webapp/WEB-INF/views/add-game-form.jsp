@@ -1,12 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ page import="com.chainsys.gameandscore.businesslogic.Logic"%>
 <!DOCTYPE html>
 <html lang=en>
 <head>
 <meta charset="ISO-8859-1">
 <title>Add Game</title>
 <style>
+	<%@include file="css/form.css"%>
 .text-danger {
     color: #e80c4d;
     font-size: 0.9em;
@@ -18,13 +21,7 @@
 		<div id="form">
 			<form:form action="add" method="post" modelAttribute="addgame">
 				<div>
-					<label for="gameid">Game Id</label>
-					<div>
-						<form:input path="gameid"/>
-					</div>
-				</div>
-				<div>
-					<label for="gamebetween">Game Between</label>
+					<label for="gamebetween">Match</label>
 					<div>
 						<form:input path="gamebetween" />
 					</div>
@@ -36,9 +33,9 @@
 					</div>
 				</div>
 				<div>
-					<label for="dateandtime">Date And Time</label>
+					<label for="dateandtime">Date</label>
 					<div>
-						<form:input path="dateandtime" />
+						<form:input type="date" max="<%=Logic.getInstanceDate()%>"  path="dateandtime" />
 					</div>
 				</div>
 				<div>

@@ -1,12 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+
 <!DOCTYPE html>
 <html lang=en>
 <head>
 <meta charset="ISO-8859-1">
 <title>Add BowlingDetails Form</title>
 <style>
+	<%@include file="css/form.css"%>
 .text-danger {
     color: #e80c4d;
     font-size: 0.9em;

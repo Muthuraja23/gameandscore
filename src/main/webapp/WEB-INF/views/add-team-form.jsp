@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html lang=en>
@@ -7,6 +8,7 @@
 <meta charset="ISO-8859-1">
 <title>Add Team Form</title>
 <style>
+	<%@include file="css/form.css"%>
 .text-danger {
 	color: #e80c4d;
 	font-size: 0.9em;
@@ -18,12 +20,6 @@
 		<div id="form">
 			<form:form action="add" method="post" modelAttribute="addteam">
 				<div>
-					<label for="teamid">Team id</label>
-					<div>
-						<form:input path="teamid" />
-					</div>
-				</div>
-				<div>
 					<label for="teamname">Team Name</label>
 					<div>
 						<form:input path="teamname" />
@@ -32,7 +28,7 @@
 				<div>
 					<label for="startdate">Start Date</label>
 					<div>
-						<form:input path="startdate" />
+						<form:input type="date" path="startdate" />
 					</div>
 				</div>
 				<div>
@@ -59,7 +55,6 @@
 						<form:input path="owner" />
 					</div>
 				</div>
-				<form:errors path="owner" cssClass="text-danger" />
 				<div>
 					<label for="email">Email</label>
 					<div>

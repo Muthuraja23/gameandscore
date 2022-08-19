@@ -1,30 +1,34 @@
 package com.chainsys.gameandscore.model;
 
-import java.sql.Timestamp;
+import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.Cascade;
 
 @Entity
 @Table(name = "game")
 public class Game {
 	@Id
 	@Column(name = "game_id")
+	@GeneratedValue(strategy = GenerationType.AUTO, generator = "game_id_seq")
+    @SequenceGenerator(name = "game_id_seq", sequenceName = "game_id_seq", allocationSize = 1)
 	private int gameid;
 	@Column(name = "sports_id")
 	private int sportsid;
 	@Column(name = "game_between")
 	private String gamebetween;
-	@Column(name = "time_")
-	private Timestamp dateandtime;
+	@Column(name = "date_")
+	private Date dateandtime;
 	@Column(name = "result")
 	private String result;
 
@@ -59,11 +63,11 @@ public class Game {
 		this.gamebetween = gamebetween;
 	}
 
-	public Timestamp getDateandtime() {
+	public Date getDateandtime() {
 		return dateandtime;
 	}
 
-	public void setDateandtime(Timestamp dateandtime) {
+	public void setDateandtime(Date dateandtime) {
 		this.dateandtime = dateandtime;
 	}
 

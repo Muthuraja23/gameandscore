@@ -29,13 +29,13 @@ public class CrSbBattingDetailsController {
 	}
 	
 	@GetMapping("/addbatting")
-	public String battingAddForm(Model model) {
+	public String addBattingForm(Model model) {
 		CrSbBattingDetails batting = new CrSbBattingDetails();
 		model.addAttribute("addbattingdetails", batting);
 		return "add-battingdetails-form";
 	}
 	@PostMapping("/add")
-	public String addNewDetails(@ModelAttribute("addbattingdetails")CrSbBattingDetails crSbBattingDetails) {
+	public String addBattingDetails(@ModelAttribute("addbattingdetails")CrSbBattingDetails crSbBattingDetails) {
 		batservice.save(crSbBattingDetails);
 		return "redirect:/batting/getalldetails";
 	}
