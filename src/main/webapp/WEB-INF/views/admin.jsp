@@ -20,33 +20,66 @@
 	<a href="/game/addform"><button> Add</button></a>
 	
 	<form action="/game/updateform">
-            <div class="center">
-                <input type="text" name="gameid" /> <input type="submit"
-                    value="update" />
+           <div class="center">
+                <input type="text" name="gameid" /> 
+                <br><button>Update</button>
             </div>
         </form>
         
         <form action="/game/deletegame">
             <div class="center">
-                <input type="text" name="gameid" /> <input type="submit"
-                    value="delete" />
+                <input type="text" name="gameid" />
+                <br><button>Delete</button>
             </div>
         </form>
 	
 	<h1>Cricket</h1>
-		<h1>ScoreBoard</h1><br>
+		<h2>ScoreBoard</h2><br>
 		<a href="/cricket/addscore"><button> Add</button></a>
 		<form action="/cricket/updatescore">
             <div class="center">
-                <input type="text" name="crscoreboardid" /> <input type="submit"
-                    value="update" />
+                <input type="text" name="crscoreboardid" /> 
+                <br><button>Update</button>
             </div>
         </form>
         
         <form action="/cricket/deletescore">
             <div class="center">
-                <input type="text" name="crscoreboardid" /> <input type="submit"
-                    value="delete" />
+                <input type="text" name="crscoreboardid" /> 
+                <br><button>Delete</button>
+            </div>
+            </form>
+            
+        <h2>Batting</h2><br>
+        <a href="/batting/addbatting"><button> Add</button></a>
+        <form action="/batting/updatebatting">
+            <div class="center">
+                <input type="text" name="crbattingid" /> 
+                <br><button>Update</button>
+            </div>
+        </form>
+        
+        <form action="/batting/deletebatting">
+            <div class="center">
+                <input type="text" name="crbattingid" /> 
+                <br><button>Delete</button>
+            </div>
+            </form>
+            
+        <h2>Bowling</h2><br>
+            
+            <a href="/bowling/addbowling"><button> Add</button></a>
+        <form action="/bowling/updatebowling">
+            <div class="center">
+                <input type="text" name="crbowlingid" /> 
+                <br><button>Update</button>
+            </div>
+        </form>
+        
+        <form action="/bowling/deletebowling">
+            <div class="center">
+                <input type="text" name="crbowlingid" /> 
+                <br><button>Delete</button>
             </div>
             </form>
             

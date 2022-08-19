@@ -27,7 +27,7 @@ public class CrSbBowlingDetailsController {
 		model.addAttribute("bowlingdetails", bowl);
 		return "bowlingdetails-list";
 	}
-@GetMapping("/addform")
+@GetMapping("/addbowling")
 public String teamAddForm(Model model) {
 	CrSbBowlingDetails b=new CrSbBowlingDetails();
 	model.addAttribute("adddetails", b);

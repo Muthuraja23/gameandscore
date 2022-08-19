@@ -5,7 +5,7 @@
 <html lang=en>
 <head>
 <meta charset="ISO-8859-1">
-<title>Update Game</title>
+<title>Update Cricket ScoreBoard</title>
 <style>
 .text-danger {
     color: #e80c4d;
@@ -18,12 +18,6 @@
 		<div id="form">
 			<form:form action="updatescore" method="post"
 				modelAttribute="updatescore">
-				<div>
-					<label for="crscoreboardid">Cricket Scoreboard Id</label>
-					<div>
-						<form:input path="crscoreboardid" />
-					</div>
-				</div>
 				<div>
 					<label for="gameid">Game Id</label>
 					<div>

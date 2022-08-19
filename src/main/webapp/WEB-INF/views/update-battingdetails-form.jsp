@@ -19,12 +19,6 @@
 			<form:form action="update" method="post"
 				modelAttribute="updatedetails">
 				<div>
-					<label for="crbattingid">cricket Scoreboard Id</label>
-					<div>
-						<form:input path="crbattingid" />
-					</div>
-				</div>
-				<div>
 					<label for="gameid">Game id</label>
 					<div>
 						<form:input path="gameid" />

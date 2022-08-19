@@ -2,7 +2,10 @@ package com.chainsys.gameandscore.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
@@ -10,6 +13,8 @@ import javax.persistence.Table;
 public class CrSbBowlingDetails {
 	@Id
 	@Column(name = "cr_bowling_id")
+	@GeneratedValue(strategy = GenerationType.AUTO, generator = "bowling_id")
+    @SequenceGenerator(name = "bowling_id", sequenceName = "bowling_id", allocationSize = 1)
 	private int crbowlingid;
 	@Column(name = "game_id")
 	private int gameid;

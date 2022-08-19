@@ -21,12 +21,6 @@
 		<div id="form">
 			<form:form action="add" method="post" modelAttribute="adddetails">
 				<div>
-					<label for="crbowlingid">Bowling id</label>
-					<div>
-						<form:input path="crbowlingid" />
-					</div>
-				</div>
-				<div>
 					<label for="gameid">Game Id</label>
 					<div>
 						<form:input path="gameid" />

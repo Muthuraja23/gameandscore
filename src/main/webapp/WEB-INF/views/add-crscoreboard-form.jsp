@@ -6,7 +6,7 @@
 <html lang=en>
 <head>
 <meta charset="ISO-8859-1">
-<title>Add Cricket Scoreboard Form</title>
+<title>Add Cricket ScoreBoard</title>
 <style>
 	<%@include file="css/form.css"%>
 .text-danger {
@@ -19,12 +19,6 @@
 	<div id="root">
 		<div id="form">
 			<form:form action="add" method="post" modelAttribute="addscore">
-				<div>
-					<label for="crscoreboardid">Scoreboard Id</label>
-					<div>
-						<form:input path="crscoreboardid" />
-					</div>
-				</div>
 				<div>
 					<label for="gameid">Game Id</label>
 					<div>

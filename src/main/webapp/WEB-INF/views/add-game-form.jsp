@@ -28,8 +28,12 @@
 				</div>
 				<div>
 					<label for="sportsid">Sports Id</label>
-					<div>
-						<form:input path="sportsid" />
+					<div class="custom-select" style="width:103%;" >
+						<form:select path="sportsid" >
+						<form:option value="1"></form:option>
+						<form:option value="2"></form:option>
+						<form:option value="3"></form:option>
+						</form:select>
 					</div>
 				</div>
 				<div>
@@ -50,5 +54,8 @@
 			</form:form>
 		</div>
 	</div>
+	<script type="text/javascript">
+<%@include file="js/select.js" %>
+</script>
 </body>
 </html>

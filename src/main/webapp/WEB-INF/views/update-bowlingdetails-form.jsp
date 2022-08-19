@@ -19,12 +19,6 @@
 			<form:form action="update" method="post"
 				modelAttribute="updatebowling">
 				<div>
-					<label for="crbowlingid">Cricket Bowling id</label>
-					<div>
-						<form:input path="crbowlingid" />
-					</div>
-				</div>
-				<div>
 					<label for="gameid">Game Id</label>
 					<div>
 						<form:input path="gameid" />

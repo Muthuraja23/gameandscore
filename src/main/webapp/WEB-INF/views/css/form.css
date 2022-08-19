@@ -24,7 +24,7 @@ button {
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 60%;
+  width: auto;
   opacity: 0.9;
 }
 
@@ -77,7 +77,7 @@ td,h2 {
 }
 
 .select-selected {
-  background-color: DodgerBlue;
+  background-color: #ccc;
 }
 
 /*style the arrow inside the select element:*/

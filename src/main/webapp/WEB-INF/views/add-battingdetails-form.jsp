@@ -19,12 +19,6 @@
 		<div id="form">
 			<form:form action="add" method="post" modelAttribute="addbattingdetails">
 				<div>
-					<label for="crbattingid">Batting Id</label>
-					<div>
-						<form:input path="crbattingid" />
-					</div>
-				</div>
-				<div>
 					<label for="gameid">Game id</label>
 					<div>
 						<form:input path="gameid" />
