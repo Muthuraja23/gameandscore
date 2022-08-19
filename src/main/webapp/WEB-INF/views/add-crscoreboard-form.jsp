@@ -32,7 +32,7 @@
 					</div>
 				</div>
 				<div>
-					<label for="matchbetween">Match Between</label>
+					<label for="matchbetween">Match</label>
 					<div>
 						<form:input path="matchbetween" />
 					</div>

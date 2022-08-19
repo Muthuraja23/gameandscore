@@ -58,10 +58,6 @@ table.center {
 	margin-right: auto;
 }
 
-/* table, th, td {
-	border: 2px solid black;
-	border-collapse: collapse;
-} */
 div {
 	text-align: center;
 }
@@ -99,10 +95,10 @@ div {
 <body>
 	<ul class="topnav">
 		<li><a class="active" href="/game/index">Home</a></li>
-		<li><a href="/game/getallgames">Cricket</a></li>
-		<li><a href="/football/getscore">Football</a></li>
-		<li><a href="/hockey/getscore">Hockey</a></li>
-		<li class="right"><a href="/team/getallteams">Menu</a></li>
+		<li><a href="/game/getallgames?id=1">Cricket</a></li>
+			<li><a href="/game/getallgames?id=2">Football</a></li>
+			<li><a href="/game/getallgames?id=3">Hockey</a></li>
+		<li class="right"><a href="/team/getallteams">Teams</a></li>
 	</ul>
 	<div style="padding: 0 16px;"></div>
 
@@ -113,7 +109,6 @@ div {
 				<tr>
 					<th>Team Name</th>
 					<th>Start Date</th>
-					<th>Total Players</th>
 					<th>Country</th>
 					<th>Status</th>
 					<th>Owner</th>
@@ -125,7 +120,6 @@ div {
 					<tr>
 						<td>${Team.teamname}</td>
 						<td>${Team.startdate}</td>
-						<td>${Team.totalplayers}</td>
 						<td>${Team.country}</td>
 						<td>${Team.status}</td>
 						<td>${Team.owner}</td>
