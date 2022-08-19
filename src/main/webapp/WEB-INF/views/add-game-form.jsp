@@ -30,7 +30,7 @@
 					<label for="sportsid">Sports Id</label>
 					<div class="custom-select" style="width: 75%" >
 						<form:select path="sportsid" >
-							<form:option value="0"></form:option>
+						<form:option value="0"></form:option>
 						<form:option value="1"></form:option>
 						<form:option value="2"></form:option>
 						<form:option value="3"></form:option>

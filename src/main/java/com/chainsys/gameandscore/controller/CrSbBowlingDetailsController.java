@@ -50,7 +50,7 @@ public String showUpdateForm(@RequestParam("crbowlingid") int id, Model model) {
 @PostMapping("/update")
 public String updateteam(@ModelAttribute("updatebowling") CrSbBowlingDetails b) {
 	blservice.save(b);
-    return "LISTOFBOWLING";
+    return LISTOFBOWLING;
 }
 @GetMapping("/deletedetails")
 public String deleteTeam(@RequestParam("crbowlingid") int id) {
