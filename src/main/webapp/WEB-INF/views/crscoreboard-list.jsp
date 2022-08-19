@@ -78,9 +78,9 @@
 						<th>Team</th>
 						<th>Name</th>
 						<th>Overs</th>
-						<th>Wickets</th>
-						<th>Runs</th>
 						<th>Maiden</th>
+						<th>Runs</th>
+						<th>Wickets</th>
 						<th>Economy</th>
 					</tr>
 				</thead>
@@ -90,9 +90,9 @@
 							<td>${CrSbBowlingDetails.team}</td>
 							<td>${CrSbBowlingDetails.playername}</td>
 							<td>${CrSbBowlingDetails.overs}</td>
-							<td>${CrSbBowlingDetails.wickets}</td>
+							<td>${CrSbBowlingDetails.maiden}</td>							
 							<td>${CrSbBowlingDetails.runs}</td>
-							<td>${CrSbBowlingDetails.maiden}</td>
+							<td>${CrSbBowlingDetails.wickets}</td>
 							<td>${CrSbBowlingDetails.economy}</td>
 						</tr>
 					</c:forEach>

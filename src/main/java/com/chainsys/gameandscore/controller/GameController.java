@@ -18,6 +18,9 @@ import com.chainsys.gameandscore.service.GameService;
 @Controller
 @RequestMapping("/game")
 public class GameController {
+	public static final String LISTOFGAMES = "redirect:/game/getallgames";
+    public static final String ADDGAME = "add-game-form";
+    public static final String UPDATEGAME = "update-game-form";
 	@Autowired
 	private GameService gmservice;
 	@GetMapping("/index")
@@ -52,7 +55,7 @@ public class GameController {
 	public String gameAddForm(Model model) {
 		Game g = new Game();
 		model.addAttribute("addgame", g);
-		return "add-game-form";
+		return ADDGAME;
 	}
 
 	@PostMapping("/add")
@@ -66,13 +69,13 @@ public class GameController {
 	public String showUpdateForm(@RequestParam("gameid") int id, Model model) {
 		Game g = gmservice.findById(id);
 		model.addAttribute("updategame", g);
-		return "update-game-form";
+		return UPDATEGAME;
 	}
 
 	@PostMapping("/updategame")
 	public String updateGame(@ModelAttribute("updategame") Game g) {
 		gmservice.save(g);
-		return "redirect:/game/getallgames";
+		return LISTOFGAMES;
 	}
 
 	@GetMapping("/deletegame")
