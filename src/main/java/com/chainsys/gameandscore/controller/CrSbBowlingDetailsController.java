@@ -18,6 +18,8 @@ import com.chainsys.gameandscore.service.CrSbBowlingDetailsService;
 @Controller
 @RequestMapping("/bowling")
 public class CrSbBowlingDetailsController {
+	public static final String LISTOFBOWLING = "redirect:/bowling/getalldetails";
+
 	@Autowired
 	private CrSbBowlingDetailsService blservice;
 
@@ -36,7 +38,7 @@ public String teamAddForm(Model model) {
 @PostMapping("/add")
 public String addNewTeam(@ModelAttribute("adddetails")CrSbBowlingDetails bl) {
 	blservice.save(bl);
-	return "redirect:/bowling/getalldetails";
+	return LISTOFBOWLING;
 }
 @GetMapping("/updatebowling")
 public String showUpdateForm(@RequestParam("crbowlingid") int id, Model model) {
@@ -48,12 +50,12 @@ public String showUpdateForm(@RequestParam("crbowlingid") int id, Model model) {
 @PostMapping("/update")
 public String updateteam(@ModelAttribute("updatebowling") CrSbBowlingDetails b) {
 	blservice.save(b);
-    return "updated";
+    return "LISTOFBOWLING";
 }
 @GetMapping("/deletedetails")
 public String deleteTeam(@RequestParam("crbowlingid") int id) {
 	blservice.deleteById(id);
-	return "redirect:/bowling/getalldetails";
+	return LISTOFBOWLING;
 }
 
 }
