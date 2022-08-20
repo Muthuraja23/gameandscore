@@ -15,7 +15,7 @@ public interface GameRepository extends CrudRepository<Game, Integer> {
 
 	Game findById(int id);
 
-	void deleteById(int gmid);
+	void deleteById(int id);
 	List<Game>findBySportsid(int id);
 
 }
