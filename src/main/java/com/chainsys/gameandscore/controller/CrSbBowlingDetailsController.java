@@ -30,13 +30,13 @@ public class CrSbBowlingDetailsController {
 		return "bowlingdetails-list";
 	}
 @GetMapping("/addbowling")
-public String teamAddForm(Model model) {
+public String bowlingAddForm(Model model) {
 	CrSbBowlingDetails b=new CrSbBowlingDetails();
 	model.addAttribute("adddetails", b);
 	return "add-bowlingdetails-form";
 }
 @PostMapping("/add")
-public String addNewTeam(@ModelAttribute("adddetails")CrSbBowlingDetails bl) {
+public String addNewBowling(@ModelAttribute("adddetails")CrSbBowlingDetails bl) {
 	blservice.save(bl);
 	return LISTOFBOWLING;
 }
@@ -48,12 +48,12 @@ public String showUpdateForm(@RequestParam("crbowlingid") int id, Model model) {
 }
 
 @PostMapping("/update")
-public String updateteam(@ModelAttribute("updatebowling") CrSbBowlingDetails b) {
+public String updateBowling(@ModelAttribute("updatebowling") CrSbBowlingDetails b) {
 	blservice.save(b);
     return LISTOFBOWLING;
 }
 @GetMapping("/deletedetails")
-public String deleteTeam(@RequestParam("crbowlingid") int id) {
+public String deleteBowlingDetails(@RequestParam("crbowlingid") int id) {
 	blservice.deleteById(id);
 	return LISTOFBOWLING;
 }
