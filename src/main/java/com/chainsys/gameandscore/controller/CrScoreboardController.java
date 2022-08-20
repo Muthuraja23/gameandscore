@@ -33,8 +33,8 @@ public String getscore(@RequestParam("id")int gameId,Model model) {
 	model.addAttribute("score", sboard);
 	List<CrSbBattingDetails> crSbBattingDetailsList = crSbBattingDetailsService.getCrSbBattingDetails(gameId);
 	model.addAttribute("bat", crSbBattingDetailsList);
-	List<CrSbBowlingDetails> CrSbBowlingDetailsList = crSbBowlingDetailsService.getBowlingByGameId(gameId);
-	model.addAttribute("ball", CrSbBowlingDetailsList);
+	List<CrSbBowlingDetails> crSbBowlingDetailsList = crSbBowlingDetailsService.getBowlingByGameId(gameId);
+	model.addAttribute("ball", crSbBowlingDetailsList);
 	return "crscoreboard-list";
 }
 @GetMapping("/addscore")
