@@ -29,7 +29,7 @@
 				<c:forEach var="CrSbBowlingDetails" items="${bowlingdetails}">
 					<tr>
 						<td>${CrSbBowlingDetails.team}</td>
-						<td>${CrSbBowlingDetails.playername}</td>
+						<td>${CrSbBowlingDetails.playerName}</td>
 						<td>${CrSbBowlingDetails.overs}</td>
 						<td>${CrSbBowlingDetails.wickets}</td>
 						<td>${CrSbBowlingDetails.runs}</td>

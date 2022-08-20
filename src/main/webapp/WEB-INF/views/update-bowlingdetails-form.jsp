@@ -31,9 +31,9 @@
 					</div>
 				</div>
 				<div>
-					<label for="playername">Name</label>
+					<label for="playerName">Name</label>
 					<div>
-						<form:input path="playername" />
+						<form:input path="playerName" />
 					</div>
 				</div>
 				<div>

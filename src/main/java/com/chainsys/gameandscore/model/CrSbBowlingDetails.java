@@ -21,7 +21,7 @@ public class CrSbBowlingDetails {
 	@Column(name = "team")
 	private String team;
 	@Column(name = "player_name")
-	private String playername;
+	private String playerName;
 	@Column(name = "overs")
 	private float overs;
 	@Column(name = "wickets")
@@ -51,11 +51,11 @@ public class CrSbBowlingDetails {
 	public void setTeam(String team) {
 		this.team = team;
 	}
-	public String getPlayername() {
-		return playername;
+	public String getPlayerName() {
+		return playerName;
 	}
-	public void setPlayername(String playername) {
-		this.playername = playername;
+	public void setPlayerName(String playerName) {
+		this.playerName = playerName;
 	}
 	public float getOvers() {
 		return overs;
