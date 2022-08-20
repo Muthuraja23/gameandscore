@@ -14,5 +14,5 @@ public interface SportsRepository extends CrudRepository<Sports, Integer> {
 
 	Sports findById(int id);
 
-	void deleteById(int sp_id);
+	void deleteById(int id);
 }

@@ -5,10 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import com.chainsys.gameandscore.model.FootballScoreboard;
 import com.chainsys.gameandscore.model.HockeyScoreboard;
-import com.chainsys.gameandscore.repository.FootballScoreboardRepository;
 import com.chainsys.gameandscore.repository.HockeyScoreboardRepository;
 
 
