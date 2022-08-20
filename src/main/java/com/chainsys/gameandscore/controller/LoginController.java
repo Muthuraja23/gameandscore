@@ -15,13 +15,13 @@ public class LoginController {
 	@Autowired
 	private LoginService loginService;
 	@GetMapping("/login")
-	public String LoginCheack(Model model) {
+	public String loginCheck(Model model) {
 		Login login =new Login();
 		model.addAttribute("login", login);
 		return "login";
 	}
 	@PostMapping("/loginValidation")
-	public String LoginValidation(@ModelAttribute("login")Login login,Model model) {
+	public String loginValidation(@ModelAttribute("login")Login login,Model model) {
 		try {
 		login=loginService.findIdAndPassword(login.getAdminId(), login.getPassword());
 		if(login!=null) {
