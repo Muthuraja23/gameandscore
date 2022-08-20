@@ -8,6 +8,7 @@
 	.mySlides {
       display:none;
       width:100%;
+      height: 610px;
     }
   
     .w3-sections{
@@ -19,10 +20,6 @@
       width: 100%;
     }
   
-    .mySlides{
-      height: 610px;
-}
-
 
 ul.topnav {
 	list-style-type: none;
