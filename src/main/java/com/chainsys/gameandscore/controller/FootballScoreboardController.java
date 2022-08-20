@@ -20,6 +20,7 @@ import com.chainsys.gameandscore.service.FootballScoreboardService;
 @Controller
 @RequestMapping("/football")
 public class FootballScoreboardController {
+	public static final String LISTOFFOOTBALL = "redirect:/football/getscore";
 	@Autowired
 	private FootballScoreboardService fsservice;
 	@Autowired
@@ -42,7 +43,7 @@ public String teamAddForm(Model model) {
 @PostMapping("/add")
 public String addFbScore(@ModelAttribute("addscore")FootballScoreboard fs) {
 	fsservice.save(fs);
-	return "redirect:/football/getscore";
+	return LISTOFFOOTBALL;
 }
 @GetMapping("/updatescore")
 public String showUpdateForm(@RequestParam("fbscoreboardid") int id, Model model) {
@@ -54,11 +55,11 @@ public String showUpdateForm(@RequestParam("fbscoreboardid") int id, Model model
 @PostMapping("/update")
 public String updateteam(@ModelAttribute("updatescore") FootballScoreboard f) {
 	fsservice.save(f);
-    return "redirect:/football/getscore";
+    return LISTOFFOOTBALL;
 }
 @GetMapping("/deletescore")
 public String deleteTeam(@RequestParam("fbscoreboardid") int id) {
 	fsservice.deleteById(id);
-	return "redirect:/football/getscore";
+	return LISTOFFOOTBALL;
 }
 }
