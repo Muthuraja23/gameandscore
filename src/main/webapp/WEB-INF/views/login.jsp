@@ -1,37 +1,30 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<html lang=en>
+<html lang="en">
 <head>
 <meta charset="ISO-8859-1">
-<title>Login</title>
+<title>Admin login</title>
 <style>
-	<%@include file="css/form.css"%>
+<%@include file="css/login.css"%>
 </style>
 </head>
 <body>
-	<div id="root">
-		<div id="bg">
-			<form:form action="loginValidation" method="post" modelAttribute="login">
-				<div>
-					<label for="adminId">Username</label>
-					<div>
-						<form:input path="adminId" />
-					</div>
-				</div>
-				<div>
-					<label for="password">Password</label>
-					<div>
-						<form:password path="password" />
-					</div>
-				</div>
-				<div>
-					<form:button>login</form:button>
-				</div>
-			</form:form>
-		</div>
-	</div>
+        <div class="app">
+            <div class="bg"></div>
+            <form action="loginValidation" method="post"
+                modelAttribute="login" >
+                <header>
+                    <h1>Admin Login</h1>
+                </header>
+                <div class="inputs">
+                    <input type="text" id="adminId" name="adminId"
+                        placeholder="Admin ID"> <input type="password"
+                        id="password" name="password" placeholder="Password">
+                </div>
+                <br> <br> <br> <br> <br>
+                <button type="submit" value="Login">Login</button>
+            </form>
+        </div>
 </body>
 </html>

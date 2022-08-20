@@ -10,9 +10,9 @@
 <title>Admin</title>
 <style type="text/css">
     *{
+    	background-color: gray;
         text-align: center;
     }
-    <%-- <%@include file="css/login.css"%> --%>
 <%@include file="css/form.css"%>
 </style>
 </head>

@@ -36,7 +36,7 @@ public class CrSbBattingDetailsController {
 		return "add-battingdetails-form";
 	}
 	@PostMapping("/add")
-	public String addBattingDetails(@ModelAttribute("addbattingdetails")CrSbBattingDetails crSbBattingDetails) {
+	public String addBatting(@ModelAttribute("addbattingdetails")CrSbBattingDetails crSbBattingDetails) {
 		batservice.save(crSbBattingDetails);
 		return LISTOFBATTING;
 	}

@@ -7,6 +7,7 @@
 <title>Error Page</title>
 </head>
 <body>
+<div class="content-table"></div>
 <h1>Sorry for the inconvenient!</h1><br>
 <h3>username and password mismatched.</h3>
 </body>

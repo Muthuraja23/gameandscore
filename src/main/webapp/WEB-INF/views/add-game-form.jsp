@@ -9,27 +9,23 @@
 <meta charset="ISO-8859-1">
 <title>Add Game</title>
 <style>
-	<%@include file="css/background.css"%>
+<%@include file="css/background.css"%>
 	<%@include file="css/form.css"%>
-.text-danger {
-    color: #e80c4d;
-    font-size: 0.9em;
-}
 </style>
 </head>
 <body>
 	<div id="root">
 		<div id="form">
 			<form:form action="add" method="post" modelAttribute="addgame">
-				<div>
+				<div class="font">
 					<label for="gamebetween">Match</label>
 					<div>
 						<form:input path="gamebetween" />
 					</div>
 				</div>
-				<div>
+				<div class="font">
 					<label for="sportsid">Sports Id</label>
-					<div class="custom-select" style="width: 75%" >
+					<div class="custom-select" style="width: 90%" >
 						<form:select path="sportsid" >
 						<form:option value="0"></form:option>
 						<form:option value="1"></form:option>
@@ -38,13 +34,13 @@
 						</form:select>
 					</div>
 				</div>
-				<div>
+				<div class="font">
 					<label for="dateandtime">Date</label>
 					<div>
 						<form:input type="date" max="<%=Logic.getInstanceDate()%>"  path="dateandtime" />
 					</div>
 				</div>
-				<div>
+				<div class="font">
 					<label for="result">Result</label>
 					<div>
 						<form:input path="result" />
@@ -54,8 +50,8 @@
 					<form:button>Add</form:button>
 				</div>
 			</form:form>
+			</div>
 		</div>
-	</div>
 	<script type="text/javascript">
 <%@include file="js/select.js" %>
 </script>

@@ -32,11 +32,6 @@ button:hover {
   opacity:1;
 }
 
-.cancelbtn {
-  padding: 14px 20px;
-  background-color: #f44336;
-}
-
 .cancelbtn, .signupbtn {
   float: right;
   width: 100%;
@@ -100,7 +95,7 @@ td,h2 {
 
 /*style the items (options), including the selected item:*/
 .select-items div,.select-selected {
-  color: #ffffff;
+  color: #130202;
   padding: 8px 16px;
   border: 1px solid transparent;
   border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
@@ -111,7 +106,7 @@ td,h2 {
 /*style items (options):*/
 .select-items {
   position: absolute;
-  background-color: #04AA6D;
+  background-color: #36a0a0;
   top: 100%;
   left: 0;
   right: 0;
@@ -124,7 +119,7 @@ td,h2 {
 }
 
 .select-items div:hover, .same-as-selected {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(68, 226, 226, 0.1);
 }
 
 .fieldset {
@@ -140,7 +135,7 @@ td,h2 {
   box-sizing:border-box;
   border-radius:0 0 3px 3px;
 }
-/* textarea {
+textarea {
   width: 110%;
   height: 50px;
   padding: 12px 20px;
@@ -150,4 +145,8 @@ td,h2 {
   background-color: #f8f8f8;
   font-size: 16px;
   resize: none;
-} */
+}
+.font{
+  font-size: 1.5em;
+  font-weight: bold;
+}
