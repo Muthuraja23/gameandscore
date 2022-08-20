@@ -12,8 +12,7 @@ public class FootballScoreboardService {
 	@Autowired
 	private FootballScoreboardRepository rp;
 	public List<FootballScoreboard> getfbscoreboard(){
-	List <FootballScoreboard> fbsb = rp.findAll();
-	return fbsb;
+	return rp.findAll();
 	}
 	public FootballScoreboard save(FootballScoreboard fs) {
 		return rp.save(fs);

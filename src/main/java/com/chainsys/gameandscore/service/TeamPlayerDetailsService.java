@@ -14,19 +14,22 @@ public class TeamPlayerDetailsService {
 
 	@Autowired
 	private TeamPlayerDetailsRepository rp;
-	public List<TeamPlayerDetails> getTeamPlayerDetails(){
-	List <TeamPlayerDetails> teamlist = rp.findAll();
-	return teamlist;
+
+	public List<TeamPlayerDetails> getTeamPlayerDetails() {
+		return rp.findAll();
 	}
+
 	public TeamPlayerDetails save(TeamPlayerDetails tp) {
 		return rp.save(tp);
 	}
+
 	public TeamPlayerDetails findById(int id) {
 		return rp.findById(id);
-		}
-@Transactional
-public void deleteById(int id) {
-	rp.deleteById(id);
-}
+	}
+
+	@Transactional
+	public void deleteById(int id) {
+		rp.deleteById(id);
+	}
 
 }

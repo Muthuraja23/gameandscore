@@ -13,18 +13,21 @@ import com.chainsys.gameandscore.repository.PlayerRepository;
 public class PlayerService {
 	@Autowired
 	private PlayerRepository pr;
-	public List<Player> getplayers(){
-	List <Player> playerlist = pr.findAll();
-	return playerlist;
+
+	public List<Player> getplayers() {
+		return pr.findAll();
 	}
+
 	public Player save(Player p) {
 		return pr.save(p);
 	}
+
 	public Player findById(int id) {
 		return pr.findById(id);
-		}
-@Transactional
-public void deleteById(int id) {
-	pr.deleteById(id);
-}
+	}
+
+	@Transactional
+	public void deleteById(int id) {
+		pr.deleteById(id);
+	}
 }

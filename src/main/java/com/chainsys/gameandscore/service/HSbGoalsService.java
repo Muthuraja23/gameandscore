@@ -13,8 +13,7 @@ public class HSbGoalsService {
 	private HSbGoalsRepository rp;
 
 	public List<HSbGoals> getHgoals() {
-		List<HSbGoals> goallist = rp.findAll();
-		return goallist;
+		return rp.findAll();
 	}
 
 	public HSbGoals save(HSbGoals hky) {

@@ -14,8 +14,7 @@ public class CrSbBowlingDetailsService {
 	@Autowired
 	private CrSbBowlingDetailsRepository rp;
 	public List<CrSbBowlingDetails> getBowlingDetails(){
-		List <CrSbBowlingDetails> bowl = rp.findAll();
-		return bowl;
+		return rp.findAll();
 		}
 		public CrSbBowlingDetails save(CrSbBowlingDetails bl) {
 			return rp.save(bl);

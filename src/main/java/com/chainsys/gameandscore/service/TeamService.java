@@ -13,20 +13,22 @@ import com.chainsys.gameandscore.repository.TeamRepository;
 public class TeamService {
 	@Autowired
 	private TeamRepository rp;
-	public List<Team> getTeams(){
-	List <Team> teamlist = rp.findAll();
-	return teamlist;
+
+	public List<Team> getTeams() {
+		return rp.findAll();
 	}
+
 	public Team save(Team tm) {
 		return rp.save(tm);
 	}
+
 	public Team findById(int id) {
 		return rp.findById(id);
-		}
-@Transactional
-public void deleteById(int id) {
-	rp.deleteById(id);
-}
-                                
-}
+	}
 
+	@Transactional
+	public void deleteById(int id) {
+		rp.deleteById(id);
+	}
+
+}

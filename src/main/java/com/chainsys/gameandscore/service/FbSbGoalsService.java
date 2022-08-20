@@ -13,8 +13,7 @@ public class FbSbGoalsService {
 	private FbSbGoalsRepository rp;
 
 	public List<FbSbGoals> getFbgoals() {
-		List<FbSbGoals> goallist = rp.findAll();
-		return goallist;
+		return rp.findAll();
 	}
 
 	public FbSbGoals save(FbSbGoals fb) {
@@ -24,10 +23,11 @@ public class FbSbGoalsService {
 	public FbSbGoals findById(int id) {
 		return rp.findById(id);
 	}
-	public List<FbSbGoals> getGoalsByGameId(int id){
+
+	public List<FbSbGoals> getGoalsByGameId(int id) {
 		return rp.findByGameid(id);
 	}
-	
+
 	public void deleteById(int id) {
 		rp.deleteById(id);
 	}

@@ -15,8 +15,7 @@ public class CrSbBattingDetailsService {
 	private CrSbBattingDetailsRepository rp;
 
 	public List<CrSbBattingDetails> getCrSbBattingDetails() {
-		List<CrSbBattingDetails> detailslist = rp.findAll();
-		return detailslist;
+		return rp.findAll();
 	}
 
 	public CrSbBattingDetails save(CrSbBattingDetails bd) {

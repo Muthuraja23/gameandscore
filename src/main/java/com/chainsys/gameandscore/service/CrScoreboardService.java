@@ -14,19 +14,22 @@ public class CrScoreboardService {
 
 	@Autowired
 	private CrScoreboardRepository rp;
-	public List<CrScoreboard> getScore(int id){
-	List <CrScoreboard> scoreboard = rp.findByGameid(id);
-	return scoreboard;
+
+	public List<CrScoreboard> getScore(int id) {
+		return rp.findByGameid(id);
 	}
+
 	public CrScoreboard save(CrScoreboard cs) {
 		return rp.save(cs);
 	}
+
 	public CrScoreboard findById(int id) {
 		return rp.findById(id);
-		}
-@Transactional
-public void deleteById(int id) {
-	rp.deleteById(id);
-}
-	
+	}
+
+	@Transactional
+	public void deleteById(int id) {
+		rp.deleteById(id);
+	}
+
 }

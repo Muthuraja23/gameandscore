@@ -8,24 +8,26 @@ import org.springframework.transaction.annotation.Transactional;
 import com.chainsys.gameandscore.model.HockeyScoreboard;
 import com.chainsys.gameandscore.repository.HockeyScoreboardRepository;
 
-
 @Service
 public class HockeyScoreboardService {
 
 	@Autowired
 	private HockeyScoreboardRepository rp;
-	public List<HockeyScoreboard> gethscoreboard(int id){
-	List <HockeyScoreboard> hsb = rp.findByGameid(id);
-	return hsb;
+
+	public List<HockeyScoreboard> gethscoreboard(int id) {
+		return rp.findByGameid(id);
 	}
+
 	public HockeyScoreboard save(HockeyScoreboard hs) {
 		return rp.save(hs);
 	}
+
 	public HockeyScoreboard findById(int id) {
 		return rp.findById(id);
-		}
-@Transactional
-public void deleteById(int id) {
-	rp.deleteById(id);
-}	
+	}
+
+	@Transactional
+	public void deleteById(int id) {
+		rp.deleteById(id);
+	}
 }
