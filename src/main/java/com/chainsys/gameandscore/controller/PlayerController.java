@@ -18,6 +18,7 @@ import com.chainsys.gameandscore.service.PlayerService;
 @Controller
 @RequestMapping("/player")
 public class PlayerController {
+	public static final String LISTOFPLAYER = "redirect:/player/getallplayers";
 	@Autowired
 	private PlayerService plservice;
 
@@ -38,7 +39,7 @@ public class PlayerController {
 	@PostMapping("/add")
 	public String addNewPlayer(@ModelAttribute("addplayer") Player pl) {
 		plservice.save(pl);
-		return "redirect:/player/getallplayers";
+		return LISTOFPLAYER;
 	}
 	@GetMapping("/updateform")
 	public String showUpdateForm(@RequestParam("playerid") int id, Model model) {
@@ -48,14 +49,14 @@ public class PlayerController {
 	}
 
 	@PostMapping("/updateplayer")
-	public String updateplayer(@ModelAttribute("updateplayer") Player p) {
+	public String updatePlayer(@ModelAttribute("updateplayer") Player p) {
 		plservice.save(p);
-	    return "redirect:/player/getallplayers";
+	    return LISTOFPLAYER;
 	}
 	@GetMapping("/deleteplayer")
-	public String deleteplayer(@RequestParam("playerid") int id) {
+	public String deletePlayer(@RequestParam("playerid") int id) {
 		plservice.deleteById(id);
-		return "redirect:/player/getallplayers";
+		return LISTOFPLAYER;
 	}
 	
 }

@@ -2,7 +2,6 @@ package com.chainsys.gameandscore.controller;
 
 import java.util.List;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,39 +17,46 @@ import com.chainsys.gameandscore.service.SportsService;
 @Controller
 @RequestMapping("/sports")
 public class SportsController {
+	public static final String LISTOFSPORTS = "redirect:/sports/getallsports";
 	@Autowired
 	SportsService spservice;
+
 	@GetMapping("/getallsports")
-	public String getallsports(Model model) {
+	public String getAllSports(Model model) {
 		List<Sports> sportslist = spservice.getSports();
 		model.addAttribute("allsports", sportslist);
 		return "sports-list";
 	}
+
 	@GetMapping("addform")
-    public String sportsAddForm(Model model) {
-         Sports s = new Sports();
-        model.addAttribute("addsports", s);
-        return "add-sports-form";
-    }
+	public String sportsAddForm(Model model) {
+		Sports s = new Sports();
+		model.addAttribute("addsports", s);
+		return "add-sports-form";
+	}
+
 	@PostMapping("/add")
-   public String addnewsports(@ModelAttribute("addsports") Sports sp) {
-   	spservice.save(sp);
-       return "redirect:/sports/getallsports";
-   }
+	public String addNewSports(@ModelAttribute("addsports") Sports sp) {
+		spservice.save(sp);
+		return LISTOFSPORTS;
+	}
+
 	@GetMapping("/updateform")
-    public String showUpdateForm(@RequestParam("sportsid") int id, Model model) {
-        Sports s = spservice.findById(id);
-        model.addAttribute("updatesports", s);
-        return "update-sports-form";
-    }
-    @PostMapping("/updatesports")
-    public String updatesports(@ModelAttribute("updatesports") Sports s) {
-    	spservice.save(s);
-        return "redirect:/sports/getallsports";
-    }
-    @GetMapping("/deletesports")
-    public String deletesports(@RequestParam("sportsid") int id) {
-    	spservice.deleteById(id);
-        return "redirect:/sports/getallsports";
-    }
+	public String showUpdateForm(@RequestParam("sportsid") int id, Model model) {
+		Sports s = spservice.findById(id);
+		model.addAttribute("updatesports", s);
+		return "update-sports-form";
+	}
+
+	@PostMapping("/updatesports")
+	public String updateSports(@ModelAttribute("updatesports") Sports s) {
+		spservice.save(s);
+		return LISTOFSPORTS;
+	}
+
+	@GetMapping("/deletesports")
+	public String deleteSports(@RequestParam("sportsid") int id) {
+		spservice.deleteById(id);
+		return LISTOFSPORTS;
+	}
 }

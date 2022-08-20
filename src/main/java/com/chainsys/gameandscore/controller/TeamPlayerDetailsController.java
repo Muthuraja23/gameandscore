@@ -17,6 +17,7 @@ import com.chainsys.gameandscore.service.TeamPlayerDetailsService;
 @Controller
 @RequestMapping("/teamplayerdetails")
 public class TeamPlayerDetailsController {
+	public static final String LISTOFPLAYERDETAILS = "redirect:/teamplayerdetails/getallteamplayerdetails";
 
 	@Autowired
 	private TeamPlayerDetailsService tpcservice;
@@ -25,7 +26,7 @@ public class TeamPlayerDetailsController {
 	public String getallteamplayerdetails(Model model) {
 		List<TeamPlayerDetails> detaillist = tpcservice.getTeamPlayerDetails();
 		model.addAttribute("allteamplayerdetails", detaillist);
-		return "Teamplayerdetails-list";
+		return "teamplayerdetails-list";
 	}
 @GetMapping("/addform")
 public String teamplayerdetailsAddForm(Model model) {
@@ -36,7 +37,7 @@ public String teamplayerdetailsAddForm(Model model) {
 @PostMapping("/add")
 public String addNewTeam(@ModelAttribute("addteamplayerdetails")TeamPlayerDetails tp) {
 	tpcservice.save(tp);
-	return "redirect:/teamplayerdetails/getallteamplayerdetails";
+	return LISTOFPLAYERDETAILS;
 }
 @GetMapping("/updateform")
 public String showUpdateForm(@RequestParam("teamplayerid") int id, Model model) {
@@ -48,12 +49,12 @@ public String showUpdateForm(@RequestParam("teamplayerid") int id, Model model) 
 @PostMapping("/updateteamplayerdetails")
 public String updateteamplayerdetails(@ModelAttribute("updateteamplayerdetails") TeamPlayerDetails t) {
 	tpcservice.save(t);
-    return "redirect:/teamplayerdetails/getallteamplayerdetails";
+    return LISTOFPLAYERDETAILS;
 }
 @GetMapping("/deleteteamplayerdetails")
 public String deleteTeamPlayerDetails(@RequestParam("teamplayerid") int id) {
 	tpcservice.deleteById(id);
-	return "redirect:/teamplayerdetails/getallteamplayerdetails";
+	return LISTOFPLAYERDETAILS;
 }
 
 }
