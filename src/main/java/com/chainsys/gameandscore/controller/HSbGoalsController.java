@@ -18,6 +18,7 @@ import com.chainsys.gameandscore.service.HSbGoalsService;
 @Controller
 @RequestMapping("/hgoals")
 public class HSbGoalsController {
+	public static final String LISTOFHGOALS= "redirect:/hgoals/gethgoals";
 	@Autowired
 	private HSbGoalsService hsgservice;
 	@GetMapping("/gethgoals")
@@ -33,9 +34,9 @@ public String hsbgoalsAddForm(Model model) {
 	return "add-hsbgoals-form";
 }
 @PostMapping("/add")
-public String addNewTeam(@ModelAttribute("addgoal")HSbGoals hky) {
+public String addNewHockeyGoal(@ModelAttribute("addgoal")HSbGoals hky) {
 	hsgservice.save(hky);
-	return "redirect:/hgoals/gethgoals";
+	return LISTOFHGOALS;
 }
 @GetMapping("/updateform")
 public String showUpdateForm(@RequestParam("hgoalsid") int id, Model model) {
@@ -45,14 +46,14 @@ public String showUpdateForm(@RequestParam("hgoalsid") int id, Model model) {
 }
 
 @PostMapping("/update")
-public String updateteam(@ModelAttribute("updategoal") HSbGoals h) {
+public String updateHockeyGoal(@ModelAttribute("updategoal") HSbGoals h) {
 	hsgservice.save(h);
-    return "redirect:/hgoals/gethgoals";
+    return LISTOFHGOALS;
 }
 @GetMapping("/deletegoal")
-public String deleteTeam(@RequestParam("hgoalsid") int id) {
+public String deleteHockeyGoal(@RequestParam("hgoalsid") int id) {
 	hsgservice.deleteById(id);
-	return "redirect:/hgoals/gethgoals";
+	return LISTOFHGOALS;
 }
 
 }
