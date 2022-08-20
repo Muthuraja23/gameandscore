@@ -48,7 +48,7 @@ public class CrSbBattingDetailsController {
 	}
 
 	@PostMapping("/update")
-	public String updateBatting(@ModelAttribute("updatedetails") CrSbBattingDetails crSbBattingDetails) {
+	public String battingUpdate(@ModelAttribute("updatedetails") CrSbBattingDetails crSbBattingDetails) {
 		batservice.save(crSbBattingDetails);
 	    return LISTOFBATTING;
 	}
