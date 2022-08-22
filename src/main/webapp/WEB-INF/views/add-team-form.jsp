@@ -19,7 +19,8 @@
 				<div class="font">
 					<label for="teamname">Team Name</label>
 					<div>
-						<form:input path="teamname" />
+						<form:input path="teamname" pattern="^[A-Za-z\s]*$"
+                            title="Please Enter Charactor Only" required="true"/>
 					</div>
 				</div>
 				<div class="font">
@@ -37,25 +38,29 @@
 				<div class="font">
 					<label for="country">Country</label>
 					<div>
-						<form:input path="country" />
+						<form:input path="country" pattern="^[A-Za-z\s]*$"
+                            title="Please Enter Charactor Only" required="true"/>
 					</div>
 				</div>
 				<div class="font">
 					<label for="status">Status</label>
 					<div>
-						<form:input path="status" />
+						<form:input path="status" pattern="^[A-Za-z\s]*$"
+                            title="Please Enter Charactor Only" required="true"/>
 					</div>
 				</div>
 				<div class="font">
 					<label for="owner">Owner</label>
 					<div>
-						<form:input path="owner" />
+						<form:input path="owner" pattern="^[A-Za-z\s]*$"
+                            title="Please Enter Charactor Only" required="true"/>
 					</div>
 				</div>
 				<div class="font">
 					<label for="email">Email</label>
 					<div>
-						<form:input path="email" />
+						<form:input path="email"  pattern="^[a-z0-9+_.-]+@[a-zA-Z0-9.-]+$"
+                            title="Enter a valid email hello@gmail.com" required="true"/>
 					</div>
 				</div>
 				<div>

@@ -25,7 +25,8 @@
 				<div class="font">
 					<label for="team1">Team1</label>
 					<div>
-						<form:input path="team1" />
+						<form:input path="team1" pattern="^[A-Za-z\s]*$"
+                            title="Please Enter Charactor Only" required="true"/>
 					</div>
 				</div>
 				<div class="font">
@@ -55,7 +56,8 @@
 				<div class="font">
 					<label for="team2">Team2</label>
 					<div>
-						<form:input path="team2" />
+						<form:input path="team2" pattern="^[A-Za-z\s]*$"
+                            title="Please Enter Charactor Only" required="true"/>
 					</div>
 				</div>
 				<div class="font">

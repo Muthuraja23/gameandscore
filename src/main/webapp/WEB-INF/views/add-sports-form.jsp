@@ -25,7 +25,8 @@
 				<div class="font">
 					<label for="sportsname">Sports Name</label>
 					<div>
-						<form:input path="sportsname" />
+						<form:input path="sportsname" pattern="^[A-Za-z\s]*$"
+                            title="Please Enter Charactor Only"  required="true" />
 					</div>
 				</div>
 				<div class="font">

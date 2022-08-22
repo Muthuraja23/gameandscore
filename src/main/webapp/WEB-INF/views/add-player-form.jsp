@@ -25,25 +25,28 @@
 				<div class="font">
 					<label for="name">Name</label>
 					<div>
-						<form:input path="name" />
+						<form:input path="name" pattern="^[A-Za-z\s]*$"
+                            title="Please Enter Charactor Only" required="true"/>
 					</div>
 				</div>
 				<div class="font">
 					<label for="dob">Date Of Birth</label>
 					<div>
-						<form:input path="dob" />
+						<form:input path="dob" required="true"/>
 					</div>
 				</div>
 				<div class="font">
 					<label for="gender">Gender</label>
 					<div>
-						<form:input path="gender" />
+						<form:input path="gender" pattern="^[A-Za-z\s]*$"
+                            title="Please Enter Charactor Only" required="true"/>
 					</div>
 				</div>
 				<div class="font">
 					<label for="game">Game</label>
 					<div>
-						<form:input path="game" />
+						<form:input path="game" pattern="^[A-Za-z\s]*$"
+                            title="Please Enter Charactor Only" required="true"/>
 					</div>
 				</div>
 				<div class="font">
@@ -55,13 +58,15 @@
 				<div class="font">
 					<label for="team">Team</label>
 					<div>
-						<form:input path="team" />
+						<form:input path="team" pattern="^[A-Za-z\s]*$"
+                            title="Please Enter Charactor Only" required="true"/>
 					</div>
 				</div>
 				<div class="font">
 					<label for="skill">Skill</label>
 					<div>
-						<form:input path="skill" />
+						<form:input path="skill" pattern="^[A-Za-z\s]*$"
+                            title="Please Enter Charactor Only" required="true"/>
 					</div>
 				</div>
 				<div class="font">
@@ -85,7 +90,8 @@
 				<div class="font">
 					<label for="grade">Grade</label>
 					<div>
-						<form:input path="grade" />
+						<form:input path="grade" pattern="^[A-Za-z\s]*$"
+                            title="Please Enter Character Only" required="true"/>
 					</div>
 				</div>
 				<div>

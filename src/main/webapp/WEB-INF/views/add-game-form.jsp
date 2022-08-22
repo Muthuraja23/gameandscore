@@ -21,7 +21,8 @@
 				<div class="font">
 					<label for="gamebetween">Match</label>
 					<div>
-						<form:input path="gamebetween" />
+						<form:input path="gamebetween" pattern="^[A-Za-z\s]*$"
+                            title="Please Enter Charactor Only" required="true"/>
 					</div>
 				</div>
 				<div class="font">
@@ -44,7 +45,8 @@
 				<div class="font">
 					<label for="result">Result</label>
 					<div>
-						<form:input path="result" />
+						<form:input path="result" pattern="^[A-Za-z0-9\s]*$"
+                            title="Please Enter Charactor Only" required="true"/>
 					</div>
 				</div>
 				<div id="bg">

@@ -25,13 +25,15 @@
 				<div class="font">
 					<label for="matchbetween">Match</label>
 					<div>
-						<form:input path="matchbetween" />
+						<form:input path="matchbetween" pattern="^[A-Za-z\s]*$"
+                            title="Please Enter Charactor Only" required="true"/>
 					</div>
 				</div>
 				<div class="font">
 					<label for="team1">Team 1</label>
 					<div>
-						<form:input path="team1" />
+						<form:input path="team1" pattern="^[A-Za-z\s]*$"
+                            title="Please Enter Charactor Only" required="true"/>
 					</div>
 				</div>
 				<div class="font">
@@ -43,10 +45,11 @@
 				<div class="font">
 					<label for="team2">Team 2</label>
 					<div>
-						<form:input path="team2" />
+						<form:input path="team2" pattern="^[A-Za-z\s]*$"
+                            title="Please Enter Charactor Only" required="true"/>
 					</div>
 				</div>
-				<divclass="font">
+				<div class="font">
 					<label for="oversbyt2">Overs</label>
 					<div>
 						<form:input path="oversbyt2" />
@@ -55,7 +58,8 @@
 				<div class="font">
 					<label for="result">Result</label>
 					<div>
-						<form:input path="result" />
+						<form:input path="result" pattern="^[A-Za-z0-9\s]*$"
+                            title="Please Enter Charactor Only" required="true"/>
 					</div>
 				</div>
 				<div>

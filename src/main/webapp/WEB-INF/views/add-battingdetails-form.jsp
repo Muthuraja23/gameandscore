@@ -24,13 +24,15 @@
 				<div class="font">
 					<label for="team">Team</label>
 					<div>
-						<form:input path="team" />
+						<form:input path="team" pattern="^[A-Za-z\s]*$"
+                            title="Please Enter Charactor Only" required="true"/>
 					</div>
 				</div>
 				<div class="font">
 					<label for="playername">Player Name</label>
 					<div>
-						<form:input path="playername" />
+						<form:input path="playername" pattern="^[A-Za-z\s]*$"
+                            title="Please Enter Charactor Only" required="true" />
 					</div>
 				</div>
 				<div class="font">
@@ -66,7 +68,8 @@
 				<div class="font">
 					<label for="status">Status</label>
 					<div>
-						<form:input path="status" />
+						<form:input path="status" pattern="^[A-Za-z\s]*$"
+                            title="Please Enter Charactor Only" required="true"/>
 					</div>
 				</div>
 				<div>
