@@ -3,7 +3,10 @@ package com.chainsys.gameandscore.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
@@ -11,6 +14,8 @@ import javax.persistence.Table;
 public class FbSbGoals {
 	@Id
 	@Column(name = "fb_goals_id")
+	@GeneratedValue(strategy = GenerationType.AUTO, generator = "fb_goal_id")
+    @SequenceGenerator(name = "fb_goal_id", sequenceName = "fb_goal_id", allocationSize = 1)
 	private int fbgoalsid;
 	@Column(name = "game_id")
 	private int gameid;

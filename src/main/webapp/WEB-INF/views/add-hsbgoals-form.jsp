@@ -6,13 +6,10 @@
 <html lang=en>
 <head>
 <meta charset="ISO-8859-1">
-<title>Update HSbGoals</title>
+<title>Add HSbGoals</title>
 <style>
 	<%@include file="css/form.css"%>
-.text-danger {
-    color: #e80c4d;
-    font-size: 0.9em;
-}
+
 </style>
 </head>
 <body>
@@ -20,73 +17,67 @@
 		<div id="form">
 			<form:form action="add" method="post"
 				modelAttribute="addgoal">
-				<div>
-					<label for="hgoalsid">Hockey Goal Id</label>
-					<div>
-						<form:input path="hgoalsid" />
-					</div>
-				</div>
-				<div>
+				<div class="font">
 					<label for="gameid">Game Id</label>
 					<div>
 						<form:input path="gameid" />
 					</div>
 				</div>
-				<div>
+				<div class="font">
 					<label for="team1">Team 1</label>
 					<div>
 						<form:input path="team1" />
 					</div>
 				</div>
-				<div>
+				<div class="font">
 					<label for="t1shots">Shots</label>
 					<div>
 						<form:input path="t1shots" />
 					</div>
 				</div>
-				<div>
+				<div class="font">
 					<label for="t1hits">Hits</label>
 					<div>
 						<form:input path="t1hits" />
 					</div>
 				</div>
-				<div>
+				<div class="font">
 					<label for="t1totalpenalties">Penalties</label>
 					<div>
 						<form:input path="t1totalpenalties" />
 					</div>
 				</div>
-				<div>
+				<div class="font">
 					<label for="t1blockedshots">Blocked Shots</label>
 					<div>
 						<form:input path="t1blockedshots" />
 					</div>
 				</div>
-				<div>
+				<div class="font">
 					<label for="team2">Team 2</label>
 					<div>
 						<form:input path="team2" />
 					</div>
 				</div>
-				<div>
+				<div class="font">
 					<label for="t2shots">Shots</label>
 					<div>
 						<form:input path="t2shots" />
 					</div>
 				</div>
-				<div>
+				<div class="font">
 					<label for="t2hits">Hits</label>
 					<div>
 						<form:input path="t2hits" />
 					</div>
 				</div>
-				<div>
+				<div class="font">
 					<label for="t2totalpenalties">Penalties</label>
 					<div>
 						<form:input path="t2totalpenalties" />
 					</div>
 				</div>
-				<div>
+				<div class="font">
 					<label for="t2blockedshots">Blocked Shots</label>
 					<div>
 						<form:input path="t2blockedshots" />

@@ -9,7 +9,8 @@
 <meta charset="ISO-8859-1">
 <title>Add Game</title>
 <style>
-<%@include file="css/background.css"%>
+	<%@ include file = "css/add.css"%>
+	<%-- <%@include file="css/cricketbg.css"%> --%>
 	<%@include file="css/form.css"%>
 </style>
 </head>
@@ -46,14 +47,14 @@
 						<form:input path="result" />
 					</div>
 				</div>
-				<div>
-					<form:button>Add</form:button>
+				<div id="bg">
+					<button type="submit" value="add">Add</button>
 				</div>
 			</form:form>
 			</div>
 		</div>
 	<script type="text/javascript">
-<%@include file="js/select.js" %>
+<%@include file="js/select.js"%>
 </script>
 </body>
 </html>

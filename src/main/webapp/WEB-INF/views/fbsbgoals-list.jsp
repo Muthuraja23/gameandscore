@@ -7,11 +7,12 @@
 <meta charset="ISO-8859-1">
 <title>Football Goals List</title>
 <style>
+	<%@ include file ="css/table.css"%>
 </style>
 </head>
 <body>
 	<div id="table root">
-		<table>
+		<table class=content-table>
 		<caption></caption>
 			<thead>
 				<tr>

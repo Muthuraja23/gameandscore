@@ -9,60 +9,57 @@
 <meta charset="ISO-8859-1">
 <title>Add BowlingDetails Form</title>
 <style>
+	<%@include file="css/add.css"%>
 	<%@include file="css/form.css"%>
-.text-danger {
-    color: #e80c4d;
-    font-size: 0.9em;
-}
 </style>
 </head>
 <body>
 	<div id="root">
 		<div id="form">
 			<form:form action="add" method="post" modelAttribute="adddetails">
-				<div>
+				<div class="font">
 					<label for="gameid">Game Id</label>
 					<div>
 						<form:input path="gameid" />
 					</div>
 				</div>
-				<div>
+				<div class="font">
 					<label for="team">Team</label>
 					<div>
 						<form:input path="team" />
 					</div>
 				</div>
-				<div>
+				<div class="font">
 					<label for="playerName">Name</label>
 					<div>
 						<form:input path="playerName" />
 					</div>
 				</div>
-				<div>
+				<div class="font">
 					<label for="overs">Overs</label>
 					<div>
 						<form:input path="overs" />
 					</div>
 				</div>
-				<div>
+				<div class="font">
 					<label for="wickets">Wickets</label>
 					<div>
 						<form:input path="wickets" />
 					</div>
 				</div>
-				<div>
+				<div class="font">
 					<label for="runs">Runs</label>
 					<div>
 						<form:input path="runs" />
 					</div>
 				</div>
-				<div>
+				<div class="font">
 					<label for="maiden">Maiden</label>
 					<div>
 						<form:input path="maiden" />
 					</div>
 				</div>
-				<div>
+				<div class="font">
 					<label for="economy">Economy</label>
 					<div>
 						<form:input path="economy" />

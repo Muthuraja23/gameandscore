@@ -1,4 +1,4 @@
-package com.chainsys.gameandscore;
+ package com.chainsys.gameandscore;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

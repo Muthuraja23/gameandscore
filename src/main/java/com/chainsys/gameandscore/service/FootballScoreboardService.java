@@ -11,7 +11,7 @@ import com.chainsys.gameandscore.repository.FootballScoreboardRepository;
 public class FootballScoreboardService {
 	@Autowired
 	private FootballScoreboardRepository rp;
-	public List<FootballScoreboard> getfbscoreboard(){
+	public List<FootballScoreboard> getfbscoreboard(int id){
 	return rp.findAll();
 	}
 	public FootballScoreboard save(FootballScoreboard fs) {

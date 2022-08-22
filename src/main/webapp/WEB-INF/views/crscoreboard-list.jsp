@@ -7,7 +7,9 @@
 <meta charset="ISO-8859-1">
 <title>Cricket ScoreBoard List</title>
 <style>
-<%@ include file="css/navigationbar.css"%>
+
+<%@ include file ="css/cricketbg.css"%> 
+<%@include file="css/navigationbar.css"%>
 <%@ include file="css/table.css"%>
 </style>
 </head>
@@ -40,7 +42,7 @@
 			</table>
 		</div>
 		<div id="table root">
-			<table class = bat-table>
+			<table class =content-table>
 			<caption></caption>
 				<thead>
 					<tr>
@@ -71,7 +73,7 @@
 			</table>
 		</div>
 		<div id="table root">
-			<table class = bowl-table>
+			<table class =content-table>
 			<caption></caption>
 				<thead>
 					<tr>
@@ -88,7 +90,7 @@
 					<c:forEach var="CrSbBowlingDetails" items="${ball}">
 						<tr>
 							<td>${CrSbBowlingDetails.team}</td>
-							<td>${CrSbBowlingDetails.playername}</td>
+							<td>${CrSbBowlingDetails.playerName}</td>
 							<td>${CrSbBowlingDetails.overs}</td>
 							<td>${CrSbBowlingDetails.maiden}</td>							
 							<td>${CrSbBowlingDetails.runs}</td>

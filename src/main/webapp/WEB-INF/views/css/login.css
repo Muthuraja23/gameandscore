@@ -15,8 +15,12 @@ h1 {
 }
 
 body {
+	background-image: url("https://wallpaperaccess.com/full/2314950.jpg");
+	/* background-image: url("https://t4.ftcdn.net/jpg/04/60/71/01/360_F_460710131_YkD6NsivdyYsHupNvO3Y8MPEwxTAhORh.jpg"); */
 	padding: 0;
-	background: #f6f6f6;
+	background-repeat: no-repeat;
+	background-size: cover;
+	/* background: #f6f6f6; */
 	font-family: 'Poppins', sans-serif;
 	overflow-x: hidden;
 	height: 100vh;

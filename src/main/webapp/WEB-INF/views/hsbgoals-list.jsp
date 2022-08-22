@@ -7,6 +7,7 @@
 <meta charset="ISO-8859-1">
 <title>Hockey Goals List</title>
 <style>
+	<%@ include file = "css/table.css" %>
 </style>
 </head>
 <body>

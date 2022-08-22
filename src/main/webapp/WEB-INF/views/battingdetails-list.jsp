@@ -8,11 +8,12 @@
 <title>Batting Score</title>
 <style>
 <%@ include file="css/navigationbar.css"%>
+<%@ include file="css/table.css"%>
 </style>
 </head>
 <body>
 	<div id="table root">
-		<table>
+		<table class=content-table>
 		<caption></caption>
 			<thead>
 				<tr>

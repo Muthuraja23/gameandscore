@@ -2,10 +2,12 @@ package com.chainsys.gameandscore.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -36,7 +38,10 @@ public String bowlingAddForm(Model model) {
 	return "add-bowlingdetails-form";
 }
 @PostMapping("/add")
-public String addNewBowling(@ModelAttribute("adddetails")CrSbBowlingDetails bl) {
+public String addNewBowling(@Valid @ModelAttribute("adddetails")CrSbBowlingDetails bl,Errors errors) {
+	if (errors.hasErrors()) {
+		return "add";
+	}
 	blservice.save(bl);
 	return LISTOFBOWLING;
 }

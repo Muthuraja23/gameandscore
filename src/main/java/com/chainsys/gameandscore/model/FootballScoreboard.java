@@ -2,9 +2,12 @@ package com.chainsys.gameandscore.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
@@ -12,6 +15,8 @@ import javax.persistence.Table;
 public class FootballScoreboard {
 	@Id
 	@Column (name = "fb_scoreboard_id")
+	@GeneratedValue(strategy = GenerationType.AUTO, generator = "football_score")
+    @SequenceGenerator(name = "football_score", sequenceName = "football_score", allocationSize = 1)
 	private int fbscoreboardid;
 	@Column(name = "game_id")
 	private int gameid;

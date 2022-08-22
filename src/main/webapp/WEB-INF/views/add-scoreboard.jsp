@@ -8,6 +8,7 @@
 <meta charset="ISO-8859-1">
 <title>Add Scoreboard Form</title>
 <style>
+	<%@include file="css/add.css"%>
 	<%@include file="css/form.css"%>
 </style>
 </head>
@@ -15,49 +16,43 @@
 	<div id="root">
 		<div id="form">
 			<form:form action="add" method="post" modelAttribute="addscore">
-				<div>
-					<label for="crscoreboardid">ScoreBoard Id</label>
-					<div>
-						<form:input path="crscoreboardid" />
-					</div>
-				</div>
-				<div>
+				<div class="font">
 					<label for="gameid">Game Id</label>
 					<div>
 						<form:input path="gameid" />
 					</div>
 				</div>
-				<div>
+				<div class="font">
 					<label for="matchbetween">Match Between</label>
 					<div>
 						<form:input path="matchbetween" />
 					</div>
 				</div>
-				<div>
+				<div class="font">
 					<label for="team1">Team 1 Score</label>
 					<div>
 						<form:input path="team1" />
 					</div>
 				</div>
-				<div>
+				<div class="font">
 					<label for="oversbyt1">Overs</label>
 					<div>
 						<form:input path="oversbyt1" />
 					</div>
 				</div>
-				<div>
+				<div class="font">
 					<label for="team2">Team 2 Score</label>
 					<div>
 						<form:input path="team2" />
 					</div>
 				</div>
-				<div>
+				<div class="font">
 					<label for="oversbyt2">Overs</label>
 					<div>
 						<form:input path="oversbyt2" />
 					</div>
 				</div>
-				<div>
+				<div class="font">
 					<label for="result">Result</label>
 					<div>
 						<form:input path="result" />

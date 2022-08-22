@@ -8,24 +8,15 @@
 <meta charset="ISO-8859-1">
 <title>Add Football Scoreboard Form</title>
 <style>
+	<%@include file="css/add.css"%>
 	<%@include file="css/form.css"%>
-.text-danger {
-    color: #e80c4d;
-    font-size: 0.9em;
-}
 </style>
 </head>
 <body>
 	<div id="root">
 		<div id="form">
 			<form:form action="add" method="post" modelAttribute="addscore">
-				<div>
-					<label for="fbscoreboardid">Football ScoreBoard Id</label>
-					<div>
-						<form:input path="fbscoreboardid" />
-					</div>
-				</div>
-				<div>
+			<div class="font">
 					<label for="gameid">Game Id</label>
 					<div>
 						<form:input path="gameid" />

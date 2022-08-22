@@ -1,0 +1,9 @@
+@charset "ISO-8859-1";
+
+body{
+	background-image: url("https://t4.ftcdn.net/jpg/03/69/50/39/360_F_369503958_LZg280QKEi1ygukvq6nKhg8MqpZ7d3dp.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: relative;
+} 

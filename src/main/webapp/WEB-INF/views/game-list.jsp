@@ -7,6 +7,7 @@
 <meta charset="ISO-8859-1">
 <title>Game List</title>
 <style>
+/* <%@ include file="css/cricketbg.css"%>	 */
 <%@ include file="css/navigationbar.css"%>
 <%@ include file="css/table.css"%>
 <%@ include file="css/footer.css"%>

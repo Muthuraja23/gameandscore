@@ -2,10 +2,12 @@ package com.chainsys.gameandscore.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -36,8 +38,11 @@ public class CrSbBattingDetailsController {
 		return "add-battingdetails-form";
 	}
 	@PostMapping("/add")
-	public String addNewBatting(@ModelAttribute("addbattingdetails")CrSbBattingDetails crSbBattingDetails) {
-		batservice.save(crSbBattingDetails);
+	public String addNewBatting(@Valid @ModelAttribute("addbattingdetails")CrSbBattingDetails battingDetails,Errors errors ) {
+	    if (errors.hasErrors()) {
+            return "add";
+	    }
+		batservice.save(battingDetails);
 		return LISTOFBATTING;
 	}
 	@GetMapping("/updatebatting")
@@ -48,8 +53,8 @@ public class CrSbBattingDetailsController {
 	}
 
 	@PostMapping("/update")
-	public String battingUpdate(@ModelAttribute("updatedetails") CrSbBattingDetails crsbBattingDetails) {
-		batservice.save(crsbBattingDetails);
+	public String battingUpdate(@ModelAttribute("updatedetails") CrSbBattingDetails battingDetails) {
+		batservice.save(battingDetails);
 	    return LISTOFBATTING;
 	}
 	@GetMapping("/deletebatting")

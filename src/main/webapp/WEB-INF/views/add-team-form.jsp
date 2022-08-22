@@ -8,54 +8,51 @@
 <meta charset="ISO-8859-1">
 <title>Add Team Form</title>
 <style>
+	<%@include file="css/add.css"%>
 	<%@include file="css/form.css"%>
-.text-danger {
-	color: #e80c4d;
-	font-size: 0.9em;
-}
 </style>
 </head>
 <body>
 	<div id="root">
 		<div id="form">
 			<form:form action="add" method="post" modelAttribute="addteam">
-				<div>
+				<div class="font">
 					<label for="teamname">Team Name</label>
 					<div>
 						<form:input path="teamname" />
 					</div>
 				</div>
-				<div>
+				<div class="font">
 					<label for="startdate">Start Date</label>
 					<div>
 						<form:input type="date" path="startdate" />
 					</div>
 				</div>
-				<div>
+				<div class="font">
 					<label for="totalplayers">Total Players</label>
 					<div>
 						<form:input path="totalplayers" />
 					</div>
 				</div>
-				<div>
+				<div class="font">
 					<label for="country">Country</label>
 					<div>
 						<form:input path="country" />
 					</div>
 				</div>
-				<div>
+				<div class="font">
 					<label for="status">Status</label>
 					<div>
 						<form:input path="status" />
 					</div>
 				</div>
-				<div>
+				<div class="font">
 					<label for="owner">Owner</label>
 					<div>
 						<form:input path="owner" />
 					</div>
 				</div>
-				<div>
+				<div class="font">
 					<label for="email">Email</label>
 					<div>
 						<form:input path="email" />

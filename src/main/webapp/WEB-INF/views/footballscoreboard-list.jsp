@@ -7,12 +7,13 @@
 <meta charset="ISO-8859-1">
 <title>Football ScoreBoard List</title>
 <style>
+ <%@ include file="css/footballbg.css"%> 
 <%@ include file = "css/table.css" %>
 </style>
 </head>
 <body>
 	<div id="table root">
-		<table class=football>
+		<table class=content-table>
 		<caption></caption>
 			<thead>
 				<tr>
@@ -35,7 +36,7 @@
 		</table>
 	</div>
 	<div id="table root">
-		<table class=fgoals>
+		<table class=content-table>
 		<caption></caption>
 			<thead>
 				<tr>
@@ -60,7 +61,7 @@
 		</table>
 	</div>
 	<div id="table root">
-		<table class=fgoals>
+		<table class=content-table>
 		<caption></caption>
 			<thead>
 				<tr>
