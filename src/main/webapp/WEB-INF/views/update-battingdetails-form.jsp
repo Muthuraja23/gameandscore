@@ -16,6 +16,9 @@
 			<form:form action="update" method="post"
 				modelAttribute="updatedetails">
 				<div>
+				<form:input path="crbattingid" type="hidden"/>
+				</div>
+				<div>
 					<label for="gameid">Game id</label>
 					<div>
 						<form:input path="gameid" />

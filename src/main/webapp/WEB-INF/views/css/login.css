@@ -16,11 +16,9 @@ h1 {
 
 body {
 	background-image: url("https://wallpaperaccess.com/full/2314950.jpg");
-	/* background-image: url("https://t4.ftcdn.net/jpg/04/60/71/01/360_F_460710131_YkD6NsivdyYsHupNvO3Y8MPEwxTAhORh.jpg"); */
 	padding: 0;
 	background-repeat: no-repeat;
 	background-size: cover;
-	/* background: #f6f6f6; */
 	font-family: 'Poppins', sans-serif;
 	overflow-x: hidden;
 	height: 100vh;
@@ -67,7 +65,7 @@ p {
 .bg {
 	width: 400px;
 	height: 550px;
-	background: #04AA6D;
+	background: #146ECD;
 	position: absolute;
 	top: -5em;
 	left: 0;
@@ -131,7 +129,7 @@ button {
 	padding: 13px 15px;
 	border-radius: 100px;
 	border: none;
-	background: #04AA6D;
+	background: #146ECD;
 	font-family: 'Poppins', sans-serif;
 	outline: none;
 	color: #fff;

@@ -1,0 +1,10 @@
+@charset "ISO-8859-1";
+
+body{
+	background-image: url("https://wallpapersmug.com/download/1920x1080/2ba373/stadium-football-sports.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	position: relative;
+} 
