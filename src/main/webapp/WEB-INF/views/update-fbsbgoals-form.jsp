@@ -18,10 +18,7 @@
 		<div id="form">
 			<form:form action="update" method="post" modelAttribute="updategoal">
 				<div>
-					<label for="fbgoalsid">Football Goal Id</label>
-					<div>
-						<form:input path="fbgoalsid" />
-					</div>
+				<form:input path="fbgoalsid" type="hidden"/>
 				</div>
 				<div>
 					<label for="gameid">Game Id</label>

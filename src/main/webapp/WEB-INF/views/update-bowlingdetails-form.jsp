@@ -7,10 +7,6 @@
 <meta charset="ISO-8859-1">
 <title>Update Bowling Details</title>
 <style>
-.text-danger {
-    color: #e80c4d;
-    font-size: 0.9em;
-}
 </style>
 </head>
 <body>
@@ -18,6 +14,9 @@
 		<div id="form">
 			<form:form action="update" method="post"
 				modelAttribute="updatebowling">
+				<div>
+				<form:input path="crbowlingid" type="hidden"/>
+				</div>
 				<div>
 					<label for="gameid">Game Id</label>
 					<div>

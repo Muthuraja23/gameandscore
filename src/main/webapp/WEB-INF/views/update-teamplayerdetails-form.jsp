@@ -12,10 +12,7 @@
 		<div id="form">
 			<form:form action="updateteamplayerdetails" method="post" modelAttribute="updateteamplayerdetails">
 				<div>
-					<label for="teamplayerid">Team Player id</label>
-					<div>
-						<form:input path="teamplayerid" />
-					</div>
+				<form:input path="teamplayerid" type="hidden"/>
 				</div>
 				<div>
 					<label for="teamid">Team id</label>

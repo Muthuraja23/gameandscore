@@ -5,10 +5,13 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Error Page</title>
+<style>
+
+</style>
 </head>
 <body>
 <div class="content-table"></div>
 <h1>Sorry for the inconvenient!</h1><br>
-<h3>username and password mismatched.</h3>
+<h3>AdminId and Password mismatched.</h3>
 </body>
 </html>

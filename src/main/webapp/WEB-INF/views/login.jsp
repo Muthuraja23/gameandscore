@@ -16,16 +16,19 @@
             <form action="loginValidation" method="post"
                 modelAttribute="login" >
                 <header>
-                    <h1>Admin Login</h1>
+                    <h1>Admin</h1>
                 </header>
                 <div class="inputs">
                     <input type="text" id="adminId" name="adminId"
                         placeholder="Admin ID"> <input type="password"
                         id="password" name="password" placeholder="Password">
                 </div>
-                <br> <br> <br> <br> <br>
+                <br> <br> <br> <br>
                 <button type="submit" value="Login">Login</button>
             </form>
+            <footer>
+            <div style="color:red;">${message}</div>
+            </footer>
         </div>
 </body>
 </html>

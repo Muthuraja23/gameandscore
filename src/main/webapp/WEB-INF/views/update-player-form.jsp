@@ -19,10 +19,7 @@
 			<form:form action="updateplayer" method="post"
 				modelAttribute="updateplayer">
 				<div>
-					<label for="playerid">Player Id</label>
-					<div>
-						<form:input path="playerid" />
-					</div>
+				<form:input path="playerid" type="hidden"/>
 				</div>
 				<div>
 					<label for="name">Name</label>

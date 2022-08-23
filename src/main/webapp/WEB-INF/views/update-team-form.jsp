@@ -19,10 +19,7 @@
 			<form:form action="updateteam" method="post"
 				modelAttribute="updateteam">
 				<div>
-					<label for="teamid">Team id</label>
-					<div>
-						<form:input path="teamid" />
-					</div>
+				<form:input path="teamid" type="hidden"/>
 				</div>
 				<div>
 					<label for="teamname">Team Name</label>

@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import com.chainsys.gameandscore.commonutil.InvalidInputDataException;
 import com.chainsys.gameandscore.model.Login;
 import com.chainsys.gameandscore.service.LoginService;
 
@@ -22,14 +23,15 @@ public class LoginController {
 	}
 	@PostMapping("/loginValidation")
 	public String loginValidation(@ModelAttribute("login")Login login,Model model) {
-		try {
 		login=loginService.findIdAndPassword(login.getAdminId(), login.getPassword());
-		if(login!=null) {
-			return "admin";
+		try {
+		if(login==null) {
+			throw new InvalidInputDataException("No matching data found");
 		}
 		}catch(Exception exp) {
-			return "error-page";
+			model.addAttribute("message","Admin Id or Password is incorrect");
+			return "login";
 		}
-		return "error-page";
+		return "admin";
 	}
 }

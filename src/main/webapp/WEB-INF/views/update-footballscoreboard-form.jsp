@@ -19,10 +19,7 @@
 			<form:form action="update" method="post"
 				modelAttribute="updatescore">
 				<div>
-					<label for="fbscoreboardid">Football Scoreboard Id</label>
-					<div>
-						<form:input path="fbscoreboardid" />
-					</div>
+				<form:input path="fbscoreboardid" type="hidden"/>
 				</div>
 				<div>
 					<label for="gameid">Game Id</label>

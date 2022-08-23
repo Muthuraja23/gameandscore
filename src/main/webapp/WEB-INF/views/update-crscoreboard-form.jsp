@@ -19,6 +19,9 @@
 			<form:form action="updatescore" method="post"
 				modelAttribute="updatescore">
 				<div>
+				<form:input path="crscoreboardid" type="hidden"/>
+				</div>
+				<div>
 					<label for="gameid">Game Id</label>
 					<div>
 						<form:input path="gameid" />

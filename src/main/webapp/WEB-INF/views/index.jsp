@@ -53,7 +53,7 @@ opacity: 0.75;
 		}
 	</script>
 	<footer class=footer>
-	  <p>&#169 2022 buzzbuzz.com, Times Internet Limited.All rights reserved | The Days of India | Bharat Times</p>
+	  <p>&#169 2022 buzzbuzz.com, Times Internet Limited.All rights reserved | The Days of India | Bharath Times</p>
 	</footer>
 </body>
 </html>

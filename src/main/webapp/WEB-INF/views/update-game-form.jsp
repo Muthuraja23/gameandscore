@@ -19,10 +19,7 @@
 			<form:form action="updategame" method="post"
 				modelAttribute="updategame">
 				<div>
-					<label for="gameid">Game id</label>
-					<div>
-						<form:input path="gameid" />
-					</div>
+				<form:input path="gameid" type="hidden"/>
 				</div>
 				<div>
 					<label for="gamebetween">Game Between</label>

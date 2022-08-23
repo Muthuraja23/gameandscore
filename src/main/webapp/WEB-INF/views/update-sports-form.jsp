@@ -18,11 +18,8 @@
         <div id="form">
             <form:form action="updatesports" method="post" modelAttribute="updatesports">
                 <div>
-                    <label for="sportsid">Sports id</label>
-                    <div>
-                        <form:input path="sportsid" />
-                    </div>
-                </div>
+				<form:input path="sportsid" type="hidden"/>
+				</div>
                 <div>
                     <label for="sportsname">Sports Name</label>
                     <div>

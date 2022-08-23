@@ -13,10 +13,7 @@
 			<form:form action="updatescore" method="post"
 				modelAttribute="updatescore">
 				<div>
-					<label for="crscoreboardid">ScoreBoard Id</label>
-					<div>
-						<form:input path="crscoreboardid" />
-					</div>
+				<form:input path="crscoreboardid" type="hidden"/>
 				</div>
 				<div>
 					<label for="gameid">Game Id</label>
