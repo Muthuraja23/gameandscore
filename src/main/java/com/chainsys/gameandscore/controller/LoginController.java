@@ -13,16 +13,17 @@ import com.chainsys.gameandscore.service.LoginService;
 
 @Controller
 public class LoginController {
+	private static final String LOGIN = "login";
 	@Autowired
 	private LoginService loginService;
 	@GetMapping("/login")
 	public String loginCheck(Model model) {
 		Login login =new Login();
-		model.addAttribute("login", login);
-		return "login";
+		model.addAttribute("log", login);
+		return LOGIN;
 	}
 	@PostMapping("/loginValidation")
-	public String loginValidation(@ModelAttribute("login")Login login,Model model) {
+	public String loginValidation(@ModelAttribute("log")Login login,Model model) {
 		login=loginService.findIdAndPassword(login.getAdminId(), login.getPassword());
 		try {
 		if(login==null) {
@@ -30,7 +31,7 @@ public class LoginController {
 		}
 		}catch(Exception exp) {
 			model.addAttribute("message","Admin Id or Password is incorrect");
-			return "login";
+			return LOGIN;
 		}
 		return "admin";
 	}

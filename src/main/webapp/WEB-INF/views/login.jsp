@@ -14,7 +14,7 @@
         <div class="app">
             <div class="bg"></div>
             <form action="loginValidation" method="post"
-                modelAttribute="login" >
+                modelAttribute="log" >
                 <header>
                     <h1>Admin</h1>
                 </header>
