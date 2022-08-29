@@ -14,29 +14,29 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.chainsys.gameandscore.model.HSbGoals;
-import com.chainsys.gameandscore.service.HSbGoalsService;
+import com.chainsys.gameandscore.model.HockeyGoals;
+import com.chainsys.gameandscore.service.HockeyGoalsService;
 
 @Controller
 @RequestMapping("/hgoals")
-public class HSbGoalsController {
+public class HockeyGoalsController {
 	public static final String LISTOFHGOALS= "redirect:/hgoals/gethgoals";
 	@Autowired
-	private HSbGoalsService hsgservice;
+	private HockeyGoalsService hsgservice;
 	@GetMapping("/gethgoals")
 	public String getFbgoals(Model model) {
-		List<HSbGoals> hsgoals = hsgservice.getHgoals();
+		List<HockeyGoals> hsgoals = hsgservice.getHgoals();
 		model.addAttribute("allgoals", hsgoals);
 		return "hsbgoals-list";
 	}
 @GetMapping("/addform")
 public String hsbgoalsAddForm(Model model) {
-	HSbGoals h=new HSbGoals();
+	HockeyGoals h=new HockeyGoals();
 	model.addAttribute("addgoal", h);
 	return "add-hsbgoals-form";
 }
 @PostMapping("/add")
-public String addNewHockeyGoal(@Valid @ModelAttribute("addgoal")HSbGoals hky,Errors errors) {
+public String addNewHockeyGoal(@Valid @ModelAttribute("addgoal")HockeyGoals hky,Errors errors) {
 	if (errors.hasErrors()) {
 		return "add";
 	}
@@ -45,13 +45,13 @@ public String addNewHockeyGoal(@Valid @ModelAttribute("addgoal")HSbGoals hky,Err
 }
 @GetMapping("/updateform")
 public String showUpdateForm(@RequestParam("hgoalsid") int id, Model model) {
-	HSbGoals h = hsgservice.findById(id);
+	HockeyGoals h = hsgservice.findById(id);
     model.addAttribute("updategoal", h);
     return "update-hsbgoals-form";
 }
 
 @PostMapping("/update")
-public String updateHockeyGoal(@ModelAttribute("updategoal") HSbGoals h) {
+public String updateHockeyGoal(@ModelAttribute("updategoal") HockeyGoals h) {
 	hsgservice.save(h);
     return LISTOFHGOALS;
 }

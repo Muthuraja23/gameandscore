@@ -26,7 +26,6 @@ public class HockeyScoreboardService {
 		return rp.findById(id);
 	}
 
-	@Transactional
 	public void deleteById(int id) {
 		rp.deleteById(id);
 	}

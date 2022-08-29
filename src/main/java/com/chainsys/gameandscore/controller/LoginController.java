@@ -6,12 +6,14 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.chainsys.gameandscore.commonutil.InvalidInputDataException;
 import com.chainsys.gameandscore.model.Login;
 import com.chainsys.gameandscore.service.LoginService;
 
 @Controller
+@RequestMapping("/admin")
 public class LoginController {
 	private static final String LOGIN = "login";
 	@Autowired

@@ -25,20 +25,15 @@ public class Game {
 	private int gameid;
 	@Column(name = "sports_id")
 	private int sportsid;
-	@Column(name = "game_between")
-	private String gamebetween;
-	@Column(name = "date_")
+	@Column(name = "teamA")
+	private String teamA;
+	@Column(name = "teamB")
+	private String teamB;
+	@Column(name = "game_date")
 	private Date dateandtime;
 	@Column(name = "result")
 	private String result;
-
-	@OneToMany(
-			mappedBy = "game",
-			cascade = CascadeType.ALL
-			)
 	
-	private List<FootballScoreboard>footballScoreboards = new ArrayList<>();
-
 	public int getGameid() {
 		return gameid;
 	}
@@ -55,12 +50,20 @@ public class Game {
 		this.sportsid = sportsid;
 	}
 
-	public String getGamebetween() {
-		return gamebetween;
+	public String getTeamA() {
+		return teamA;
 	}
 
-	public void setGamebetween(String gamebetween) {
-		this.gamebetween = gamebetween;
+	public void setTeamA(String teamA) {
+		this.teamA = teamA;
+	}
+
+	public String getTeamB() {
+		return teamB;
+	}
+
+	public void setTeamB(String teamB) {
+		this.teamB = teamB;
 	}
 
 	public Date getDateandtime() {
@@ -79,6 +82,16 @@ public class Game {
 		this.result = result;
 	}
 
+
+
+	@OneToMany(
+			mappedBy = "game",
+			cascade = CascadeType.ALL
+			)
+	
+	private List<FootballScoreboard>footballScoreboards = new ArrayList<>();
+
+	
 	public List<FootballScoreboard> getFootballScoreboards() {
 		return footballScoreboards;
 	}

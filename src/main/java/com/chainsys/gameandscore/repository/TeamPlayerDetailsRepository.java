@@ -13,5 +13,5 @@ public interface TeamPlayerDetailsRepository extends JpaRepository<TeamPlayerDet
 	TeamPlayerDetails save(TeamPlayerDetails tp);
 	void deleteById(int tmid);
 	List <TeamPlayerDetails> findAll();
-
+	TeamPlayerDetails findByName(String name);
 }

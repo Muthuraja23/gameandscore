@@ -17,6 +17,12 @@ public class PlayerService {
 	public List<Player> getplayers() {
 		return pr.findAll();
 	}
+	public List<Player> getPlayersByTeamId(int id){
+		return pr.findByTeamid(id);
+	}
+	public Player getPlayersByName(String name){
+		return pr.findByName(name);
+	}
 
 	public Player save(Player p) {
 		return pr.save(p);
@@ -26,7 +32,6 @@ public class PlayerService {
 		return pr.findById(id);
 	}
 
-	@Transactional
 	public void deleteById(int id) {
 		pr.deleteById(id);
 	}

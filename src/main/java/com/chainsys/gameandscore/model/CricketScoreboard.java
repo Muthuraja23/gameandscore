@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "cr_scoreboard")
-public class CrScoreboard {
+public class CricketScoreboard {
 	@Id
 	@Column(name = "cr_scoreboard_id")
 	@GeneratedValue(strategy = GenerationType.AUTO, generator = "cr_score_id")

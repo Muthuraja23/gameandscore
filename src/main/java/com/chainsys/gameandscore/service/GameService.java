@@ -28,7 +28,6 @@ public class GameService {
 	public Game findById(int id) {
 		return repo.findById(id);
 	}
-	@Transactional
 	public void deleteById(int id) {
 		repo.deleteById(id);
 	}

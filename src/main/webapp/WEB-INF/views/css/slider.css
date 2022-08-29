@@ -2,10 +2,9 @@
 .mySlides {
       display:none;
       width:100%;
-      
-      height: 610px;
+      height: 550px; 
     }
-  
+   	 	
     .w3-sections{
       margin-top: 0px !important;
       margin-bottom: 0px !important;

@@ -8,148 +8,52 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Admin</title>
-<style type="text/css">
-* {
-	background-color: gray;
-	text-align: center;
+<style>
+<%@include file="css/navigationbar.css"%>
+<%@include file="css/slider.css"%>
+<%@include file="css/footer.css"%>
+img{
+opacity: 0.75;
 }
-<%@include file="css/form.css"%>
 </style>
 </head>
 <body>
-	<h1>Game</h1>
-	<a href="/game/addform"><button>Add</button></a>
-
-	<form action="/game/updateform">
-		<div class="center">
-			<input type="text" name="gameid" /> <br>
-			<button>Update</button>
+	<div class="container">
+		<ul class="topnav">
+			<li><a class="active" href="/game/index">Home</a></li>
+			<li><a href="/game/addform?id=1">Cricket</a></li>
+			<li><a href="/game/addform?id=2">Football</a></li>
+			<li><a href="/game/addform?id=3">Hockey</a></li>
+			<li class="right"><a href="/team/getallteams">Teams</a></li>
+		</ul>
+		<div style="padding: 0 16px;"></div>
+	</div>
+	<form:form action="" method="get" modelAttribute="space">
+		<div class="w3-content-width w3-sections">
+			<img class="mySlides" src="https://media.istockphoto.com/photos/cricket-leather-ball-resting-on-bat-on-the-stadium-pitch-picture-id1255328634?b=1&k=20&m=1255328634&s=170667a&w=0&h=kPODQbM_ZecfQOPipjG-iTfyvDwrlx6CQwECg2iGvQg=" alt="" style="width: 100%">
+			<img class="mySlides" src="https://images.pexels.com/photos/46798/the-ball-stadion-football-the-pitch-46798.jpeg" alt="" style="width: 100%"> 
+			<img class="mySlides" src="https://wallpaperaccess.com/full/2051794.jpg" alt="" style="width: 100%">
 		</div>
-	</form>
-
-	<form action="/game/deletegame">
-		<div class="center">
-			<input type="text" name="gameid" /> <br>
-			<button>Delete</button>
-		</div>
-	</form>
-
-	<h1>Cricket</h1>
-	<h2>ScoreBoard</h2>
-	<br>
-	<a href="/cricket/addscore"><button>Add</button></a>
-	<form action="/cricket/updatescore">
-		<div class="center">
-			<input type="text" name="crscoreboardid" /> <br>
-			<button>Update</button>
-		</div>
-	</form>
-
-	<form action="/cricket/deletescore">
-		<div class="center">
-			<input type="text" name="crscoreboardid" /> <br>
-			<button>Delete</button>
-		</div>
-	</form>
-
-	<h2>Batting</h2>
-	<br>
-	<a href="/batting/addbatting"><button>Add</button></a>
-	<form action="/batting/updatebatting">
-		<div class="center">
-			<input type="text" name="crbattingid" /> <br>
-			<button>Update</button>
-		</div>
-	</form>
-
-	<form action="/batting/deletebatting">
-		<div class="center">
-			<input type="text" name="crbattingid" /> <br>
-			<button>Delete</button>
-		</div>
-	</form>
-
-	<h2>Bowling</h2>
-	<br>
-
-	<a href="/bowling/addbowling"><button>Add</button></a>
-	<form action="/bowling/updatebowling">
-		<div class="center">
-			<input type="text" name="crbowlingid" /> <br>
-			<button>Update</button>
-		</div>
-	</form>
-
-	<form action="/bowling/deletebowling">
-		<div class="center">
-			<input type="text" name="crbowlingid" /> <br>
-			<button>Delete</button>
-		</div>
-	</form>
-
-	<h1>Football</h1>
-	<br>
-	<h2>ScoreBoard</h2>
-	<a href="/football/addform"><button>Add</button></a>
-	<form action="/football/updatescore">
-		<div class="center">
-			<input type="text" name="fbscoreboardid" /> <br>
-			<button>Update</button>
-		</div>
-	</form>
-
-	<form action="/football/deletescore">
-		<div class="center">
-			<input type="text" name="fbscoreboardid" /> <br>
-			<button>Delete</button>
-		</div>
-	</form>
-	<h2>Stats</h2>
-	<a href="/fbgoals/addform"><button>Add</button></a>
-	<form action="/fbgoals/updateform">
-		<div class="center">
-			<input type="text" name="fbgoalsid" /> <br>
-			<button>Update</button>
-		</div>
-	</form>
-
-	<form action="/fbgoals/deletegoal">
-		<div class="center">
-			<input type="text" name="fbgoalsid" /> <br>
-			<button>Delete</button>
-		</div>
-	</form>	
-	
-	<h1>Hockey</h1><br>
-	<h2>ScoreBoard</h2>
-	<a href="/hockey/addform"><button>Add</button></a>
-	<form action="/hockey/updatescore">
-		<div class="center">
-			<input type="text" name="hscoreboardid" /> <br>
-			<button>Update</button>
-		</div>
-	</form>
-
-	<form action="/hockey/deletescore">
-		<div class="center">
-			<input type="text" name="hscoreboardid" /> <br>
-			<button>Delete</button>
-		</div>
-	</form>
-	<h2>Stats</h2>
-	<a href="/hgoals/addform"><button>Add</button></a>
-	<form action="/hgoals/updateform">
-		<div class="center">
-			<input type="text" name="hgoalsid" /> <br>
-			<button>Update</button>
-		</div>
-	</form>
-
-	<form action="/hgoals/deletegoal">
-		<div class="center">
-			<input type="text" name="hgoalsid" /> <br>
-			<button>Delete</button>
-		</div>
-	</form>
+	</form:form>
+	<script>
+		var myIndex = 0;
+		carousel();
+		function carousel() {
+			var i;
+			var x = document.getElementsByClassName("mySlides");
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";
+			}
+			myIndex++;
+			if (myIndex > x.length) {
+				myIndex = 1
+			}
+			x[myIndex - 1].style.display = "block";
+			setTimeout(carousel, 5000); // Change image every 5 seconds
+		}
+	</script>
+	<footer class=footer>
+	  <p>&#169 2022 buzzbuzz.com, Times Internet Limited.All rights reserved | The Days of India | Tamil Times</p>
+	</footer>
 </body>
 </html>

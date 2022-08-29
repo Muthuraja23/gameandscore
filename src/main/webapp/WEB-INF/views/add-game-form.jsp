@@ -19,21 +19,22 @@
 		<div id="form">
 			<form:form action="add" method="post" modelAttribute="addgame">
 				<div class="font">
-					<label for="gamebetween">Match</label>
+					<label for="teamA">Team A</label>
 					<div>
-						<form:input path="gamebetween" pattern="^[A-Za-z\s]*$"
+						<form:input path="teamA" pattern="^[A-Za-z\s]*$"
                             title="Please Enter Charactor Only" required="true"/>
 					</div>
 				</div>
 				<div class="font">
-					<label for="sportsid">Sports Id</label>
+				<label for="teamB">Team B</label>
+					<div>
+						<form:input path="teamB" pattern="^[A-Za-z\s]*$"
+                            title="Please Enter Charactor Only" required="true"/>
+					</div>
+					</div>
+				<div class="font">
 					<div class="custom-select" style="width: 90%" >
-						<form:select path="sportsid" >
-						<form:option value="0"></form:option>
-						<form:option value="1"></form:option>
-						<form:option value="2"></form:option>
-						<form:option value="3"></form:option>
-						</form:select>
+						<form:input path="sportsid" type="hidden"/>
 					</div>
 				</div>
 				<div class="font">
@@ -43,10 +44,9 @@
 					</div>
 				</div>
 				<div class="font">
-					<label for="result">Result</label>
 					<div>
 						<form:input path="result" pattern="^[A-Za-z0-9\s]*$"
-                            title="Please Enter Charactor Only" required="true"/>
+                            title="Please Enter Charactor Only" type="hidden"/>
 					</div>
 				</div>
 				<div id="bg">

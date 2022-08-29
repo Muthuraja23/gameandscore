@@ -1,6 +1,5 @@
 package com.chainsys.gameandscore.controller;
 
-import java.util.List;
 
 import javax.validation.Valid;
 
@@ -14,68 +13,59 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.chainsys.gameandscore.model.CrSbBattingDetails;
-import com.chainsys.gameandscore.model.CrSbBowlingDetails;
-import com.chainsys.gameandscore.model.CrScoreboard;
-import com.chainsys.gameandscore.service.CrSbBattingDetailsService;
-import com.chainsys.gameandscore.service.CrSbBowlingDetailsService;
-import com.chainsys.gameandscore.service.CrScoreboardService;
+import com.chainsys.gameandscore.model.CricketScoreboard;
+import com.chainsys.gameandscore.service.CricketScoreboardService;
 
 @Controller
 @RequestMapping("/cricket")
-public class CrScoreboardController {
+public class CricketScoreboardController {
 	public static final String LISTOFDETAILS= "redirect:/cricket/getscore";
 
 	@Autowired
-	private CrScoreboardService csservice;
-	@Autowired
-	private CrSbBattingDetailsService crSbBattingDetailsService;
-	@Autowired
-	private CrSbBowlingDetailsService crSbBowlingDetailsService;
-
+	private CricketScoreboardService cricketScoreboardService;
+	
 	@GetMapping("/getscore")
 	public String getscore(@RequestParam("id") int gameId, Model model) {
-		List<CrScoreboard> sboard = csservice.getScore(gameId);
-		model.addAttribute("score", sboard);
-		List<CrSbBattingDetails> crSbBattingDetailsList = crSbBattingDetailsService.getCrSbBattingDetails(gameId);
-		model.addAttribute("bat", crSbBattingDetailsList);
-		List<CrSbBowlingDetails> crSbBowlingDetailsList = crSbBowlingDetailsService.getBowlingByGameId(gameId);
-		model.addAttribute("ball", crSbBowlingDetailsList);
+		//System.out.println(gameId);
+		CricketScoreboard crScoreboard=cricketScoreboardService.getScoreByCalculation(gameId);
+		//System.out.println(crScoreboard.getGameid());
+		cricketScoreboardService.save(crScoreboard);
+		model.addAttribute("crScoreboard", crScoreboard);
 		return "crscoreboard-list";
 	}
 
 	@GetMapping("/addscore")
 	public String scoreAddForm(Model model) {
-		CrScoreboard cs = new CrScoreboard();
+		CricketScoreboard cs = new CricketScoreboard();
 		model.addAttribute("addscore", cs);
 		return "add-crscoreboard-form";
 	}
 
 	@PostMapping("/add")
-	public String addScore(@Valid @ModelAttribute("addscore") CrScoreboard c,Errors errors) {
+	public String addScore(@Valid @ModelAttribute("addscore") CricketScoreboard c,Errors errors) {
 		if (errors.hasErrors()) {
             return "add";
 	    }
-		csservice.save(c);
+		cricketScoreboardService.save(c);
 		return LISTOFDETAILS;
 	}
 
 	@GetMapping("/updatescore")
 	public String showUpdateForm(@RequestParam("crscoreboardid") int id, Model model) {
-		CrScoreboard cs = csservice.findById(id);
+		CricketScoreboard cs = cricketScoreboardService.findById(id);
 		model.addAttribute("updatescore", cs);
 		return "update-crscoreboard-form";
 	}
 
 	@PostMapping("/updatescore")
-	public String updateteam(@ModelAttribute("updatescore") CrScoreboard cs) {
-		csservice.save(cs);
+	public String updateteam(@ModelAttribute("updatescore") CricketScoreboard cs) {
+		cricketScoreboardService.save(cs);
 		return LISTOFDETAILS;
 	}
 
 	@GetMapping("/deletescore")
 	public String deleteTeam(@RequestParam("crscoreboardid") int id) {
-		csservice.deleteById(id);
+		cricketScoreboardService.deleteById(id);
 		return LISTOFDETAILS;
 	}
 }

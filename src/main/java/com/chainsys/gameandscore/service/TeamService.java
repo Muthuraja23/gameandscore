@@ -21,12 +21,13 @@ public class TeamService {
 	public Team save(Team tm) {
 		return rp.save(tm);
 	}
-
+	public Team getTeamByName(String name) {
+		return rp.findByTeamname(name);
+	}
 	public Team findById(int id) {
 		return rp.findById(id);
 	}
 
-	@Transactional
 	public void deleteById(int id) {
 		rp.deleteById(id);
 	}

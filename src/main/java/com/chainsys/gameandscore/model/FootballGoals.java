@@ -11,7 +11,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "fb_sb_goals")
-public class FbSbGoals {
+public class FootballGoals {
 	@Id
 	@Column(name = "fb_goals_id")
 	@GeneratedValue(strategy = GenerationType.AUTO, generator = "fb_goal_id")

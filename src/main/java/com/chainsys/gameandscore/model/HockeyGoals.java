@@ -11,7 +11,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "h_sb_goals")
-public class HSbGoals {
+public class HockeyGoals {
 	@Id
 	@Column(name = "h_goals_id")
 	@GeneratedValue(strategy = GenerationType.AUTO, generator = "h_goal_id")

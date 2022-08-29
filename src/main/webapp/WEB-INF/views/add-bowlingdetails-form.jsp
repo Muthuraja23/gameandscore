@@ -61,12 +61,6 @@
 						<form:input path="maiden" />
 					</div>
 				</div>
-				<div class="font">
-					<label for="economy">Economy</label>
-					<div>
-						<form:input path="economy" />
-					</div>
-				</div>
 				<div>
 					<form:button>Add</form:button>
 				</div>

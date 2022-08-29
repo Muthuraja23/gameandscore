@@ -26,8 +26,9 @@ public class TeamPlayerDetailsService {
 	public TeamPlayerDetails findById(int id) {
 		return rp.findById(id);
 	}
-
-	@Transactional
+	public TeamPlayerDetails teamPlayerByName(String name) {
+		return rp.findByName(name);
+	}
 	public void deleteById(int id) {
 		rp.deleteById(id);
 	}

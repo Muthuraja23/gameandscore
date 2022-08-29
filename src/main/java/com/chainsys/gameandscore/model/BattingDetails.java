@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "cr_sb_batting_details")
-public class CrSbBattingDetails {
+public class BattingDetails {
 	@Id
 	@Column(name = "cr_batting_id")
 	@GeneratedValue(strategy = GenerationType.AUTO, generator = "batting_id")

@@ -27,7 +27,8 @@
 		<caption></caption>
 			<thead>
 				<tr>
-					<th>Game</th>
+					<th>TeamA</th>
+					<th>TeamB</th>
 					<th>Date And Time</th>
 					<th>Result</th>
 				</tr>
@@ -35,7 +36,8 @@
 			<tbody>
 				<c:forEach var="Game" items="${allgames}">
 					<tr>
-						<td>${Game.gamebetween}</td>
+						<td>${Game.teamA}</td>
+						<td>${Game.teamB}</td>
 						<td>${Game.dateandtime}</td>
 						<td><a href="/game/directioncontroll?id=${Game.gameid}">${Game.result}</a></td>
 					</tr>

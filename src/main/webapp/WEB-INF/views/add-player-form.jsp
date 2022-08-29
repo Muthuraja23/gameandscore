@@ -17,12 +17,6 @@
 		<div id="form">
 			<form:form action="add" method="post" modelAttribute="addplayer">
 				<div class="font">
-					<label for="playerid">Player Id</label>
-					<div>
-						<form:input path="playerid" />
-					</div>
-				</div>
-				<div class="font">
 					<label for="name">Name</label>
 					<div>
 						<form:input path="name" pattern="^[A-Za-z\s]*$"

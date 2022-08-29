@@ -53,8 +53,9 @@ public class GameController {
 	}
 
 	@GetMapping("addform")
-	public String gameAddForm(Model model) {
+	public String gameAddForm(@RequestParam("id")int sportsId,Model model) {
 		Game g = new Game();
+		g.setSportsid(sportsId);
 		model.addAttribute("addgame", g);
 		return "add-game-form";
 	}
@@ -65,8 +66,9 @@ public class GameController {
 			return "add";
 		}
 		gmservice.save(gm);
-		int id = gm.getSportsid();
-		return "redirect:/game/getallgames?id=" + id;
+		System.out.println(gm.getGameid());
+		int id = gm.getGameid();
+		return "redirect:/player/getallplayersbyteam?id="+id;
 	}
 
 	@GetMapping("/updateform")

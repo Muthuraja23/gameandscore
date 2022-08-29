@@ -13,5 +13,5 @@ public interface TeamRepository extends JpaRepository<Team,Integer> {
 	Team save(Team tm);
 	void deleteById(int tmid);
 	List <Team> findAll();
-
+	Team findByTeamname(String name);
 }

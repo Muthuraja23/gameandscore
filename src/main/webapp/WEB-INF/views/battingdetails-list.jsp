@@ -28,7 +28,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach var="CrSbBattingDetails" items="${battingdetails}">
+				<c:forEach var="CrSbBattingDetails" items="${teamAList}">
 					<tr>
 						<td>${CrSbBattingDetails.team}</td>
 						<td>${CrSbBattingDetails.playername}</td>
@@ -43,5 +43,38 @@
 			</tbody>
 		</table>
 	</div>
+	
+	<div id="table root">
+		<table class=content-table>
+		<caption></caption>
+			<thead>
+				<tr>
+					<th>Team</th>
+					<th>Name</th>
+					<th>Runs Scored</th>
+					<th>Balls Faced</th>
+					<th>Fours</th>
+					<th>Sixes</th>
+					<th>Strike Rate</th>
+					<th>Status</th>
+				</tr>
+			</thead>
+			<tbody>
+				<c:forEach var="CrSbBattingDetails" items="${teamBList}">
+					<tr>
+						<td>${CrSbBattingDetails.team}</td>
+						<td>${CrSbBattingDetails.playername}</td>
+						<td>${CrSbBattingDetails.runsscored}</td>
+						<td>${CrSbBattingDetails.ballsfaced}</td>
+						<td>${CrSbBattingDetails.fours}</td>
+						<td>${CrSbBattingDetails.sixes}</td>
+						<td>${CrSbBattingDetails.strikerate}</td>
+						<td>${CrSbBattingDetails.status}</td>
+					</tr>
+				</c:forEach>
+			</tbody>
+		</table>
+	</div>
+	
 </body>
 </html>

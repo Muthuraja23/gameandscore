@@ -4,7 +4,10 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
@@ -12,6 +15,8 @@ import javax.persistence.Table;
 public class Player {
 	@Id
 	@Column(name = "player_id")
+	@GeneratedValue(strategy = GenerationType.AUTO, generator = "player_sequence_id")
+    @SequenceGenerator(name = "player_sequence_id", sequenceName = "player_sequence_id", allocationSize = 1)
 	private int playerid;
 	@Column(name = "name")
 	private String name;

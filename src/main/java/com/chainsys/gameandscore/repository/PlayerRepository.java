@@ -13,5 +13,7 @@ public interface PlayerRepository extends JpaRepository<Player,Integer>{
 	Player save(Player pl);
 	void deleteById(int id);
 	List <Player> findAll();
-
+	List<Player> findByTeamid(int id);
+	Player findByName(String name);
+	
 }

@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+ad<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
@@ -57,12 +57,6 @@
 					<label for="sixes">Sixes</label>
 					<div>
 						<form:input path="sixes" />
-					</div>
-				</div>
-				<div class="font">
-					<label for="strikerate">Strike Rate</label>
-					<div>
-						<form:input path="strikerate" />
 					</div>
 				</div>
 				<div class="font">

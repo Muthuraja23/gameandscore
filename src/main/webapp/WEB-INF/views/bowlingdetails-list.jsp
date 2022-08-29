@@ -8,11 +8,12 @@
 <title>BowlingDetails List</title>
 <style>
 <%@ include file="css/navigationbar.css"%>
+<%@ include file = "css/table.css"%>
 </style>
 </head>
 <body>
 	<div id="table root">
-		<table>
+		<table class=content-table>
 		<caption></caption>
 			<thead>
 				<tr>
@@ -26,7 +27,37 @@
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach var="CrSbBowlingDetails" items="${bowlingdetails}">
+				<c:forEach var="CrSbBowlingDetails" items="${teamAList}">
+					<tr>
+						<td>${CrSbBowlingDetails.team}</td>
+						<td>${CrSbBowlingDetails.playerName}</td>
+						<td>${CrSbBowlingDetails.overs}</td>
+						<td>${CrSbBowlingDetails.wickets}</td>
+						<td>${CrSbBowlingDetails.runs}</td>
+						<td>${CrSbBowlingDetails.maiden}</td>
+						<td>${CrSbBowlingDetails.economy}</td>
+					</tr>
+				</c:forEach>
+			</tbody>
+		</table>
+	</div>
+	
+	<div id="table root">
+		<table class=content-table>
+		<caption></caption>
+			<thead>
+				<tr>
+					<th>Team</th>
+					<th>Name</th>
+					<th>Overs</th>
+					<th>Wickets</th>
+					<th>Runs</th>
+					<th>Maiden</th>
+					<th>Economy</th>
+				</tr>
+			</thead>
+			<tbody>
+				<c:forEach var="CrSbBowlingDetails" items="${teamBList}">
 					<tr>
 						<td>${CrSbBowlingDetails.team}</td>
 						<td>${CrSbBowlingDetails.playerName}</td>
